@@ -1,0 +1,116 @@
+# =============== #
+# Unity generated #
+# =============== #
+*.pidb.meta
+*.stackdump
+/ProjectSettings/ProjectVersion.txt
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ibrary/
+/[Oo]bj/
+/[Tt]emp/
+sysinfo.txt
+
+# ============================================= #
+# Visual Studio / MonoDevelop / Rider generated #
+# ============================================= #
+*.svd
+*.tmp
+.consulo/
+.vs/
+/*.booproj
+/*.csproj
+/*.pidb
+/*.sln*
+/*.suo
+/*.unityproj
+/*.user
+/*.userprefs
+/.idea*/
+/bin/
+/properties/
+ExportedObj/
+[Ee]xported[Oo]bj/
+
+# ====================================== #
+# Unity Meta for Visual Studio Generated #
+# ====================================== #
+/[Oo]bj.meta
+*.svd.meta
+*.tmp.meta
+.consulo.meta
+.vs.meta
+/*.booproj.meta
+/*.csproj.meta
+/*.pidb.meta
+/*.sln*.meta
+/*.suo.meta
+/*.unityproj.meta
+/*.user.meta
+/*.userprefs.meta
+/.idea*.meta
+/bin.meta
+/properties.meta
+ExportedObj.meta
+[Ee]xported[Oo]bj.meta
+
+
+# ====== #
+# Builds #
+# ====== #
+*.apk
+*.unitypackage
+
+# ============ #
+# OS generated #
+# ============ #
+.DS_Store*
+.Spotlight-V100
+.Trashes
+._*
+[Dd]esktop.ini
+[Tt]humbs.db
+ehthumbs.db
+
+/AssetBundles
+/SwitchIL2CPPCache
+/SwitchIL2CPPStats
+Assets/StreamingAssets/AssetBundles
+Assets/StreamingAssets/AssetBundles.meta
+Assets/AotModels.meta
+Assets/AotModels/
+Assets/Plugins/GitHub/*
+Assets/Plugins/GitHub.meta
+
+ProjectSettings/EditorBuildSettings\.asset
+
+Assets/Plugins/Editor\.meta
+Assets/Plugins/Editor/JetBrains\.meta
+Assets/Plugins/Editor/JetBrains/*
+
+Logs/
+
+Assets/Resources/Version/
+Assets/Resources/Version\.meta
+
+RegisterIcalls\.cpp
+
+MemoryCaptures/
+
+Assets/StreamingAssets/\.AssetBundles/
+Packages/*
+!Packages/manifest.json
+!Packages/packages-lock.json
+
+Assets/Third Party/Heureka*
+DUMMY__*
+
+SerializedBuildInfo/
+
+Assets/Resources/AssetManager/AssetInitializerLoadOrder.json*
+Assets/Third Party/Gallant Games/InControl/Source/Native/NativeInputDeviceProfileList.cs
+Assets/Resources/AssetManager/AssetLookup.txt*
+ProjectSettings/ProBuilderSettings.json
+Assets/Resources/AssetManager/AssetLookup.txt.meta
+Packages/packages-lock.json
+ProjectSettings/Packages/com.unity.probuilder/Settings.json
