@@ -1,6 +1,16 @@
 09c07045a418a0f44b91e429392fc523:=Toon/Lit Snow Buildup
-0000000000000000f000000000000000:=Standard
+0000000000000000f000000000000000:=Particles/Standard Unlit
 c22777d6e868e4f2fb421913386b154e:=ProBuilder/Standard Vertex Color
 eae9c11350249284e8400a100179e0b2:=Standard
 f6538a28f14e373459169053ad803793:=Toon/Lit Ice VertexColor Tessellated
 2deeb8eb5e3936143b79e26ac4c25ebc:=Custom/SnowShader
+2cabc195666b0da459caf7d9f7bd66d1:=Standard
+01aff1b6e02444c4b8918e73bdda9a5b:=.poiyomi/Toon/Opaque
+e6e94bcb2448d5146bb58252a37dab28:=Particles/Standard Unlit
+b53b2fc6d7d40fc49a377e4f4a96dbfa:=Toon/Lit Ice VertexColor Tessellated
+a1f0ca1946c64f54ea98ae76f756b14e:=Sand/SandRenderingShader
+af33ce2d4e5757543b75e795db8446a7:=Standard
+35923778a0355ce479b1bba36902119a:=Standard
+62969d4889afe94468e2d18a8b0224eb:=Sand/SandRenderingShader
+cfe3746f93e5bcc45875903fd3feec2e:=Custom/SandFog
+c64b1a82c7daa0947813c62f7e83f97d:=Sand/Sky

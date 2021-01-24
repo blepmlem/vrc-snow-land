@@ -1,0 +1,126 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: ToonSnowIciclesExtreme
+  m_Shader: {fileID: 4800000, guid: 620c85a87e84d8b40b6b6cf8c553232b, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _GroundTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 0.05, y: 0.05}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Noise:
+        m_Texture: {fileID: 2800000, guid: 6bfa05600af138847bc516fd43534e52, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Ramp:
+        m_Texture: {fileID: 2800000, guid: f2e3a8231b7cbd34c867660e276ade43, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SnowRamp:
+        m_Texture: {fileID: 2800000, guid: f2e3a8231b7cbd34c867660e276ade43, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SnowTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Splatmap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _BumpScale: 1
+    - _Cutoff: 0.5
+    - _DetailNormalMapScale: 1
+    - _Displacement: 0.047
+    - _DstBlend: 0
+    - _GlossMapScale: 1
+    - _Glossiness: 0.345
+    - _GlossyReflections: 1
+    - _Height: 0.45
+    - _IceCutoff: 0.349
+    - _IceDisplacement: -0.53
+    - _Metallic: 0
+    - _Mode: 0
+    - _NoiseScale: 0.893
+    - _OcclusionStrength: 1
+    - _Parallax: 0.02
+    - _RampOffset: 0.58
+    - _RimPower: 2.54
+    - _RimPowerIce: 3.3
+    - _RimPowerSnow: 1.7
+    - _Scale: 0.923
+    - _Sharpness: 0.883
+    - _SmoothnessTextureChannel: 0
+    - _SnowCutoff: 0.5
+    - _SnowHeight: 0.05
+    - _SnowSize: 1.31
+    - _SpecularHighlights: 1
+    - _SrcBlend: 1
+    - _Tess: 6.7
+    - _ToonRampSoftNess: 0.254
+    - _UVSec: 0
+    - _ZWrite: 1
+    m_Colors:
+    - _Color: {r: 0.6784314, g: 0.7388152, b: 0.7529412, a: 1}
+    - _ColorIce: {r: 0.19999996, g: 0.5, b: 0.5, a: 1}
+    - _ColorSnow: {r: 0.7, g: 1, b: 1, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _GroundColor: {r: 1, g: 1, b: 1, a: 1}
+    - _RampColor: {r: 0, g: 0, b: 0.5, a: 1}
+    - _RimColor: {r: 0.5801887, g: 1, b: 1, a: 1}
+    - _RimColorSnow: {r: 0.6839622, g: 0.9209906, b: 1, a: 1}
+    - _SnowAngle: {r: 0, g: 1.04, b: 0, a: 1}
+    - _SnowColor: {r: 0.6263795, g: 0.6415094, b: 0.6415094, a: 1}
+    - _TColor: {r: 1, g: 0.94746995, b: 0.7688679, a: 1}

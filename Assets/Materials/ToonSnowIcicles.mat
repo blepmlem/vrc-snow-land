@@ -45,14 +45,14 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _MainTex:
         m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
+        m_Scale: {x: 0.05, y: 0.05}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Noise:
-        m_Texture: {fileID: 2800000, guid: f5e8afd4512e6bc44bee8e58f4de0420, type: 3}
+        m_Texture: {fileID: 2800000, guid: 6bfa05600af138847bc516fd43534e52, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
@@ -88,20 +88,20 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0.345
     - _GlossyReflections: 1
-    - _Height: 0.78
-    - _IceCutoff: 0.18
-    - _IceDisplacement: -1
+    - _Height: 0.35
+    - _IceCutoff: 0.669
+    - _IceDisplacement: -0
     - _Metallic: 0
     - _Mode: 0
-    - _NoiseScale: 0.859
+    - _NoiseScale: 0.192
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _RampOffset: 0.6
     - _RimPower: 2.54
     - _RimPowerIce: 3.3
-    - _RimPowerSnow: 5
+    - _RimPowerSnow: 1.7
     - _Scale: 0.989
-    - _Sharpness: 1
+    - _Sharpness: 0.731
     - _SmoothnessTextureChannel: 0
     - _SnowCutoff: 0.5
     - _SnowHeight: 0.05
@@ -109,18 +109,18 @@ Material:
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _Tess: 15.6
-    - _ToonRampSoftNess: 0.1
+    - _ToonRampSoftNess: 0.299
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 0.6799573, g: 0.7522419, b: 0.754717, a: 1}
     - _ColorIce: {r: 0.19999996, g: 0.5, b: 0.5, a: 1}
     - _ColorSnow: {r: 0.7, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _GroundColor: {r: 1, g: 1, b: 1, a: 1}
     - _RampColor: {r: 0, g: 0, b: 0.5, a: 1}
     - _RimColor: {r: 0.5801887, g: 1, b: 1, a: 1}
-    - _RimColorSnow: {r: 0, g: 0.6, b: 0.8, a: 1}
+    - _RimColorSnow: {r: 0.6839622, g: 0.9209906, b: 1, a: 1}
     - _SnowAngle: {r: 0, g: 1.04, b: 0, a: 1}
     - _SnowColor: {r: 0.6263795, g: 0.6415094, b: 0.6415094, a: 1}
     - _TColor: {r: 1, g: 0.94746995, b: 0.7688679, a: 1}
