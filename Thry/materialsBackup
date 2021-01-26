@@ -1,5 +1,5 @@
 09c07045a418a0f44b91e429392fc523:=Toon/Lit Snow Buildup
-0000000000000000f000000000000000:=Particles/Standard Unlit
+0000000000000000f000000000000000:=Standard
 c22777d6e868e4f2fb421913386b154e:=ProBuilder/Standard Vertex Color
 eae9c11350249284e8400a100179e0b2:=Standard
 f6538a28f14e373459169053ad803793:=Toon/Lit Ice VertexColor Tessellated
@@ -14,3 +14,6 @@ af33ce2d4e5757543b75e795db8446a7:=Standard
 62969d4889afe94468e2d18a8b0224eb:=Sand/SandRenderingShader
 cfe3746f93e5bcc45875903fd3feec2e:=Custom/SandFog
 c64b1a82c7daa0947813c62f7e83f97d:=Sand/Sky
+143d64618fa54d8479dbd849f1526fd0:=Standard
+c595c71ad592de1429e863b14d8a15a1:=Standard
+1c987494452b85f4ab4cac3322415907:=Standard
