@@ -27,7 +27,7 @@ Shader "Toon/Lit Ice VertexColor Tessellated" {
 		_RimPowerIce("Ice Rim Power", Range(0,20)) = 5
 
 		[Header(Ice Displacement)]	
-		_Scale("Noise Scale Ice", Range(0,1)) = 1
+		_Scale("Noise Scale Ice", Range(0,.2)) = .2
 		_IceDisplacement("Ice Displacement Cutoff", Range(-2,0)) = -1
 		_Sharpness("Ice Sharpness", Range(0,1)) = 1
 		_Height("Ice Length", Range(0,2)) = 0.7	
@@ -72,10 +72,10 @@ Shader "Toon/Lit Ice VertexColor Tessellated" {
 			float dist = distance(worldPosition, _WorldSpaceCameraPos);
 			float f = clamp(1.0 - (dist - minDist) / (maxDist - minDist), 0.01, 1.0);
 			
-			if (color.r < 0.4 ) {
-				f = 0.001;
-			}				
-			return f * tess; 
+			// if (color.r < 0.4 ) {
+			// 	f = 0.001;
+			// }				
+			return f * tess * color.r + 0.001; 
 		}
 
 		float4 MeltDistanceBasedTess(float4 v0, float4 v1, float4 v2, float minDist, float maxDist, float tess, float4 v0c, float4 v1c, float4 v2c)
@@ -148,7 +148,7 @@ Shader "Toon/Lit Ice VertexColor Tessellated" {
 			// part of model facing bottom
 			float facingBottom =1- smoothstep(_IceCutoff * noisetexture.r, (_IceCutoff + 0.01)* noisetexture.r, IN.worldNormal.y);
 			// part of model with red vertex color
-			float snowEdge = step(_SnowCutoff * noisetexture.r, IN.color.r);
+			float snowEdge = 1- smoothstep(IN.color.r -.1, IN.color.r + .1, _SnowCutoff * noisetexture.r);
 
 			// base texture, not on red vertex color
 			float3 baseAlbedo = c.rgb * (1- snowEdge);
@@ -166,9 +166,9 @@ Shader "Toon/Lit Ice VertexColor Tessellated" {
 			half rim = 1.0 - saturate(dot(normalize(IN.viewDir), o.Normal)); //+ IN.test.r; // rimlight
 
 			// ice rim
-			float3 iceRim = _RimColor.rgb *pow(rimTextured, _RimPowerIce)* facingBottom* (step(0.25, IN.color.r));
+			float3 iceRim = _RimColor.rgb *pow(rimTextured, _RimPowerIce)* facingBottom* (1-smoothstep(IN.color.r -.1, IN.color.r + .1, 0.25));
 			// snow rim
-			float3 snowRim = _RimColorSnow.rgb *pow(rim, _RimPowerSnow) * (1 - facingBottom) * (step(0.25, IN.color.r));
+			float3 snowRim = _RimColorSnow.rgb *pow(rim, _RimPowerSnow) * (1 - facingBottom) * (1-smoothstep(IN.color.r -.1, IN.color.r + .1, 0.25));
 			//combined
 			o.Emission = snowRim + iceRim ;// add glow rimlight to snow
 			

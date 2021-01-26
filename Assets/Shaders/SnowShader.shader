@@ -1,5 +1,6 @@
 ﻿Shader "Custom/SnowShader" {
 	Properties {
+		_TesselationDistance("Tessellation Distance", Float) = 50
 		_Tess("Tessellation", Range(1,64)) = 4
 		_Splatmap("Splatmap", 2D) = "black" {}
 		_Displacement("Displacement", Range(0, 1.0)) = 0.3
@@ -9,6 +10,7 @@
 		_GroundTex("Ground (RGB)", 2D) = "white" {}
 		_Glossiness ("Smoothness", Range(0,1)) = 0.5
 		_Metallic ("Metallic", Range(0,1)) = 0.0
+		_TopCamData ("Tadioaje", Vector) = (0,0,0,0)
 	}
 	SubShader {
 		Tags { "RenderType"="Opaque" }
@@ -16,7 +18,7 @@
 
 		CGPROGRAM
 		// Physically based Standard lighting model, and enable shadows on all light types
-		#pragma surface surf Standard fullforwardshadows vertex:disp tessellate:tessDistance
+		#pragma surface surf Standard fullforwardshadows vertex:disp tessellate:tessDistance addshadow
 
 		// Use shader model 3.0 target, to get nicer looking lighting
 		#pragma target 4.6
@@ -33,23 +35,33 @@
 			float2 texcoord2 : TEXCOORD2;
 		};
 
-		float _Tess;
+		float _Tess, _TesselationDistance;
 
 		float4 tessDistance(appdata v0, appdata v1, appdata v2) {
-			float minDist = 100.0;
-			float maxDist = 250.0;
-			return UnityDistanceBasedTess(v0.vertex, v1.vertex, v2.vertex, minDist, maxDist, _Tess);
+			float minDist = 0;
+			return UnityDistanceBasedTess(v0.vertex, v1.vertex, v2.vertex, minDist, _TesselationDistance, _Tess);
 		}
 
 		sampler2D _Splatmap;
 		float _Displacement;
-
+		float4 _TopCamData;
+		
+		float4 GetTopCamMapLod(float2 wPos, float4 topCam, sampler2D  camTex)
+	    {
+	        return tex2Dlod(camTex, (float4(wPos,0,0) + float4(-topCam.x,-topCam.z,0,0)) * topCam.w * .5 + float4(.5,.5,0,0));
+	    }
+		
 		void disp(inout appdata v)
 		{
-			float d = tex2Dlod(_Splatmap , float4(v.texcoord.xy, 0, 0)).r * _Displacement;
+			float4 pos = mul(unity_ObjectToWorld,v.vertex);
+			half camDistance = distance(_TopCamData.xz, pos.xz);
+			camDistance = smoothstep(25, 20, camDistance);
+			float4 d = GetTopCamMapLod(pos.xz, _TopCamData, _Splatmap).r * _Displacement * camDistance;
 			v.vertex.xyz -= v.normal * d;
 			v.vertex.xyz += v.normal * _Displacement;
 		}
+
+
 
 		sampler2D _SnowTex;
 		fixed4 _SnowColor;
@@ -60,6 +72,7 @@
 			float2 uv_SnowTex;
 			float2 uv_GroundTex;
 			float2 uv_Splatmap;
+			float3 worldPos;
 		};
 
 		half _Glossiness;
@@ -74,9 +87,10 @@
 		UNITY_INSTANCING_BUFFER_END(Props)
 
 		void surf (Input IN, inout SurfaceOutputStandard o) {
-
-			half amount = tex2Dlod(_Splatmap, float4(IN.uv_Splatmap, 0, 0)).r;
-
+			half camDistance = distance(_TopCamData.xz, IN.worldPos.xz);
+			camDistance = smoothstep(25, 20, camDistance);
+			
+			half amount = GetTopCamMapLod(IN.worldPos.xz, _TopCamData, _Splatmap).r * camDistance;
 			// Albedo comes from a texture tinted by color
 			fixed4 snow = tex2D(_SnowTex, IN.uv_SnowTex) * _SnowColor;
 			fixed4 ground = tex2D(_GroundTex, IN.uv_GroundTex) * _GroundColor;
