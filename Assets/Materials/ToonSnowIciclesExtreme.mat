@@ -88,9 +88,9 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0.345
     - _GlossyReflections: 1
-    - _Height: 0.45
+    - _Height: 0.58
     - _IceCutoff: 0.349
-    - _IceDisplacement: -0.53
+    - _IceDisplacement: -0.87
     - _Metallic: 0
     - _Mode: 0
     - _NoiseScale: 0.893
@@ -100,15 +100,15 @@ Material:
     - _RimPower: 2.54
     - _RimPowerIce: 3.3
     - _RimPowerSnow: 1.7
-    - _Scale: 0.923
-    - _Sharpness: 0.883
+    - _Scale: 0.008
+    - _Sharpness: 0.85
     - _SmoothnessTextureChannel: 0
-    - _SnowCutoff: 0.5
-    - _SnowHeight: 0.05
+    - _SnowCutoff: 0.384
+    - _SnowHeight: 0.1
     - _SnowSize: 1.31
     - _SpecularHighlights: 1
     - _SrcBlend: 1
-    - _Tess: 6.7
+    - _Tess: 15.7
     - _ToonRampSoftNess: 0.254
     - _UVSec: 0
     - _ZWrite: 1

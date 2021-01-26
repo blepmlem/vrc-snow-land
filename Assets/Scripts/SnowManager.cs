@@ -1,18 +1,25 @@
-﻿
-using System;
-using UdonSharp;
+﻿using UdonSharp;
 using UnityEngine;
-using UnityEngine.Rendering;
 using VRC.SDKBase;
-using VRC.Udon;
 
 public class SnowManager : UdonSharpBehaviour
 {
     [SerializeField]
     private GameObject _tracker;
+
+    [SerializeField]
+    private Renderer _snowPlane;
+    
+    [SerializeField]
+    private Camera _snowCam;
+
+    [SerializeField]
+    private float _camOffset = 50;
     
     private VRCPlayerApi[] _players = new VRCPlayerApi[32];
     private Transform[] _trackers = new Transform[32];
+    private readonly int TopCamData = Shader.PropertyToID("_TopCamData");
+
     void Start()
     {
         Add(Networking.LocalPlayer);
@@ -22,6 +29,24 @@ public class SnowManager : UdonSharpBehaviour
     {
         Debug.Log($"Player joined: {player.displayName}");
         Add(player);
+    }
+
+    public override void OnPlayerLeft(VRCPlayerApi player)
+    {
+        Remove(player);
+    }
+
+    private void Remove(VRCPlayerApi player)
+    {
+        for (var i = 0; i < _players.Length; i++)
+        {
+            if (_players[i] == player)
+            {
+                _players[i] = null;
+                // _trackers[i] = VRCInstantiate(_tracker).transform;
+                return;
+            }
+        }
     }
 
     private void Update()
@@ -34,6 +59,11 @@ public class SnowManager : UdonSharpBehaviour
                 _trackers[i].position = player.GetPosition() - (Vector3.up * 10);
             }
         }
+        
+        var pos = Networking.LocalPlayer.GetPosition() + Vector3.up * _camOffset;
+        float size = 1f / _snowCam.orthographicSize;
+        _snowCam.transform.position = pos;
+        _snowPlane.material.SetVector("_TopCamData", new Vector4(pos.x, pos.y, pos.z, size));
     }
 
     private void Add(VRCPlayerApi p)

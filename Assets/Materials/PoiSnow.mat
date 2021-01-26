@@ -716,7 +716,7 @@ Material:
     - footer_twitter: 0
     - footer_youtube: 0
     - m_ParallaxMap: 1
-    - m_Special_Effects: 0
+    - m_Special_Effects: 1
     - m_end_Alpha: 0
     - m_end_CenterOutEmission: 0
     - m_end_CenterOutEmission1: 0
@@ -803,7 +803,7 @@ Material:
     - m_start_emission1Options: 0
     - m_start_emissionOptions: 0
     - m_start_flipBook: 0
-    - m_start_glitter: 1
+    - m_start_glitter: 0
     - m_start_glitterRandom: 0
     - m_start_glowInDarkEmissionOptions: 0
     - m_start_glowInDarkEmissionOptions1: 0
@@ -814,7 +814,7 @@ Material:
     - m_start_mirrorOptions: 0
     - m_start_panosphereOptions: 0
     - m_start_parallaxAdvanced: 1
-    - m_start_parallaxHeightmap: 0
+    - m_start_parallaxHeightmap: 1
     - m_start_parallaxInternal: 1
     - m_start_pointToPoint: 0
     - m_start_reflectionRim: 0
