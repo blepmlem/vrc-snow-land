@@ -31,7 +31,7 @@ public class SnowManager : UdonSharpBehaviour
             var player = _players[i];
             if (player != null)
             {
-                _trackers[i].position = player.GetPosition();
+                _trackers[i].position = player.GetPosition() - (Vector3.up * 10);
             }
         }
     }
