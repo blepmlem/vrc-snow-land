@@ -495,19 +495,19 @@ Material:
     - _GITDEMinLight1: 0
     - _GITDEWorldOrMesh: 0
     - _GITDEWorldOrMesh1: 0
-    - _GlitterAngleRange: 90
+    - _GlitterAngleRange: 88.7
     - _GlitterBias: 0.8
     - _GlitterBrightness: 5.3
     - _GlitterColorMapUV: 0
     - _GlitterContrast: 300
     - _GlitterEnable: 1
-    - _GlitterFrequency: 2500
+    - _GlitterFrequency: 128
     - _GlitterJitter: 1
     - _GlitterMaskUV: 0
-    - _GlitterMinBrightness: 0.012
+    - _GlitterMinBrightness: 0.009
     - _GlitterRandomColors: 0
     - _GlitterSize: 0.156
-    - _GlitterSpeed: 1
+    - _GlitterSpeed: 2
     - _GlitterUseSurfaceColor: 0.531
     - _GlossMapScale: 1
     - _Glossiness: 0.5
@@ -618,7 +618,7 @@ Material:
     - _RimSharpness: 0.075
     - _RimStrength: 0.4
     - _RimTexUV: 0
-    - _RimWidth: 0.124
+    - _RimWidth: 0.657
     - _RimWidthNoiseStrength: 0.1
     - _RimWidthNoiseTextureUV: 0
     - _SSSDistortion: 0.391
@@ -715,8 +715,8 @@ Material:
     - footer_patreon: 0
     - footer_twitter: 0
     - footer_youtube: 0
-    - m_ParallaxMap: 0
-    - m_Special_Effects: 1
+    - m_ParallaxMap: 1
+    - m_Special_Effects: 0
     - m_end_Alpha: 0
     - m_end_CenterOutEmission: 0
     - m_end_CenterOutEmission1: 0
@@ -770,8 +770,8 @@ Material:
     - m_end_specular1: 0
     - m_end_subsurface: 0
     - m_end_vertexManipulation: 0
-    - m_lightingOptions: 1
-    - m_mainOptions: 1
+    - m_lightingOptions: 0
+    - m_mainOptions: 0
     - m_renderingOptions: 1
     - m_start_Alpha: 0
     - m_start_CenterOutEmission: 0
@@ -808,14 +808,14 @@ Material:
     - m_start_glowInDarkEmissionOptions: 0
     - m_start_glowInDarkEmissionOptions1: 0
     - m_start_lightingAdvanced: 0
-    - m_start_lightingBeta: 0
+    - m_start_lightingBeta: 1
     - m_start_manualFlipbookControl: 0
     - m_start_matcap: 0
     - m_start_mirrorOptions: 0
     - m_start_panosphereOptions: 0
-    - m_start_parallaxAdvanced: 0
+    - m_start_parallaxAdvanced: 1
     - m_start_parallaxHeightmap: 0
-    - m_start_parallaxInternal: 0
+    - m_start_parallaxInternal: 1
     - m_start_pointToPoint: 0
     - m_start_reflectionRim: 0
     - m_start_rimLightOptions: 1
