@@ -1,7 +1,8 @@
 ﻿Shader "Custom/SnowShader" {
 	Properties {
-		_TesselationDistance("Tessellation Distance", Float) = 50
-		_Tess("Tessellation", Range(1,64)) = 4
+		_TesselationMinDistance("MinTess Distance", Float) = 0
+		_TesselationMaxDistance("Max Tess Distance", Float) = 50
+		_Tess("Tessellation", Range(1,512)) = 4
 		_Splatmap("Splatmap", 2D) = "black" {}
 		_Displacement("Displacement", Range(0, 1.0)) = 0.3
 		_SnowColor ("Snow Color", Color) = (1,1,1,1)
@@ -10,7 +11,7 @@
 		_GroundTex("Ground (RGB)", 2D) = "white" {}
 		_Glossiness ("Smoothness", Range(0,1)) = 0.5
 		_Metallic ("Metallic", Range(0,1)) = 0.0
-		_TopCamData ("Tadioaje", Vector) = (0,0,0,0)
+		_TopCamData ("Top Cam Debug", Vector) = (0,0,0,0)
 	}
 	SubShader {
 		Tags { "RenderType"="Opaque" }
@@ -35,11 +36,10 @@
 			float2 texcoord2 : TEXCOORD2;
 		};
 
-		float _Tess, _TesselationDistance;
+		float _Tess, _TesselationMinDistance, _TesselationMaxDistance;
 
 		float4 tessDistance(appdata v0, appdata v1, appdata v2) {
-			float minDist = 0;
-			return UnityDistanceBasedTess(v0.vertex, v1.vertex, v2.vertex, minDist, _TesselationDistance, _Tess);
+			return UnityDistanceBasedTess(v0.vertex, v1.vertex, v2.vertex, _TesselationMinDistance, _TesselationMaxDistance, _Tess);
 		}
 
 		sampler2D _Splatmap;
@@ -87,6 +87,9 @@
 		UNITY_INSTANCING_BUFFER_END(Props)
 
 		void surf (Input IN, inout SurfaceOutputStandard o) {
+
+			float3 viewDirection = normalize( o. );
+			
 			half camDistance = distance(_TopCamData.xz, IN.worldPos.xz);
 			camDistance = smoothstep(25, 20, camDistance);
 			
