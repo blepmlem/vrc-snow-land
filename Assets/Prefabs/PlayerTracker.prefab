@@ -9,11 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6787363815648893721}
-  - component: {fileID: 7199753030364257278}
   - component: {fileID: 6700295665445576631}
   - component: {fileID: 972295201414706925}
   m_Layer: 19
-  m_Name: Tracker
+  m_Name: PlayerTracker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -33,14 +32,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &7199753030364257278
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2843355073553626522}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!198 &6700295665445576631
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -999,7 +990,7 @@ ParticleSystem:
           inWeight: 0.33333334
           outWeight: 0.15285996
         - serializedVersion: 3
-          time: 0.004560858
+          time: 0.0011123717
           value: 0.874597
           inSlope: 0
           outSlope: -0.13468437

@@ -495,18 +495,18 @@ Material:
     - _GITDEMinLight1: 0
     - _GITDEWorldOrMesh: 0
     - _GITDEWorldOrMesh1: 0
-    - _GlitterAngleRange: 88.7
-    - _GlitterBias: 0.8
+    - _GlitterAngleRange: 90
+    - _GlitterBias: 0.617
     - _GlitterBrightness: 5.3
     - _GlitterColorMapUV: 0
     - _GlitterContrast: 300
     - _GlitterEnable: 1
-    - _GlitterFrequency: 128
+    - _GlitterFrequency: 256
     - _GlitterJitter: 1
     - _GlitterMaskUV: 0
     - _GlitterMinBrightness: 0.009
     - _GlitterRandomColors: 0
-    - _GlitterSize: 0.156
+    - _GlitterSize: 0.175
     - _GlitterSpeed: 2
     - _GlitterUseSurfaceColor: 0.531
     - _GlossMapScale: 1
@@ -803,7 +803,7 @@ Material:
     - m_start_emission1Options: 0
     - m_start_emissionOptions: 0
     - m_start_flipBook: 0
-    - m_start_glitter: 0
+    - m_start_glitter: 1
     - m_start_glitterRandom: 0
     - m_start_glowInDarkEmissionOptions: 0
     - m_start_glowInDarkEmissionOptions1: 0
