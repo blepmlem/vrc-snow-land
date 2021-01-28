@@ -19,17 +19,29 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _BotTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _GlitterTex:
+        m_Texture: {fileID: 2800000, guid: 6a3722fb933d00a428b1d92267979106, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _GroundTex:
-        m_Texture: {fileID: 2800000, guid: 9d21f9fedcaf4714985ebba215fdcbd4, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 5, y: 5}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Noise1:
+        m_Texture: {fileID: 2800000, guid: 04adfac2018725f43bf17158a3b6991a, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _SnowTex:
-        m_Texture: {fileID: 2800000, guid: 9d21f9fedcaf4714985ebba215fdcbd4, type: 3}
-        m_Scale: {x: 2, y: 2}
+        m_Texture: {fileID: 2800000, guid: e6c845ba4dc42ca45b60613941bea50c, type: 3}
+        m_Scale: {x: 256, y: 256}
         m_Offset: {x: 0, y: 0}
     - _Splat:
         m_Texture: {fileID: 2800000, guid: 14fd892f608efc64491b055e065a022e, type: 3}
@@ -39,16 +51,33 @@ Material:
         m_Texture: {fileID: 8400000, guid: fe6140f9f1fad214ca4a38d3a286fa8c, type: 2}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _TopTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Floats:
     - _Displacement: 0.003
-    - _Glossiness: 0.61
+    - _GlitterThreshold: -0.95
+    - _Glossiness: 1
     - _Metallic: 0
+    - _NormalStrength: 0.037
+    - _OceanSpecularPower: 12.02
+    - _OceanSpecularStrength: 0.7
+    - _TerrainRimPower: 3.67
+    - _TerrainRimStrength: 0.99
     - _Tess: 78
     - _TesselationDistance: 50
-    - _TesselationMaxDistance: 25
+    - _TesselationMaxDistance: 50
     - _TesselationMinDistance: 0
     m_Colors:
+    - _BotColor: {r: 0.6792453, g: 0.6696333, b: 0.6696333, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _GroundColor: {r: 0.8962264, g: 0.89199895, b: 0.89199895, a: 1}
-    - _SnowColor: {r: 1, g: 1, b: 1, a: 1}
+    - _GlitterColor: {r: 3.4415908, g: 3.4415908, b: 3.4415908, a: 1}
+    - _GroundColor: {r: 0.7169812, g: 0.7169812, b: 0.7169812, a: 1}
+    - _OceanSpecularColor: {r: 0.8537736, g: 0.9077642, b: 1, a: 1}
+    - _ShadowColor: {r: 0.29156286, g: 0.4485987, b: 0.6792453, a: 1}
+    - _SnowColor: {r: 0.9669811, g: 0.98745227, b: 1, a: 1}
+    - _TerrainColor: {r: 0.70879316, g: 0.79805464, b: 0.8301887, a: 1}
+    - _TerrainRimColor: {r: 0.8396226, g: 0.8396226, b: 0.8396226, a: 1}
     - _TopCamData: {r: 0, g: 10, b: 0, a: 0.04}
+    - _TopColor: {r: 0.9575472, g: 1, b: 0.9951497, a: 1}

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.03582868, g: 0.08722328, b: 0.15444164, a: 1}
+  m_IndirectSpecularColor: {r: 0.03560915, g: 0.087388806, b: 0.15682441, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -596,7 +596,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!136 &505566846
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -728,7 +728,7 @@ Camera:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 3669815
-  m_RenderingPath: 3
+  m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
   m_TargetEye: 3
@@ -4602,13 +4602,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1024943029}
-  m_LocalRotation: {x: -0.594129, y: 0.687457, z: 0.123542525, w: -0.3989371}
+  m_LocalRotation: {x: 0.28107223, y: -0.011983007, z: -0.017196352, w: 0.9594577}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 17.709002, y: -493.123, z: -793.942}
+  m_LocalEulerAnglesHint: {x: 32.612003, y: -722.222, z: -722.704}
 --- !u!1001 &1138944714
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4684,13 +4684,13 @@ PrefabInstance:
     - target: {fileID: 6759095419728963412, guid: 8894fa7e4588a5c4fab98453e558847d,
         type: 3}
       propertyPath: DynamicMaterials.Array.size
-      value: 5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6759095419728963412, guid: 8894fa7e4588a5c4fab98453e558847d,
         type: 3}
       propertyPath: DynamicMaterials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: f9ad7f96011d6054ab6349218356e7cf, type: 2}
+      objectReference: {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
     - target: {fileID: 6759095419728963412, guid: 8894fa7e4588a5c4fab98453e558847d,
         type: 3}
       propertyPath: ReferenceCamera
@@ -4705,7 +4705,7 @@ PrefabInstance:
         type: 3}
       propertyPath: DynamicMaterials.Array.data[1]
       value: 
-      objectReference: {fileID: 2100000, guid: 74f3d88714e0d3d4d8d4dc70bd8a53d2, type: 2}
+      objectReference: {fileID: 2100000, guid: 2deeb8eb5e3936143b79e26ac4c25ebc, type: 2}
     - target: {fileID: 6759095419728963412, guid: 8894fa7e4588a5c4fab98453e558847d,
         type: 3}
       propertyPath: DynamicMaterials.Array.data[3]
@@ -4784,6 +4784,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: LightThing (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2536220902955541982, guid: 63a3b4beed50b0345aa628284f01a6ab,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 63a3b4beed50b0345aa628284f01a6ab, type: 3}
@@ -5127,6 +5132,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: LightThing (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2536220902955541982, guid: 63a3b4beed50b0345aa628284f01a6ab,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 63a3b4beed50b0345aa628284f01a6ab, type: 3}
 --- !u!1001 &1804438376
@@ -5149,17 +5159,17 @@ PrefabInstance:
     - target: {fileID: 6787363815648893721, guid: 08a2955cd4be5504880e43db2895bedc,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.53
+      value: 28.07
       objectReference: {fileID: 0}
     - target: {fileID: 6787363815648893721, guid: 08a2955cd4be5504880e43db2895bedc,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.7
+      value: -4.05
       objectReference: {fileID: 0}
     - target: {fileID: 6787363815648893721, guid: 08a2955cd4be5504880e43db2895bedc,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.93
+      value: 4.62
       objectReference: {fileID: 0}
     - target: {fileID: 6787363815648893721, guid: 08a2955cd4be5504880e43db2895bedc,
         type: 3}
@@ -5419,6 +5429,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: LightThing (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 2536220902955541982, guid: 63a3b4beed50b0345aa628284f01a6ab,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 63a3b4beed50b0345aa628284f01a6ab, type: 3}
 --- !u!1001 &26277503093569724
@@ -5487,6 +5502,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: LightThing
+      objectReference: {fileID: 0}
+    - target: {fileID: 2536220902955541982, guid: 63a3b4beed50b0345aa628284f01a6ab,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 63a3b4beed50b0345aa628284f01a6ab, type: 3}

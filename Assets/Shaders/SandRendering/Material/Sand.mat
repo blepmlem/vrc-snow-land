@@ -9,7 +9,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: Sand
   m_Shader: {fileID: 4800000, guid: d9f446591c0101d4e8281b97d5caf1bf, type: 3}
-  m_ShaderKeywords: 
+  m_ShaderKeywords: _ISGLITTER_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -81,11 +81,11 @@ Material:
     - _GlitterMutiplyer: 33.75
     - _GlitterRange: 6.26
     - _GlitterShiness: 1
-    - _Glitterness: 3.08
+    - _Glitterness: 9.8
     - _Glossiness: 4
     - _IsDetailNormal: 0
     - _IsDiffuse: 0
-    - _IsGlitter: 0
+    - _IsGlitter: 1
     - _IsGlitterBase: 0
     - _IsGlitterNoise: 0
     - _IsGlitterSurface: 0
@@ -100,7 +100,7 @@ Material:
     - _IsSpecular: 0
     - _OceanSpecularMutiplyer: 0.79
     - _OceanSpecularShiness: 0.77
-    - _Roughness: 0.5
+    - _Roughness: 0.22
     - _ShallowBumpScale: 0.5
     - _SpecularAngle: -2.33
     - _SpecularMutiplyer: 1.56
