@@ -5,7 +5,7 @@
 		_Tess("Tessellation", Range(1,128)) = 4
 		_SnowTex ("Snow (RGB)", 2D) = "white" {}
 		_Splatmap("Splatmap", 2D) = "black" {}
-		_Displacement("Displacement", Range(0, 1.0)) = 0.3
+		_Displacement("Displacement", Range(0, 0.01)) = 0.003
 		[HDR] _TopColor ("Top Color", Color) = (1,1,1,1)
 		_TopTex ("Top (RGB)", 2D) = "white" {}
 		[HDR] _BotColor("Bottom Color", Color) = (1,1,1,1)
@@ -25,6 +25,9 @@
 		[HDR] _TerrainRimColor("TerrainRimColor", Color) = (1,1,1,1)
 		[HDR] _TerrainColor("TerrainColor", Color) = (1,1,1,1)
 		_ShadowColor("ShadowColor", Color) = (1,1,1,1)
+		_ShallowTex("ShallowTex", 2D) = "white" {}
+		_SteepTex("SteepTex", 2D) = "white" {}
+		_SteepnessSharpnessPower("SteepnessSharpnessPower", Float) = 1
 		_TopCamData ("Top Cam Debug", Vector) = (0,0,0,0)		
 	}
 	SubShader {
@@ -82,15 +85,37 @@
 		fixed4 _TopColor;
 		sampler2D _BotTex;
 		fixed4 _BotColor;
-
+		
+		sampler2D _ShallowTex;
+		sampler2D _SteepTex;
+		float4 _ShallowTex_ST;
+		float4 _SteepTex_ST;
+		sampler2D _SnowTex;
+		sampler2D _GlitterTex;
+		float4 _GlitterTex_TexelSize;
+		float _GlitterThreshold;
+		float3 _GlitterColor;
+		float _OceanSpecularPower;
+		float _OceanSpecularStrength;
+		float3 _OceanSpecularColor;
+		float _TerrainRimPower;
+		float _TerrainRimStrength;
+		float3 _TerrainRimColor;
+		float3 _TerrainColor;
+		float3 _ShadowColor;
+		
 		struct Input {
 			float2 uv_TopTex;
 			float2 uv_BotTex;
 			float2 uv_Splatmap;
 			float2 uv_SnowTex;
 			float2 uv_GlitterTex;
+			float2 uv_ShallowTex;
+			float2 uv_SteepTex;
 			float3 worldPos;
 			float3 viewDir;
+			float3 worldNormal;
+			INTERNAL_DATA
 		};
 		
 		struct SurfaceOutputSnow
@@ -138,20 +163,6 @@
 		  fixed4 col2 = tex2Dlod(s, float4(uvParams.xy / (pow(2,mip) * 2), 0, 0));
 		  return lerp(col1, col2, mipLerp);
 		}
-		
-		sampler2D _SnowTex;
-		sampler2D _GlitterTex;
-		float4 _GlitterTex_TexelSize;
-		float _GlitterThreshold;
-		float3 _GlitterColor;
-		float _OceanSpecularPower;
-		float _OceanSpecularStrength;
-		float3 _OceanSpecularColor;
-		float _TerrainRimPower;
-		float _TerrainRimStrength;
-		float3 _TerrainRimColor;
-		float3 _TerrainColor;
-		float3 _ShadowColor;
 		
 		float3 GlitterSpecular (float2 uv, float3 N, float3 L, float3 V)
 		{
@@ -202,14 +213,30 @@
 		    return normalize(lerp(n1, n2, t));
 		}
 		
-		float3 SandNormal (float2 uv, float3 N)
+		float3 SnowNormal (float2 uv, float3 N)
 		{
 		    float3 random = tex2D(_SnowTex, uv).rgb;
 		    float3 S = normalize(random * 2 - 1);
 		    float3 Ns = nlerp(N, S, _NormalStrength);
 		    return Ns;
 		}
+
+		float _SteepnessSharpnessPower;
+
+		float3 RipplesNormal(Input IN, float3 N)
+		{
+			float3 N_WORLD = WorldNormalVector(IN, N);
+			float3 UP_WORLD = float3(0, 1, 0);
+			float steepness = saturate(dot(N_WORLD, UP_WORLD));
+			steepness = pow(steepness, _SteepnessSharpnessPower);
+			float2 uv = N_WORLD.xz;
 			
+			float3 shallow = UnpackNormal(tex2D(_ShallowTex, TRANSFORM_TEX(uv, _ShallowTex)));
+			float3 steep   = UnpackNormal(tex2D(_SteepTex,   TRANSFORM_TEX(uv, _SteepTex)));
+			
+			float3 S = nlerp(steep, shallow, steepness);
+			return S;
+		}
 
 		void surf (Input IN, inout SurfaceOutputSnow o) {
 			
@@ -224,8 +251,14 @@
 			o.snowAmount = amount;
 			o.uv_glitter = IN.uv_GlitterTex;
 			fixed4 c = lerp(snow, ground, amount);
+
+			
 			float3 N = float3(0, 0, 1);
-			N = SandNormal(IN.uv_SnowTex.xy, N);
+			
+			// N = RipplesNormal(IN, N);
+			N = SnowNormal(IN.uv_SnowTex.xy, N);
+
+			
 			o.Albedo = c.rgb;
 			o.Normal = N;
 			// Metallic and smoothness come from slider variables
