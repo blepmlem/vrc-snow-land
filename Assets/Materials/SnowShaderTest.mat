@@ -66,8 +66,8 @@ Material:
     m_Floats:
     - _Displacement: 0.003
     - _GlitterThreshold: -0.95
-    - _Glossiness: 1
-    - _Metallic: 0
+    - _Glossiness: 0
+    - _Metallic: 0.748
     - _NormalStrength: 0.037
     - _OceanSpecularPower: 12.02
     - _OceanSpecularStrength: 0.7
@@ -79,14 +79,14 @@ Material:
     - _TesselationMaxDistance: 50
     - _TesselationMinDistance: 0
     m_Colors:
-    - _BotColor: {r: 0.6792453, g: 0.6696333, b: 0.6696333, a: 1}
+    - _BotColor: {r: 0.6745283, g: 0.6908018, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _GlitterColor: {r: 3.4415908, g: 3.4415908, b: 3.4415908, a: 1}
+    - _GlitterColor: {r: 0.4013897, g: 0.4013897, b: 0.4013897, a: 1}
     - _GroundColor: {r: 0.7169812, g: 0.7169812, b: 0.7169812, a: 1}
-    - _OceanSpecularColor: {r: 0.8537736, g: 0.9077642, b: 1, a: 1}
+    - _OceanSpecularColor: {r: 1, g: 0.98720586, b: 0.85490197, a: 1}
     - _ShadowColor: {r: 0.29156286, g: 0.4485987, b: 0.6792453, a: 1}
     - _SnowColor: {r: 0.9669811, g: 0.98745227, b: 1, a: 1}
     - _TerrainColor: {r: 0.70879316, g: 0.79805464, b: 0.8301887, a: 1}
-    - _TerrainRimColor: {r: 0.8396226, g: 0.8396226, b: 0.8396226, a: 1}
+    - _TerrainRimColor: {r: 1.9280115, g: 1.9280115, b: 1.9280115, a: 1}
     - _TopCamData: {r: 0, g: 10, b: 0, a: 0.04}
     - _TopColor: {r: 0.9575472, g: 1, b: 0.9951497, a: 1}

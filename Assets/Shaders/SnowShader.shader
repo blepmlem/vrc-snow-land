@@ -10,8 +10,8 @@
 		_TopTex ("Top (RGB)", 2D) = "white" {}
 		[HDR] _BotColor("Bottom Color", Color) = (1,1,1,1)
 		_BotTex("Bottom (RGB)", 2D) = "white" {}
-//		_Glossiness ("Smoothness", Range(0,1)) = 0.5
-//		_Metallic ("Metallic", Range(0,1)) = 0
+		_Glossiness ("Smoothness", Range(0,1)) = 0.5
+		_Metallic ("Metallic", Range(0,1)) = 0
 //		_Noise1 ("Noise 1 (RGB)", 2D) = "white" {}
 		_NormalStrength("Normal Strength", Range(0, 1.0)) = 0.3
 		_GlitterTex("GlitterTex", 2D) = "white" {}
@@ -261,27 +261,36 @@
 			
 			o.Albedo = c.rgb;
 			o.Normal = N;
-			// Metallic and smoothness come from slider variables
-			// o.Metallic = _Metallic;
-			// o.Smoothness = _Glossiness;
+			o.Metallic = _Metallic;
+			o.Smoothness = _Glossiness;
 			o.Alpha = c.a;
 		}
 
 		inline void LightingSnow_GI(SurfaceOutputSnow s, UnityGIInput data, inout UnityGI gi)
         {
-#if defined(UNITY_PASS_DEFERRED) && UNITY_ENABLE_REFLECTION_BUFFERS
-    gi = UnityGlobalIllumination(data, s.Occlusion, s.Normal);
-#else
-    Unity_GlossyEnvironmentData g = UnityGlossyEnvironmentSetup(s.Smoothness, data.worldViewDir, s.Normal, lerp(unity_ColorSpaceDielectricSpec.rgb, s.Albedo, s.Metallic));
-    gi = UnityGlobalIllumination(data, s.Occlusion, s.Normal, g);
-#endif
+			#if defined(UNITY_PASS_DEFERRED) && UNITY_ENABLE_REFLECTION_BUFFERS
+			gi = UnityGlobalIllumination(data, s.Occlusion, s.Normal);
+			#else
+			Unity_GlossyEnvironmentData g = UnityGlossyEnvironmentSetup(s.Smoothness, data.worldViewDir, s.Normal, lerp(unity_ColorSpaceDielectricSpec.rgb, s.Albedo, s.Metallic));
+			gi = UnityGlobalIllumination(data, s.Occlusion, s.Normal, g);
+			#endif
         }
 		
-		float4 LightingSnow (SurfaceOutputSnow s, fixed3 viewDir, UnityGI gi)
+		float4 LightingSnow (SurfaceOutputSnow s, half3 viewDir, UnityGI gi)
 		{
-		   // Lighting properties
+			SurfaceOutputStandard ss;
+			ss.Albedo = s.Albedo;
+			ss.Normal = s.Normal;
+			ss.Emission = s.Emission;
+			ss.Metallic = s.Metallic;
+			ss.Smoothness = s.Smoothness;
+			ss.Occlusion = s.Occlusion;
+			ss.Alpha = s.Alpha;
+			
+			float4 c = LightingStandard(ss,viewDir,gi);
+
 		    float3 L = gi.light.dir;
-		    float3 N = s.Normal;
+		    float3 N = ss.Normal;
 		    float3 V = viewDir;
 		 
 		    // Lighting calculation
@@ -295,7 +304,7 @@
 		    float3 color = diffuseColor + specularColor + glitterColor;
 		 
 		    // Final color
-		    return float4(color * s.Albedo, 1);
+		    return float4(color * c, 1);
 		}
 		ENDCG
 	}
