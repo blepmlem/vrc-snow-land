@@ -114,3 +114,6 @@ ProjectSettings/ProBuilderSettings.json
 Assets/Resources/AssetManager/AssetLookup.txt.meta
 Packages/packages-lock.json
 ProjectSettings/Packages/com.unity.probuilder/Settings.json
+
+lfs/*
+hooks/*
