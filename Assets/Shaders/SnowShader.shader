@@ -296,7 +296,7 @@
 		    // Lighting calculation
 		    float3 diffuseColor = DiffuseColor  (N, L);
 		    float3 rimColor     = RimLighting   (N, V);
-		    float3 oceanColor   = OceanSpecular (N, L, V);
+		    float3 oceanColor   = OceanSpecular (N, L, V) ;
 			float3 glitterColor = GlitterSpecular (s.uv_glitter, N, L, V);
  
 		    // Combining
@@ -304,7 +304,7 @@
 		    float3 color = diffuseColor + specularColor + glitterColor;
 		 
 		    // Final color
-		    return float4(color * c, 1);
+		    return float4(color + c, 1);
 		}
 		ENDCG
 	}

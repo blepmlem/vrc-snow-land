@@ -14,7 +14,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4065981810087200224
 Transform:
@@ -83,6 +83,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4065981810087200224}
     m_Modifications:
+    - target: {fileID: 449761900768299514, guid: d05a375fb3fcf6b478ce6afa0a284bec,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 3878948089199295058, guid: d05a375fb3fcf6b478ce6afa0a284bec,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -138,10 +143,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4543213937012258970, guid: d05a375fb3fcf6b478ce6afa0a284bec,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 6876404603834500837, guid: d05a375fb3fcf6b478ce6afa0a284bec,
         type: 3}
       propertyPath: m_Name
       value: Branch w/snow Medium (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6876404603834500837, guid: d05a375fb3fcf6b478ce6afa0a284bec,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d05a375fb3fcf6b478ce6afa0a284bec, type: 3}
@@ -158,10 +173,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4065981810087200224}
     m_Modifications:
+    - target: {fileID: 719452729026272623, guid: 4fdb39395c2a598498f8dc07de88768b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 8468893269038413010, guid: 4fdb39395c2a598498f8dc07de88768b,
         type: 3}
       propertyPath: m_Name
       value: Branch w/snow Small (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8468893269038413010, guid: 4fdb39395c2a598498f8dc07de88768b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 8643042424798528002, guid: 4fdb39395c2a598498f8dc07de88768b,
         type: 3}
@@ -218,6 +243,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8829902051749162325, guid: 4fdb39395c2a598498f8dc07de88768b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4fdb39395c2a598498f8dc07de88768b, type: 3}
 --- !u!4 &9186395298335877019 stripped
@@ -233,10 +263,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4065981810087200224}
     m_Modifications:
+    - target: {fileID: 719452729026272623, guid: 4fdb39395c2a598498f8dc07de88768b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 8468893269038413010, guid: 4fdb39395c2a598498f8dc07de88768b,
         type: 3}
       propertyPath: m_Name
       value: Branch w/snow Small (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8468893269038413010, guid: 4fdb39395c2a598498f8dc07de88768b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 8643042424798528002, guid: 4fdb39395c2a598498f8dc07de88768b,
         type: 3}
@@ -293,6 +333,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8829902051749162325, guid: 4fdb39395c2a598498f8dc07de88768b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4fdb39395c2a598498f8dc07de88768b, type: 3}
 --- !u!4 &8902601245013377032 stripped
@@ -308,10 +353,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4065981810087200224}
     m_Modifications:
+    - target: {fileID: 719452729026272623, guid: 4fdb39395c2a598498f8dc07de88768b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 8468893269038413010, guid: 4fdb39395c2a598498f8dc07de88768b,
         type: 3}
       propertyPath: m_Name
       value: Branch w/snow Small (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8468893269038413010, guid: 4fdb39395c2a598498f8dc07de88768b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 8643042424798528002, guid: 4fdb39395c2a598498f8dc07de88768b,
         type: 3}
@@ -368,6 +423,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8829902051749162325, guid: 4fdb39395c2a598498f8dc07de88768b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4fdb39395c2a598498f8dc07de88768b, type: 3}
 --- !u!4 &8690275650488214006 stripped
@@ -383,10 +443,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4065981810087200224}
     m_Modifications:
+    - target: {fileID: 719452729026272623, guid: 4fdb39395c2a598498f8dc07de88768b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 8468893269038413010, guid: 4fdb39395c2a598498f8dc07de88768b,
         type: 3}
       propertyPath: m_Name
       value: Branch w/snow Small (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8468893269038413010, guid: 4fdb39395c2a598498f8dc07de88768b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 8643042424798528002, guid: 4fdb39395c2a598498f8dc07de88768b,
         type: 3}
@@ -443,6 +513,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8829902051749162325, guid: 4fdb39395c2a598498f8dc07de88768b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4fdb39395c2a598498f8dc07de88768b, type: 3}
 --- !u!4 &7393454901338198581 stripped
@@ -458,6 +533,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4065981810087200224}
     m_Modifications:
+    - target: {fileID: 449761900768299514, guid: d05a375fb3fcf6b478ce6afa0a284bec,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 3878948089199295058, guid: d05a375fb3fcf6b478ce6afa0a284bec,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -513,10 +593,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4543213937012258970, guid: d05a375fb3fcf6b478ce6afa0a284bec,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 6876404603834500837, guid: d05a375fb3fcf6b478ce6afa0a284bec,
         type: 3}
       propertyPath: m_Name
       value: Branch w/snow Medium (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6876404603834500837, guid: d05a375fb3fcf6b478ce6afa0a284bec,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d05a375fb3fcf6b478ce6afa0a284bec, type: 3}
@@ -533,10 +623,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4065981810087200224}
     m_Modifications:
+    - target: {fileID: 719452729026272623, guid: 4fdb39395c2a598498f8dc07de88768b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 8468893269038413010, guid: 4fdb39395c2a598498f8dc07de88768b,
         type: 3}
       propertyPath: m_Name
       value: Branch w/snow Small (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8468893269038413010, guid: 4fdb39395c2a598498f8dc07de88768b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 8643042424798528002, guid: 4fdb39395c2a598498f8dc07de88768b,
         type: 3}
@@ -593,6 +693,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8829902051749162325, guid: 4fdb39395c2a598498f8dc07de88768b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4fdb39395c2a598498f8dc07de88768b, type: 3}
 --- !u!4 &7069216199585887680 stripped
@@ -608,6 +713,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4065981810087200224}
     m_Modifications:
+    - target: {fileID: 449761900768299514, guid: d05a375fb3fcf6b478ce6afa0a284bec,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 3878948089199295058, guid: d05a375fb3fcf6b478ce6afa0a284bec,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -663,10 +773,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4543213937012258970, guid: d05a375fb3fcf6b478ce6afa0a284bec,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 6876404603834500837, guid: d05a375fb3fcf6b478ce6afa0a284bec,
         type: 3}
       propertyPath: m_Name
       value: Branch w/snow Medium (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6876404603834500837, guid: d05a375fb3fcf6b478ce6afa0a284bec,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d05a375fb3fcf6b478ce6afa0a284bec, type: 3}
@@ -683,6 +803,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4065981810087200224}
     m_Modifications:
+    - target: {fileID: 4307502827319466556, guid: 6ba5fc49b2dcf0749819114977a41c3b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4554681247806368368, guid: 6ba5fc49b2dcf0749819114977a41c3b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -738,10 +863,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4704749511390548423, guid: 6ba5fc49b2dcf0749819114977a41c3b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 5118176699357628415, guid: 6ba5fc49b2dcf0749819114977a41c3b,
         type: 3}
       propertyPath: m_Name
       value: Branch w/snow Large (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5118176699357628415, guid: 6ba5fc49b2dcf0749819114977a41c3b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ba5fc49b2dcf0749819114977a41c3b, type: 3}
@@ -758,6 +893,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4065981810087200224}
     m_Modifications:
+    - target: {fileID: 4307502827319466556, guid: 6ba5fc49b2dcf0749819114977a41c3b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4554681247806368368, guid: 6ba5fc49b2dcf0749819114977a41c3b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -813,10 +953,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4704749511390548423, guid: 6ba5fc49b2dcf0749819114977a41c3b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 5118176699357628415, guid: 6ba5fc49b2dcf0749819114977a41c3b,
         type: 3}
       propertyPath: m_Name
       value: Branch w/snow Large
+      objectReference: {fileID: 0}
+    - target: {fileID: 5118176699357628415, guid: 6ba5fc49b2dcf0749819114977a41c3b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ba5fc49b2dcf0749819114977a41c3b, type: 3}
@@ -833,6 +983,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4065981810087200224}
     m_Modifications:
+    - target: {fileID: 449761900768299514, guid: d05a375fb3fcf6b478ce6afa0a284bec,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 3878948089199295058, guid: d05a375fb3fcf6b478ce6afa0a284bec,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -888,10 +1043,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4543213937012258970, guid: d05a375fb3fcf6b478ce6afa0a284bec,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 6876404603834500837, guid: d05a375fb3fcf6b478ce6afa0a284bec,
         type: 3}
       propertyPath: m_Name
       value: Branch w/snow Medium (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6876404603834500837, guid: d05a375fb3fcf6b478ce6afa0a284bec,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d05a375fb3fcf6b478ce6afa0a284bec, type: 3}
@@ -908,6 +1073,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4065981810087200224}
     m_Modifications:
+    - target: {fileID: 449761900768299514, guid: d05a375fb3fcf6b478ce6afa0a284bec,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 3878948089199295058, guid: d05a375fb3fcf6b478ce6afa0a284bec,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -963,10 +1133,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4543213937012258970, guid: d05a375fb3fcf6b478ce6afa0a284bec,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 6876404603834500837, guid: d05a375fb3fcf6b478ce6afa0a284bec,
         type: 3}
       propertyPath: m_Name
       value: Branch w/snow Medium (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6876404603834500837, guid: d05a375fb3fcf6b478ce6afa0a284bec,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d05a375fb3fcf6b478ce6afa0a284bec, type: 3}
@@ -983,6 +1163,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4065981810087200224}
     m_Modifications:
+    - target: {fileID: 4307502827319466556, guid: 6ba5fc49b2dcf0749819114977a41c3b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4554681247806368368, guid: 6ba5fc49b2dcf0749819114977a41c3b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1038,10 +1223,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4704749511390548423, guid: 6ba5fc49b2dcf0749819114977a41c3b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 5118176699357628415, guid: 6ba5fc49b2dcf0749819114977a41c3b,
         type: 3}
       propertyPath: m_Name
       value: Branch w/snow Large (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5118176699357628415, guid: 6ba5fc49b2dcf0749819114977a41c3b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ba5fc49b2dcf0749819114977a41c3b, type: 3}
@@ -1058,10 +1253,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4065981810087200224}
     m_Modifications:
+    - target: {fileID: 719452729026272623, guid: 4fdb39395c2a598498f8dc07de88768b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 8468893269038413010, guid: 4fdb39395c2a598498f8dc07de88768b,
         type: 3}
       propertyPath: m_Name
       value: Branch w/snow Small
+      objectReference: {fileID: 0}
+    - target: {fileID: 8468893269038413010, guid: 4fdb39395c2a598498f8dc07de88768b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 8643042424798528002, guid: 4fdb39395c2a598498f8dc07de88768b,
         type: 3}
@@ -1118,6 +1323,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8829902051749162325, guid: 4fdb39395c2a598498f8dc07de88768b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4fdb39395c2a598498f8dc07de88768b, type: 3}
 --- !u!4 &6875092549793412999 stripped
@@ -1133,6 +1343,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4065981810087200224}
     m_Modifications:
+    - target: {fileID: 4307502827319466556, guid: 6ba5fc49b2dcf0749819114977a41c3b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4554681247806368368, guid: 6ba5fc49b2dcf0749819114977a41c3b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1188,10 +1403,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4704749511390548423, guid: 6ba5fc49b2dcf0749819114977a41c3b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 5118176699357628415, guid: 6ba5fc49b2dcf0749819114977a41c3b,
         type: 3}
       propertyPath: m_Name
       value: Branch w/snow Large (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5118176699357628415, guid: 6ba5fc49b2dcf0749819114977a41c3b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ba5fc49b2dcf0749819114977a41c3b, type: 3}
@@ -1208,6 +1433,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4065981810087200224}
     m_Modifications:
+    - target: {fileID: 449761900768299514, guid: d05a375fb3fcf6b478ce6afa0a284bec,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 3878948089199295058, guid: d05a375fb3fcf6b478ce6afa0a284bec,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1263,10 +1493,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4543213937012258970, guid: d05a375fb3fcf6b478ce6afa0a284bec,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 6876404603834500837, guid: d05a375fb3fcf6b478ce6afa0a284bec,
         type: 3}
       propertyPath: m_Name
       value: Branch w/snow Medium (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6876404603834500837, guid: d05a375fb3fcf6b478ce6afa0a284bec,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d05a375fb3fcf6b478ce6afa0a284bec, type: 3}
@@ -1283,6 +1523,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4065981810087200224}
     m_Modifications:
+    - target: {fileID: 4307502827319466556, guid: 6ba5fc49b2dcf0749819114977a41c3b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4554681247806368368, guid: 6ba5fc49b2dcf0749819114977a41c3b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1338,10 +1583,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4704749511390548423, guid: 6ba5fc49b2dcf0749819114977a41c3b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 5118176699357628415, guid: 6ba5fc49b2dcf0749819114977a41c3b,
         type: 3}
       propertyPath: m_Name
       value: Branch w/snow Large (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5118176699357628415, guid: 6ba5fc49b2dcf0749819114977a41c3b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ba5fc49b2dcf0749819114977a41c3b, type: 3}
@@ -1358,6 +1613,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4065981810087200224}
     m_Modifications:
+    - target: {fileID: 4307502827319466556, guid: 6ba5fc49b2dcf0749819114977a41c3b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4554681247806368368, guid: 6ba5fc49b2dcf0749819114977a41c3b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1413,10 +1673,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4704749511390548423, guid: 6ba5fc49b2dcf0749819114977a41c3b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 5118176699357628415, guid: 6ba5fc49b2dcf0749819114977a41c3b,
         type: 3}
       propertyPath: m_Name
       value: Branch w/snow Large (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5118176699357628415, guid: 6ba5fc49b2dcf0749819114977a41c3b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ba5fc49b2dcf0749819114977a41c3b, type: 3}
@@ -1433,6 +1703,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4065981810087200224}
     m_Modifications:
+    - target: {fileID: 4307502827319466556, guid: 6ba5fc49b2dcf0749819114977a41c3b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4554681247806368368, guid: 6ba5fc49b2dcf0749819114977a41c3b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1488,10 +1763,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4704749511390548423, guid: 6ba5fc49b2dcf0749819114977a41c3b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 5118176699357628415, guid: 6ba5fc49b2dcf0749819114977a41c3b,
         type: 3}
       propertyPath: m_Name
       value: Branch w/snow Large (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5118176699357628415, guid: 6ba5fc49b2dcf0749819114977a41c3b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ba5fc49b2dcf0749819114977a41c3b, type: 3}
@@ -1508,6 +1793,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4065981810087200224}
     m_Modifications:
+    - target: {fileID: 4307502827319466556, guid: 6ba5fc49b2dcf0749819114977a41c3b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4554681247806368368, guid: 6ba5fc49b2dcf0749819114977a41c3b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1563,10 +1853,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4704749511390548423, guid: 6ba5fc49b2dcf0749819114977a41c3b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 5118176699357628415, guid: 6ba5fc49b2dcf0749819114977a41c3b,
         type: 3}
       propertyPath: m_Name
       value: Branch w/snow Large (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5118176699357628415, guid: 6ba5fc49b2dcf0749819114977a41c3b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ba5fc49b2dcf0749819114977a41c3b, type: 3}
@@ -1583,6 +1883,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4065981810087200224}
     m_Modifications:
+    - target: {fileID: 4307502827319466556, guid: 6ba5fc49b2dcf0749819114977a41c3b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4554681247806368368, guid: 6ba5fc49b2dcf0749819114977a41c3b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1638,10 +1943,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4704749511390548423, guid: 6ba5fc49b2dcf0749819114977a41c3b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 5118176699357628415, guid: 6ba5fc49b2dcf0749819114977a41c3b,
         type: 3}
       propertyPath: m_Name
       value: Branch w/snow Large (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5118176699357628415, guid: 6ba5fc49b2dcf0749819114977a41c3b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ba5fc49b2dcf0749819114977a41c3b, type: 3}
@@ -1658,6 +1973,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4065981810087200224}
     m_Modifications:
+    - target: {fileID: 4307502827319466556, guid: 6ba5fc49b2dcf0749819114977a41c3b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4554681247806368368, guid: 6ba5fc49b2dcf0749819114977a41c3b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1713,10 +2033,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4704749511390548423, guid: 6ba5fc49b2dcf0749819114977a41c3b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 5118176699357628415, guid: 6ba5fc49b2dcf0749819114977a41c3b,
         type: 3}
       propertyPath: m_Name
       value: Branch w/snow Large (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5118176699357628415, guid: 6ba5fc49b2dcf0749819114977a41c3b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ba5fc49b2dcf0749819114977a41c3b, type: 3}
@@ -1733,6 +2063,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4065981810087200224}
     m_Modifications:
+    - target: {fileID: 449761900768299514, guid: d05a375fb3fcf6b478ce6afa0a284bec,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 3878948089199295058, guid: d05a375fb3fcf6b478ce6afa0a284bec,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1788,10 +2123,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4543213937012258970, guid: d05a375fb3fcf6b478ce6afa0a284bec,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 6876404603834500837, guid: d05a375fb3fcf6b478ce6afa0a284bec,
         type: 3}
       propertyPath: m_Name
       value: Branch w/snow Medium
+      objectReference: {fileID: 0}
+    - target: {fileID: 6876404603834500837, guid: d05a375fb3fcf6b478ce6afa0a284bec,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d05a375fb3fcf6b478ce6afa0a284bec, type: 3}
@@ -1808,6 +2153,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4065981810087200224}
     m_Modifications:
+    - target: {fileID: 449761900768299514, guid: d05a375fb3fcf6b478ce6afa0a284bec,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 3878948089199295058, guid: d05a375fb3fcf6b478ce6afa0a284bec,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1863,10 +2213,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4543213937012258970, guid: d05a375fb3fcf6b478ce6afa0a284bec,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 6876404603834500837, guid: d05a375fb3fcf6b478ce6afa0a284bec,
         type: 3}
       propertyPath: m_Name
       value: Branch w/snow Medium (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6876404603834500837, guid: d05a375fb3fcf6b478ce6afa0a284bec,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d05a375fb3fcf6b478ce6afa0a284bec, type: 3}
@@ -1883,6 +2243,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4065981810087200224}
     m_Modifications:
+    - target: {fileID: 449761900768299514, guid: d05a375fb3fcf6b478ce6afa0a284bec,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 3878948089199295058, guid: d05a375fb3fcf6b478ce6afa0a284bec,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1938,10 +2303,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4543213937012258970, guid: d05a375fb3fcf6b478ce6afa0a284bec,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 6876404603834500837, guid: d05a375fb3fcf6b478ce6afa0a284bec,
         type: 3}
       propertyPath: m_Name
       value: Branch w/snow Medium (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6876404603834500837, guid: d05a375fb3fcf6b478ce6afa0a284bec,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d05a375fb3fcf6b478ce6afa0a284bec, type: 3}
@@ -1958,10 +2333,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4065981810087200224}
     m_Modifications:
+    - target: {fileID: 719452729026272623, guid: 4fdb39395c2a598498f8dc07de88768b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 8468893269038413010, guid: 4fdb39395c2a598498f8dc07de88768b,
         type: 3}
       propertyPath: m_Name
       value: Branch w/snow Small (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8468893269038413010, guid: 4fdb39395c2a598498f8dc07de88768b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 8643042424798528002, guid: 4fdb39395c2a598498f8dc07de88768b,
         type: 3}
@@ -2018,6 +2403,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8829902051749162325, guid: 4fdb39395c2a598498f8dc07de88768b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4fdb39395c2a598498f8dc07de88768b, type: 3}
 --- !u!4 &4511660622987251448 stripped
@@ -2033,6 +2423,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4065981810087200224}
     m_Modifications:
+    - target: {fileID: 449761900768299514, guid: d05a375fb3fcf6b478ce6afa0a284bec,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 3878948089199295058, guid: d05a375fb3fcf6b478ce6afa0a284bec,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2088,10 +2483,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4543213937012258970, guid: d05a375fb3fcf6b478ce6afa0a284bec,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 6876404603834500837, guid: d05a375fb3fcf6b478ce6afa0a284bec,
         type: 3}
       propertyPath: m_Name
       value: Branch w/snow Medium (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6876404603834500837, guid: d05a375fb3fcf6b478ce6afa0a284bec,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d05a375fb3fcf6b478ce6afa0a284bec, type: 3}
@@ -2108,10 +2513,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4065981810087200224}
     m_Modifications:
+    - target: {fileID: 719452729026272623, guid: 4fdb39395c2a598498f8dc07de88768b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 8468893269038413010, guid: 4fdb39395c2a598498f8dc07de88768b,
         type: 3}
       propertyPath: m_Name
       value: Branch w/snow Small (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8468893269038413010, guid: 4fdb39395c2a598498f8dc07de88768b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 8643042424798528002, guid: 4fdb39395c2a598498f8dc07de88768b,
         type: 3}
@@ -2168,6 +2583,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8829902051749162325, guid: 4fdb39395c2a598498f8dc07de88768b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4fdb39395c2a598498f8dc07de88768b, type: 3}
 --- !u!4 &4162899557268432542 stripped
@@ -2183,10 +2603,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4065981810087200224}
     m_Modifications:
+    - target: {fileID: 719452729026272623, guid: 4fdb39395c2a598498f8dc07de88768b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 8468893269038413010, guid: 4fdb39395c2a598498f8dc07de88768b,
         type: 3}
       propertyPath: m_Name
       value: Branch w/snow Small (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8468893269038413010, guid: 4fdb39395c2a598498f8dc07de88768b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 8643042424798528002, guid: 4fdb39395c2a598498f8dc07de88768b,
         type: 3}
@@ -2243,6 +2673,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8829902051749162325, guid: 4fdb39395c2a598498f8dc07de88768b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4fdb39395c2a598498f8dc07de88768b, type: 3}
 --- !u!4 &2745658652097917973 stripped
@@ -2258,10 +2693,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4065981810087200224}
     m_Modifications:
+    - target: {fileID: 719452729026272623, guid: 4fdb39395c2a598498f8dc07de88768b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 8468893269038413010, guid: 4fdb39395c2a598498f8dc07de88768b,
         type: 3}
       propertyPath: m_Name
       value: Branch w/snow Small (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8468893269038413010, guid: 4fdb39395c2a598498f8dc07de88768b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 8643042424798528002, guid: 4fdb39395c2a598498f8dc07de88768b,
         type: 3}
@@ -2318,6 +2763,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8829902051749162325, guid: 4fdb39395c2a598498f8dc07de88768b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4fdb39395c2a598498f8dc07de88768b, type: 3}
 --- !u!4 &2705244916095421531 stripped
@@ -2333,10 +2783,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4065981810087200224}
     m_Modifications:
+    - target: {fileID: 719452729026272623, guid: 4fdb39395c2a598498f8dc07de88768b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 8468893269038413010, guid: 4fdb39395c2a598498f8dc07de88768b,
         type: 3}
       propertyPath: m_Name
       value: Branch w/snow Small (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8468893269038413010, guid: 4fdb39395c2a598498f8dc07de88768b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 8643042424798528002, guid: 4fdb39395c2a598498f8dc07de88768b,
         type: 3}
@@ -2393,6 +2853,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8829902051749162325, guid: 4fdb39395c2a598498f8dc07de88768b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4fdb39395c2a598498f8dc07de88768b, type: 3}
 --- !u!4 &2422512821804519671 stripped
@@ -2408,10 +2873,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4065981810087200224}
     m_Modifications:
+    - target: {fileID: 719452729026272623, guid: 4fdb39395c2a598498f8dc07de88768b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 8468893269038413010, guid: 4fdb39395c2a598498f8dc07de88768b,
         type: 3}
       propertyPath: m_Name
       value: Branch w/snow Small (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8468893269038413010, guid: 4fdb39395c2a598498f8dc07de88768b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 8643042424798528002, guid: 4fdb39395c2a598498f8dc07de88768b,
         type: 3}
@@ -2468,6 +2943,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8829902051749162325, guid: 4fdb39395c2a598498f8dc07de88768b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4fdb39395c2a598498f8dc07de88768b, type: 3}
 --- !u!4 &2377093971914618114 stripped
@@ -2483,10 +2963,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4065981810087200224}
     m_Modifications:
+    - target: {fileID: 719452729026272623, guid: 4fdb39395c2a598498f8dc07de88768b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 8468893269038413010, guid: 4fdb39395c2a598498f8dc07de88768b,
         type: 3}
       propertyPath: m_Name
       value: Branch w/snow Small (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8468893269038413010, guid: 4fdb39395c2a598498f8dc07de88768b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 8643042424798528002, guid: 4fdb39395c2a598498f8dc07de88768b,
         type: 3}
@@ -2543,6 +3033,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8829902051749162325, guid: 4fdb39395c2a598498f8dc07de88768b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4fdb39395c2a598498f8dc07de88768b, type: 3}
 --- !u!4 &3187922973169360538 stripped
@@ -2558,10 +3053,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4065981810087200224}
     m_Modifications:
+    - target: {fileID: 719452729026272623, guid: 4fdb39395c2a598498f8dc07de88768b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 8468893269038413010, guid: 4fdb39395c2a598498f8dc07de88768b,
         type: 3}
       propertyPath: m_Name
       value: Branch w/snow Small (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8468893269038413010, guid: 4fdb39395c2a598498f8dc07de88768b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 8643042424798528002, guid: 4fdb39395c2a598498f8dc07de88768b,
         type: 3}
@@ -2618,6 +3123,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8829902051749162325, guid: 4fdb39395c2a598498f8dc07de88768b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4fdb39395c2a598498f8dc07de88768b, type: 3}
 --- !u!4 &1517379085177571571 stripped
@@ -2633,6 +3143,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4065981810087200224}
     m_Modifications:
+    - target: {fileID: 4307502827319466556, guid: 6ba5fc49b2dcf0749819114977a41c3b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4554681247806368368, guid: 6ba5fc49b2dcf0749819114977a41c3b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2688,10 +3203,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4704749511390548423, guid: 6ba5fc49b2dcf0749819114977a41c3b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 5118176699357628415, guid: 6ba5fc49b2dcf0749819114977a41c3b,
         type: 3}
       propertyPath: m_Name
       value: Branch w/snow Large (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5118176699357628415, guid: 6ba5fc49b2dcf0749819114977a41c3b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ba5fc49b2dcf0749819114977a41c3b, type: 3}
@@ -2708,6 +3233,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4065981810087200224}
     m_Modifications:
+    - target: {fileID: 449761900768299514, guid: d05a375fb3fcf6b478ce6afa0a284bec,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 3878948089199295058, guid: d05a375fb3fcf6b478ce6afa0a284bec,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2763,10 +3293,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4543213937012258970, guid: d05a375fb3fcf6b478ce6afa0a284bec,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 6876404603834500837, guid: d05a375fb3fcf6b478ce6afa0a284bec,
         type: 3}
       propertyPath: m_Name
       value: Branch w/snow Medium (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6876404603834500837, guid: d05a375fb3fcf6b478ce6afa0a284bec,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d05a375fb3fcf6b478ce6afa0a284bec, type: 3}
@@ -2783,6 +3323,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4065981810087200224}
     m_Modifications:
+    - target: {fileID: 4307502827319466556, guid: 6ba5fc49b2dcf0749819114977a41c3b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4554681247806368368, guid: 6ba5fc49b2dcf0749819114977a41c3b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2838,10 +3383,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4704749511390548423, guid: 6ba5fc49b2dcf0749819114977a41c3b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 5118176699357628415, guid: 6ba5fc49b2dcf0749819114977a41c3b,
         type: 3}
       propertyPath: m_Name
       value: Branch w/snow Large (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5118176699357628415, guid: 6ba5fc49b2dcf0749819114977a41c3b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ba5fc49b2dcf0749819114977a41c3b, type: 3}
@@ -2858,10 +3413,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4065981810087200224}
     m_Modifications:
+    - target: {fileID: 719452729026272623, guid: 4fdb39395c2a598498f8dc07de88768b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 8468893269038413010, guid: 4fdb39395c2a598498f8dc07de88768b,
         type: 3}
       propertyPath: m_Name
       value: Branch w/snow Small (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8468893269038413010, guid: 4fdb39395c2a598498f8dc07de88768b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 8643042424798528002, guid: 4fdb39395c2a598498f8dc07de88768b,
         type: 3}
@@ -2918,6 +3483,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8829902051749162325, guid: 4fdb39395c2a598498f8dc07de88768b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4fdb39395c2a598498f8dc07de88768b, type: 3}
 --- !u!4 &2268649234445479139 stripped
@@ -2933,6 +3503,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4065981810087200224}
     m_Modifications:
+    - target: {fileID: 449761900768299514, guid: d05a375fb3fcf6b478ce6afa0a284bec,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 3878948089199295058, guid: d05a375fb3fcf6b478ce6afa0a284bec,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2988,10 +3563,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4543213937012258970, guid: d05a375fb3fcf6b478ce6afa0a284bec,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 6876404603834500837, guid: d05a375fb3fcf6b478ce6afa0a284bec,
         type: 3}
       propertyPath: m_Name
       value: Branch w/snow Medium (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6876404603834500837, guid: d05a375fb3fcf6b478ce6afa0a284bec,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d05a375fb3fcf6b478ce6afa0a284bec, type: 3}
@@ -3008,6 +3593,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4065981810087200224}
     m_Modifications:
+    - target: {fileID: 449761900768299514, guid: d05a375fb3fcf6b478ce6afa0a284bec,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 3878948089199295058, guid: d05a375fb3fcf6b478ce6afa0a284bec,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3063,10 +3653,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4543213937012258970, guid: d05a375fb3fcf6b478ce6afa0a284bec,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 6876404603834500837, guid: d05a375fb3fcf6b478ce6afa0a284bec,
         type: 3}
       propertyPath: m_Name
       value: Branch w/snow Medium (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6876404603834500837, guid: d05a375fb3fcf6b478ce6afa0a284bec,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d05a375fb3fcf6b478ce6afa0a284bec, type: 3}
@@ -3083,6 +3683,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4065981810087200224}
     m_Modifications:
+    - target: {fileID: 449761900768299514, guid: d05a375fb3fcf6b478ce6afa0a284bec,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 3878948089199295058, guid: d05a375fb3fcf6b478ce6afa0a284bec,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3138,10 +3743,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4543213937012258970, guid: d05a375fb3fcf6b478ce6afa0a284bec,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 6876404603834500837, guid: d05a375fb3fcf6b478ce6afa0a284bec,
         type: 3}
       propertyPath: m_Name
       value: Branch w/snow Medium (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6876404603834500837, guid: d05a375fb3fcf6b478ce6afa0a284bec,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d05a375fb3fcf6b478ce6afa0a284bec, type: 3}
@@ -3158,6 +3773,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4065981810087200224}
     m_Modifications:
+    - target: {fileID: 449761900768299514, guid: d05a375fb3fcf6b478ce6afa0a284bec,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 3878948089199295058, guid: d05a375fb3fcf6b478ce6afa0a284bec,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3213,10 +3833,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4543213937012258970, guid: d05a375fb3fcf6b478ce6afa0a284bec,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 6876404603834500837, guid: d05a375fb3fcf6b478ce6afa0a284bec,
         type: 3}
       propertyPath: m_Name
       value: Branch w/snow Medium (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6876404603834500837, guid: d05a375fb3fcf6b478ce6afa0a284bec,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d05a375fb3fcf6b478ce6afa0a284bec, type: 3}
@@ -3233,6 +3863,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4065981810087200224}
     m_Modifications:
+    - target: {fileID: 449761900768299514, guid: d05a375fb3fcf6b478ce6afa0a284bec,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 3878948089199295058, guid: d05a375fb3fcf6b478ce6afa0a284bec,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3288,10 +3923,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4543213937012258970, guid: d05a375fb3fcf6b478ce6afa0a284bec,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 6876404603834500837, guid: d05a375fb3fcf6b478ce6afa0a284bec,
         type: 3}
       propertyPath: m_Name
       value: Branch w/snow Medium (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6876404603834500837, guid: d05a375fb3fcf6b478ce6afa0a284bec,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d05a375fb3fcf6b478ce6afa0a284bec, type: 3}
@@ -3311,6 +3956,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 4c5ba16027426dc4891053eecaa9e1f2, type: 3}
       propertyPath: m_Name
       value: Model_pinetree_trunk
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 4c5ba16027426dc4891053eecaa9e1f2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 4c5ba16027426dc4891053eecaa9e1f2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3375,6 +4024,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4065981810087200224}
     m_Modifications:
+    - target: {fileID: 449761900768299514, guid: d05a375fb3fcf6b478ce6afa0a284bec,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 3878948089199295058, guid: d05a375fb3fcf6b478ce6afa0a284bec,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3430,10 +4084,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4543213937012258970, guid: d05a375fb3fcf6b478ce6afa0a284bec,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 6876404603834500837, guid: d05a375fb3fcf6b478ce6afa0a284bec,
         type: 3}
       propertyPath: m_Name
       value: Branch w/snow Medium (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6876404603834500837, guid: d05a375fb3fcf6b478ce6afa0a284bec,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d05a375fb3fcf6b478ce6afa0a284bec, type: 3}
@@ -3450,6 +4114,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4065981810087200224}
     m_Modifications:
+    - target: {fileID: 4307502827319466556, guid: 6ba5fc49b2dcf0749819114977a41c3b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4554681247806368368, guid: 6ba5fc49b2dcf0749819114977a41c3b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3505,10 +4174,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4704749511390548423, guid: 6ba5fc49b2dcf0749819114977a41c3b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 5118176699357628415, guid: 6ba5fc49b2dcf0749819114977a41c3b,
         type: 3}
       propertyPath: m_Name
       value: Branch w/snow Large (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5118176699357628415, guid: 6ba5fc49b2dcf0749819114977a41c3b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ba5fc49b2dcf0749819114977a41c3b, type: 3}

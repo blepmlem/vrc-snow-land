@@ -104,6 +104,7 @@ GameObject:
   - component: {fileID: 6835119554179868123}
   - component: {fileID: 6835119554179868121}
   - component: {fileID: 3691326812030911161}
+  - component: {fileID: 8979570172458621290}
   m_Layer: 13
   m_Name: Snowboard
   m_TagString: Untagged
@@ -199,3 +200,16 @@ MonoBehaviour:
   currentlyHeldBy: {fileID: 0}
   pickupable: 1
   proximity: 5
+--- !u!135 &8979570172458621290
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6835119554179868126}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.9
+  m_Center: {x: 0, y: 0, z: 0}
