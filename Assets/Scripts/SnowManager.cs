@@ -19,9 +19,15 @@ public class SnowManager : UdonSharpBehaviour
     private VRCPlayerApi[] _players = new VRCPlayerApi[32];
     private Transform[] _trackers = new Transform[32];
     private readonly int TopCamData = Shader.PropertyToID("_TopCamData");
+    public readonly int GlitterColor = Shader.PropertyToID("_GlitterColor");
+    public readonly int TerrainRimColor = Shader.PropertyToID("_TerrainRimColor");
+    public readonly int TerrainColor = Shader.PropertyToID("_TerrainColor");
 
+    public Material SnowMaterial;
+    
     void Start()
     {
+        SnowMaterial = _snowPlane.material;
         Add(Networking.LocalPlayer);
     }
 
@@ -51,6 +57,10 @@ public class SnowManager : UdonSharpBehaviour
 
     private void Update()
     {
+        #if UNITY_EDITOR
+        return;
+        #endif
+        
         for (var i = 0; i < _players.Length; i++)
         {
             var player = _players[i];
@@ -77,5 +87,13 @@ public class SnowManager : UdonSharpBehaviour
                 return;
             }
         }
+    }
+
+    public void SetSnowData(Weather weather)
+    {
+        var mat = _snowPlane.material;
+        mat.SetColor(GlitterColor, weather.SnowGlitter);
+        mat.SetColor(TerrainRimColor, weather.SnowRim);
+        mat.SetColor(TerrainColor, weather.TerrainColor);
     }
 }
