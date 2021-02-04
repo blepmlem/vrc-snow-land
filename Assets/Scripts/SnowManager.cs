@@ -57,7 +57,7 @@ public class SnowManager : UdonSharpBehaviour
 
     private void Update()
     {
-        #if UNITY_EDITOR
+        #if !UDONSHARP_COMPILER && UNITY_EDITOR
         return;
         #endif
         

@@ -60,7 +60,7 @@ public class WeatherManager : UdonSharpBehaviour
 
     private void Update()
     {
-        #if UNITY_EDITOR
+        #if !UDONSHARP_COMPILER && UNITY_EDITOR
         _transitionSpeed = 1 / _transitionDuration + Mathf.Epsilon;
         #endif
         

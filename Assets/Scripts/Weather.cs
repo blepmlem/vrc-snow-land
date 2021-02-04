@@ -47,7 +47,7 @@ public class Weather : UdonSharpBehaviour
 	{
 		SunColor = Color.Lerp(SunColor, w.SunColor, t);
 		SunIntensity = Mathf.Lerp(SunIntensity, w.SunIntensity, t);
-		SunAngle = Vector3.Lerp(SunAngle, w.SunAngle, t);
+		SunAngle = Vector3.Slerp(SunAngle, w.SunAngle, t);
 		SnowRim = Color.Lerp(SnowRim, w.SnowRim, t);
 		SnowGlitter = Color.Lerp(SnowGlitter, w.SnowGlitter, t);
 		TerrainColor = Color.Lerp(TerrainColor, w.TerrainColor, t);
