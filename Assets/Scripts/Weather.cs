@@ -43,19 +43,19 @@ public class Weather : UdonSharpBehaviour
 		SkyExposure = w.SkyExposure;
 	}
 
-	public void MoveTowards(Weather w, float delta)
+	public void Lerp(Weather w, float t)
 	{
-		SunColor = MoveTowardsRGB(SunColor, w.SunColor, delta);
-		SunIntensity = Mathf.MoveTowards(SunIntensity, w.SunIntensity, delta * 1000);
-		SunAngle = Vector3.MoveTowards(SunAngle, w.SunAngle, delta * 1000);
-		SnowRim = MoveTowardsRGB(SnowRim, w.SnowRim, delta);
-		SnowGlitter = MoveTowardsRGB(SnowGlitter, w.SnowGlitter, delta);
-		TerrainColor = MoveTowardsRGB(TerrainColor, w.TerrainColor, delta);
+		SunColor = Color.Lerp(SunColor, w.SunColor, t);
+		SunIntensity = Mathf.Lerp(SunIntensity, w.SunIntensity, t);
+		SunAngle = Vector3.Lerp(SunAngle, w.SunAngle, t);
+		SnowRim = Color.Lerp(SnowRim, w.SnowRim, t);
+		SnowGlitter = Color.Lerp(SnowGlitter, w.SnowGlitter, t);
+		TerrainColor = Color.Lerp(TerrainColor, w.TerrainColor, t);
 		
-		SkyTint = MoveTowardsRGB(SkyTint, w.SkyTint, delta);
-		SkyGroundTint = MoveTowardsRGB(SkyGroundTint, w.SkyGroundTint, delta);
-		SkyAtmosphereThickness = Mathf.MoveTowards(SkyAtmosphereThickness, w.SkyAtmosphereThickness, delta * 100);
-		SkyExposure = Mathf.MoveTowards(SkyExposure, w.SkyExposure, delta * 100);
+		SkyTint = Color.Lerp(SkyTint, w.SkyTint, t);
+		SkyGroundTint = Color.Lerp(SkyGroundTint, w.SkyGroundTint, t);
+		SkyAtmosphereThickness = Mathf.Lerp(SkyAtmosphereThickness, w.SkyAtmosphereThickness, t);
+		SkyExposure = Mathf.Lerp(SkyExposure, w.SkyExposure, t);
 	}
 	
 	private Color MoveTowardsRGB(Color a, Color b, float delta)

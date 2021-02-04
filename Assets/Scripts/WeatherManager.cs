@@ -1,5 +1,6 @@
 ﻿
 using System;
+using System.Linq;
 using UdonSharp;
 using UnityEngine;
 using VRC.SDKBase;
@@ -17,13 +18,9 @@ public class WeatherManager : UdonSharpBehaviour
     private Light _directionalLight;
 
     [SerializeField]
-    private float _timeOfDay;
-
-    [SerializeField]
     private int _targetWeatherIndex;
-
-    [SerializeField]
-    private Weather[] _weatherTemplates;
+    
+    
 
     [SerializeField]
     private Weather _internalWeather;
@@ -32,8 +29,13 @@ public class WeatherManager : UdonSharpBehaviour
     private Weather _internalTargetWeather;
 
     [SerializeField]
-    private float _transitionSpeed = 2;
+    private float _transitionDuration = 5;
+    
+    [SerializeField]
+    private float _t = -1;
 
+    private float _transitionSpeed;
+    private Weather[] _weatherTemplates;
     private Material _skyBox;
 
     private readonly int SkyTint = Shader.PropertyToID("_SkyTint");
@@ -43,6 +45,14 @@ public class WeatherManager : UdonSharpBehaviour
 
     private void Start()
     {
+        var allWeather = GetComponentsInChildren<Weather>();
+        _weatherTemplates = new Weather[allWeather.Length - 2];
+        for (var i = 2; i < allWeather.Length; i++)
+        {
+            _weatherTemplates[i - 2] = allWeather[i];
+        }
+        
+        _transitionSpeed = 1 / _transitionDuration + Mathf.Epsilon;
         _skyBox = RenderSettings.skybox;
         _internalWeather.Set(_weatherTemplates[_targetWeatherIndex]);
         _internalTargetWeather.Set(_internalWeather);
@@ -50,8 +60,23 @@ public class WeatherManager : UdonSharpBehaviour
 
     private void Update()
     {
-       _internalWeather.MoveTowards(_internalTargetWeather, Time.deltaTime * _transitionSpeed);
-       UpdateWeatherSystems(_internalWeather);
+        #if UNITY_EDITOR
+        _transitionSpeed = 1 / _transitionDuration + Mathf.Epsilon;
+        #endif
+        
+        if (_t < 0)
+        {
+            return;
+        }
+            
+        _t = Mathf.MoveTowards(_t , 1, Time.deltaTime * _transitionSpeed);
+        _internalWeather.Lerp(_internalTargetWeather, _transitionSpeed);
+        UpdateWeatherSystems(_internalWeather);
+
+        if (_t >= 1)
+        {
+            _t = -1;
+        }
     }
 
     [ContextMenu("Set Weather Debug")]
@@ -63,12 +88,13 @@ public class WeatherManager : UdonSharpBehaviour
             _targetWeatherIndex = 0;
         }
 
-        _internalTargetWeather.Set(_weatherTemplates[_targetWeatherIndex]);
+        SetWeather(_weatherTemplates[_targetWeatherIndex]);
     }
 
     public void SetWeather(Weather w)
     {
         _internalTargetWeather.Set(w);
+        _t = 0;
     }
     
     private void UpdateWeatherSystems(Weather w)
