@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c333ccfdd0cbdbc4ca30cef2dd6e6b9b, type: 3}
   m_Name: Shader Feeder Udon C# Program Asset
   m_EditorClassIdentifier: 
-  serializedUdonProgramAsset: {fileID: 11400000, guid: afa7062fed6f8264181e23701bddfb44,
+  serializedUdonProgramAsset: {fileID: 11400000, guid: 6ff90c5e268fcf84d99dd1873ce0c025,
     type: 2}
   udonAssembly: 
   assemblyError: 
