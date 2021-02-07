@@ -5,7 +5,6 @@ using UdonSharp;
 using UnityEngine;
 using VRC.SDKBase;
 using VRC.Udon;
-using VRC.Udon.Common.Interfaces;
 
 public class WeatherManager : UdonSharpBehaviour
 {
@@ -18,9 +17,11 @@ public class WeatherManager : UdonSharpBehaviour
     [SerializeField]
     private Light _directionalLight;
 
-    [SerializeField, UdonSynced()]
+    [SerializeField]
     private int _targetWeatherIndex;
     
+    
+
     [SerializeField]
     private Weather _internalWeather;
 
@@ -79,7 +80,7 @@ public class WeatherManager : UdonSharpBehaviour
     }
 
     [ContextMenu("Set Weather Debug")]
-    public void SetNextWeather()
+    public void SetWeatherDebug()
     {
         _targetWeatherIndex++;
         if (_targetWeatherIndex > _weatherTemplates.Length - 1)
@@ -87,15 +88,10 @@ public class WeatherManager : UdonSharpBehaviour
             _targetWeatherIndex = 0;
         }
 
-        SendCustomNetworkEvent(NetworkEventTarget.All, nameof(SetWeather));
+        SetWeather(_weatherTemplates[_targetWeatherIndex]);
     }
 
-    public void SetWeather()
-    {
-        SetWeatherInternal(_weatherTemplates[_targetWeatherIndex]);
-    }
-    
-    public void SetWeatherInternal(Weather w)
+    public void SetWeather(Weather w)
     {
         _internalTargetWeather.Set(w);
         _t = 0;

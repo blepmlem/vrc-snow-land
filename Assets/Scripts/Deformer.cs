@@ -1,4 +1,6 @@
-﻿using UdonSharp;
+﻿using System;
+using UdonSharp;
+using UdonSharpEditor;
 using UnityEngine;
 using VRC.SDKBase;
 
