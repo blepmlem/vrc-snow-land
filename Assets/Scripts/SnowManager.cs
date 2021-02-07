@@ -17,23 +17,17 @@ public class SnowManager : UdonSharpBehaviour
     private float _camOffset = 50;
     
     private VRCPlayerApi[] _players = new VRCPlayerApi[32];
-    [SerializeField]
-    private Deformer[] _trackers;
-    
+    private Transform[] _trackers = new Transform[32];
     private readonly int TopCamData = Shader.PropertyToID("_TopCamData");
     public readonly int GlitterColor = Shader.PropertyToID("_GlitterColor");
     public readonly int TerrainRimColor = Shader.PropertyToID("_TerrainRimColor");
     public readonly int TerrainColor = Shader.PropertyToID("_TerrainColor");
 
-    private Material _snowMaterial;
+    public Material SnowMaterial;
     
     void Start()
     {
-        _snowMaterial = _snowPlane.material;
-        foreach (var deformer in _trackers)
-        {
-            deformer.enabled = false;
-        }
+        SnowMaterial = _snowPlane.material;
         Add(Networking.LocalPlayer);
     }
 
@@ -55,9 +49,7 @@ public class SnowManager : UdonSharpBehaviour
             if (_players[i] == player)
             {
                 _players[i] = null;
-                _trackers[i].Player = null;
-                _trackers[i].enabled = false;
-                //Repool trackers eventually
+                // _trackers[i] = VRCInstantiate(_tracker).transform;
                 return;
             }
         }
@@ -74,7 +66,7 @@ public class SnowManager : UdonSharpBehaviour
             var player = _players[i];
             if (player != null)
             {
-                _trackers[i].transform.position = player.GetPosition();
+                _trackers[i].position = player.GetPosition() - (Vector3.up * 10);
             }
         }
         
@@ -91,10 +83,7 @@ public class SnowManager : UdonSharpBehaviour
             if (_players[i] == null)
             {
                 _players[i] = p;
-                var tracker = VRCInstantiate(_tracker.gameObject).GetComponent<Deformer>();
-                tracker.Player = p;
-                tracker.enabled = true;
-                _trackers[i] = tracker;
+                _trackers[i] = VRCInstantiate(_tracker).transform;
                 return;
             }
         }
