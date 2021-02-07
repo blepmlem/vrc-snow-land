@@ -1,5 +1,5 @@
 09c07045a418a0f44b91e429392fc523:=Toon/Lit Snow Buildup
-0000000000000000f000000000000000:=Standard
+0000000000000000f000000000000000:=Particles/Standard Unlit
 c22777d6e868e4f2fb421913386b154e:=ProBuilder/Standard Vertex Color
 eae9c11350249284e8400a100179e0b2:=Standard
 f6538a28f14e373459169053ad803793:=Toon/Lit Ice VertexColor Tessellated
@@ -32,14 +32,14 @@ a91a23057bad71548b4dd5ebe167b19b:=.poiyomi/Toon/Cutout
 08254d40be1b9f84faeaf91f82226fd4:=.poiyomi/Toon/Cutout
 74f3d88714e0d3d4d8d4dc70bd8a53d2:=.poiyomi/Toon/Opaque
 f9ad7f96011d6054ab6349218356e7cf:=.poiyomi/Toon/Opaque
-3febc0165a8dcff41b7f70d7b48178f1:=.poiyomi/Toon/Cutout
+3febc0165a8dcff41b7f70d7b48178f1:=Mobile/Particles/Alpha Blended
 10b2cc2d531a6f84eb975fd25b11d22f:=Mobile/Skybox
 23b259f397d2c29409131b22b4feb3cc:=Mobile/Particles/Alpha Blended
 c35ed7efd0790ca448b92ba2acb0837d:=Standard
 3313cae1b171afe49aaad92726f687e5:=Standard
 fce794162af13f04287902cfdf70cc08:=Standard
 e4278010fb001774eaa66ac5792ff63e:=.poiyomi/Toon/Opaque
-1276d111409d43a4491403c456ec0b49:=Standard
+1276d111409d43a4491403c456ec0b49:=.poiyomi/Toon/Opaque
 a2a94e4313823fe40b35b99b501dc218:=Standard
 4c5ba16027426dc4891053eecaa9e1f2:=Standard
 a88a93dd8abf2bc41a12a4b7358e7648:=Standard
@@ -51,5 +51,8 @@ c180ab37d899b8c44bd498cb513efa1a:=Standard
 :=Custom/SnowShader
 
 
+
 :=Custom/SnowShader
 12d0e91a0690686469d41809c219f981:=Standard
+8221915f57a5d904ca3c603f2cda02be:=Standard
+c0a857098ca57b74aa43c634f2b67a8d:=Unlit/Color
