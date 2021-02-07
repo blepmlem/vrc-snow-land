@@ -5,6 +5,7 @@ using UdonSharp;
 using UnityEngine;
 using VRC.SDKBase;
 using VRC.Udon;
+using VRC.Udon.Common.Interfaces;
 
 public class WeatherManager : UdonSharpBehaviour
 {
@@ -20,7 +21,8 @@ public class WeatherManager : UdonSharpBehaviour
     [SerializeField]
     private int _targetWeatherIndex;
     
-    
+    [UdonSynced]
+    private int _targetWeatherIndexSynced;
 
     [SerializeField]
     private Weather _internalWeather;
@@ -78,9 +80,13 @@ public class WeatherManager : UdonSharpBehaviour
             _t = -1;
         }
     }
-
-    [ContextMenu("Set Weather Debug")]
-    public void SetWeatherDebug()
+    
+    public void SetNextWeather()
+    {
+        SendCustomNetworkEvent(NetworkEventTarget.Owner, nameof(SetNextWeather_OWNER));
+    }
+    
+    public void SetNextWeather_OWNER()
     {
         _targetWeatherIndex++;
         if (_targetWeatherIndex > _weatherTemplates.Length - 1)
@@ -88,10 +94,20 @@ public class WeatherManager : UdonSharpBehaviour
             _targetWeatherIndex = 0;
         }
 
-        SetWeather(_weatherTemplates[_targetWeatherIndex]);
+        _targetWeatherIndexSynced = _targetWeatherIndex;
+        SetWeatherInternal(_weatherTemplates[_targetWeatherIndex]);
     }
 
-    public void SetWeather(Weather w)
+    public override void OnDeserialization()
+    {
+        if (_targetWeatherIndexSynced != _targetWeatherIndex)
+        {
+            _targetWeatherIndex = _targetWeatherIndexSynced;
+            SetWeatherInternal(_weatherTemplates[_targetWeatherIndex]);
+        }
+    }
+
+    public void SetWeatherInternal(Weather w)
     {
         _internalTargetWeather.Set(w);
         _t = 0;
