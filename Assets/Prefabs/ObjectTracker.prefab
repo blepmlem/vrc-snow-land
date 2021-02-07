@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1832424381653767852}
   m_Layer: 0
-  m_Name: Tracker
+  m_Name: ObjectTracker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27,7 +27,7 @@ Transform:
   m_LocalPosition: {x: 2.3642328, y: -1.4497287, z: 11.080724}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 2561459790342397407}
+  - {fileID: 2561459790342397416}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -42,6 +42,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Particles
+      objectReference: {fileID: 0}
+    - target: {fileID: 2843355073553626522, guid: 08a2955cd4be5504880e43db2895bedc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 22
       objectReference: {fileID: 0}
     - target: {fileID: 6787363815648893721, guid: 08a2955cd4be5504880e43db2895bedc,
         type: 3}
@@ -101,7 +106,7 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 7199753030364257278, guid: 08a2955cd4be5504880e43db2895bedc, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 08a2955cd4be5504880e43db2895bedc, type: 3}
---- !u!4 &2561459790342397407 stripped
+--- !u!4 &2561459790342397416 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6787363815648893721, guid: 08a2955cd4be5504880e43db2895bedc,
     type: 3}

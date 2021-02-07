@@ -17,23 +17,28 @@ public class SnowManager : UdonSharpBehaviour
     private float _camOffset = 50;
     
     private VRCPlayerApi[] _players = new VRCPlayerApi[32];
-    private Transform[] _trackers = new Transform[32];
+    private Deformer[] _trackers;
+    
     private readonly int TopCamData = Shader.PropertyToID("_TopCamData");
     public readonly int GlitterColor = Shader.PropertyToID("_GlitterColor");
     public readonly int TerrainRimColor = Shader.PropertyToID("_TerrainRimColor");
     public readonly int TerrainColor = Shader.PropertyToID("_TerrainColor");
 
-    public Material SnowMaterial;
+    private Material _snowMaterial;
     
     void Start()
     {
-        SnowMaterial = _snowPlane.material;
+        _trackers = GetComponentsInChildren<Deformer>();
+        _snowMaterial = _snowPlane.material;
+        foreach (var deformer in _trackers)
+        {
+            deformer.enabled = false;
+        }
         Add(Networking.LocalPlayer);
     }
 
     public override void OnPlayerJoined(VRCPlayerApi player)
     {
-        Debug.Log($"Player joined: {player.displayName}");
         Add(player);
     }
 
@@ -49,7 +54,8 @@ public class SnowManager : UdonSharpBehaviour
             if (_players[i] == player)
             {
                 _players[i] = null;
-                // _trackers[i] = VRCInstantiate(_tracker).transform;
+                _trackers[i].enabled = false;
+                _trackers[i].RemovePlayer();
                 return;
             }
         }
@@ -57,23 +63,10 @@ public class SnowManager : UdonSharpBehaviour
 
     private void Update()
     {
-        #if !UDONSHARP_COMPILER && UNITY_EDITOR
-        return;
-        #endif
-        
-        for (var i = 0; i < _players.Length; i++)
-        {
-            var player = _players[i];
-            if (player != null)
-            {
-                _trackers[i].position = player.GetPosition() - (Vector3.up * 10);
-            }
-        }
-        
         var pos = Networking.LocalPlayer.GetPosition() + Vector3.up * _camOffset;
         float size = 1f / _snowCam.orthographicSize;
         _snowCam.transform.position = pos;
-        _snowPlane.material.SetVector("_TopCamData", new Vector4(pos.x, pos.y, pos.z, size));
+        _snowMaterial.SetVector("_TopCamData", new Vector4(pos.x, pos.y, pos.z, size));
     }
 
     private void Add(VRCPlayerApi p)
@@ -83,7 +76,8 @@ public class SnowManager : UdonSharpBehaviour
             if (_players[i] == null)
             {
                 _players[i] = p;
-                _trackers[i] = VRCInstantiate(_tracker).transform;
+                _trackers[i].enabled = true;
+                _trackers[i].SetPlayer(p);
                 return;
             }
         }
@@ -91,7 +85,7 @@ public class SnowManager : UdonSharpBehaviour
 
     public void SetSnowData(Weather weather)
     {
-        var mat = _snowPlane.material;
+        var mat = _snowMaterial;
         mat.SetColor(GlitterColor, weather.SnowGlitter);
         mat.SetColor(TerrainRimColor, weather.SnowRim);
         mat.SetColor(TerrainColor, weather.TerrainColor);
