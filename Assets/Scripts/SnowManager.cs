@@ -17,17 +17,23 @@ public class SnowManager : UdonSharpBehaviour
     private float _camOffset = 50;
     
     private VRCPlayerApi[] _players = new VRCPlayerApi[32];
-    private Transform[] _trackers = new Transform[32];
+    [SerializeField]
+    private Deformer[] _trackers;
+    
     private readonly int TopCamData = Shader.PropertyToID("_TopCamData");
     public readonly int GlitterColor = Shader.PropertyToID("_GlitterColor");
     public readonly int TerrainRimColor = Shader.PropertyToID("_TerrainRimColor");
     public readonly int TerrainColor = Shader.PropertyToID("_TerrainColor");
 
-    public Material SnowMaterial;
+    private Material _snowMaterial;
     
     void Start()
     {
-        SnowMaterial = _snowPlane.material;
+        _snowMaterial = _snowPlane.material;
+        foreach (var deformer in _trackers)
+        {
+            deformer.enabled = false;
+        }
         Add(Networking.LocalPlayer);
     }
 
@@ -49,7 +55,9 @@ public class SnowManager : UdonSharpBehaviour
             if (_players[i] == player)
             {
                 _players[i] = null;
-                // _trackers[i] = VRCInstantiate(_tracker).transform;
+                _trackers[i].Player = null;
+                _trackers[i].enabled = false;
+                //Repool trackers eventually
                 return;
             }
         }
@@ -66,7 +74,7 @@ public class SnowManager : UdonSharpBehaviour
             var player = _players[i];
             if (player != null)
             {
-                _trackers[i].position = player.GetPosition() - (Vector3.up * 10);
+                _trackers[i].transform.position = player.GetPosition();
             }
         }
         
@@ -83,7 +91,10 @@ public class SnowManager : UdonSharpBehaviour
             if (_players[i] == null)
             {
                 _players[i] = p;
-                _trackers[i] = VRCInstantiate(_tracker).transform;
+                var tracker = VRCInstantiate(_tracker.gameObject).GetComponent<Deformer>();
+                tracker.Player = p;
+                tracker.enabled = true;
+                _trackers[i] = tracker;
                 return;
             }
         }
