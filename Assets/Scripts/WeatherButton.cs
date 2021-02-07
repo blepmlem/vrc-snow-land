@@ -12,6 +12,6 @@ public class WeatherButton : UdonSharpBehaviour
 
 	public override void Interact()
 	{
-		_weatherManager.SetWeatherDebug();
+		_weatherManager.SetNextWeather();
 	}
 }
