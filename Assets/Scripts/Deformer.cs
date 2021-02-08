@@ -13,17 +13,24 @@ public class Deformer : UdonSharpBehaviour
 	[SerializeField]
 	private float _hitRadius = .7f;
 
+	[SerializeField]
+	private float _minMoveSqrMagnitude = 1;
+
+	[SerializeField]
+	private AudioSource[] _audioSources;
+
 	private ParticleSystem.EmissionModule _emission;
-	private int _layer;
-
 	private VRCPlayerApi _player;
-
 	private Transform _target;
-
+	private int _layer;
 	private float _timeSliceInterval = .1f;
 	private float _timeSliceTimer;
+	private Vector3 _lastPosition;
+	private int _lastAudioIndex;
+	private int _audioSourcesLength;
 	private void Start()
 	{
+		_audioSourcesLength = _audioSources.Length;
 		_emission = _particles.emission;
 		_emission.enabled = false;
 		_layer = 1 << 23; //"Deformable"
@@ -45,13 +52,17 @@ public class Deformer : UdonSharpBehaviour
 		}
 
 		_timeSliceTimer = 0;
+		
+		var t = transform;
+		_lastPosition = t.position;
+		
 		if (!_isPlayerTracker)
 		{
-			transform.position = _target.position;
+			t.position = _target.position;
 		}
 		else if (_player != null)
 		{
-			transform.position = _player.GetPosition();
+			t.position = _player.GetPosition();
 		}
 		else
 		{
@@ -59,8 +70,33 @@ public class Deformer : UdonSharpBehaviour
 			return;
 		}
 
-		bool hit = Physics.CheckSphere(transform.position, _hitRadius, _layer);
+		bool hit = Physics.CheckSphere(t.position, _hitRadius, _layer);
 		_emission.enabled = hit;
+		
+		if (hit && (t.position - _lastPosition).sqrMagnitude > _minMoveSqrMagnitude)
+		{
+			AudioSource audioSource;
+			if(_lastAudioIndex < _audioSourcesLength)
+			{
+				int rand = Random.Range(0, _audioSourcesLength-1);
+				if(rand >= _lastAudioIndex)
+				{
+					rand++;
+				}
+
+				_lastAudioIndex = rand;
+				audioSource = _audioSources[rand];
+			}
+			else
+			{
+				_lastAudioIndex = Random.Range(0, _audioSourcesLength);
+				audioSource = _audioSources[Random.Range(0, _audioSourcesLength)];
+			}
+			if(!audioSource.isPlaying)
+			{
+				audioSource.Play();
+			}
+		}
 	}
 
 	public void SetPlayer(VRCPlayerApi player)
