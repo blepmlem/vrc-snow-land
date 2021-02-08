@@ -170,7 +170,8 @@ namespace VRC.Udon.Editor.ProgramSources.UdonGraphProgram.UI.GraphView
                     }
                     else
                     {
-                        Debug.Log($"Couldn't find classname for {nodeDefinition.fullName}");
+                        //TODO: handle class names not found
+                        //Debug.Log($"Couldn't find classname for {nodeDefinition.fullName}");
                     }
                 }   
             }

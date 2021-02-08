@@ -316,6 +316,7 @@ namespace VRC.Udon.Editor.ProgramSources.UdonGraphProgram.UI
             typeString = typeString.Replace("SDK3Components", "");
             typeString = typeString.Replace("VRCVRC", "VRC");
             typeString = typeString.Replace("TMPro", "");
+            typeString = typeString.Replace("VideoVideo", "Video");
             // ReSharper disable once StringLiteralTypo
             if (typeString.Replace("ector", "").Contains("ctor")) //Handle "Vector/vector"
             {

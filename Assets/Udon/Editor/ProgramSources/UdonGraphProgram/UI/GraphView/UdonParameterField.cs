@@ -39,7 +39,7 @@ namespace VRC.Udon.Editor.ProgramSources.UdonGraphProgram.UI.GraphView
 				UnityEditor.Undo.RecordObject(udonGraph.graphProgramAsset, "Rename Variable");
 				// Sanitize value for variable name
 				string newVariableName = e.newValue.SanitizeVariableName();
-				text = newVariableName;
+				newVariableName = udonGraph.GetUnusedVariableNameLike(newVariableName);
 				nodeData.nodeValues[(int)UdonParameterProperty.ValueIndices.name] = SerializableObjectContainer.Serialize(newVariableName);
 			});
 		}

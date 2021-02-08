@@ -2,6 +2,7 @@
 using UnityEditor;
 using VRC.Core;
 using System.Text.RegularExpressions;
+using VRC.SDKBase.Editor;
 
 public partial class VRCSdkControlPanel : EditorWindow
 {
@@ -199,13 +200,8 @@ public partial class VRCSdkControlPanel : EditorWindow
             InitAccount();
 
             ApiServerEnvironment newEnv = ApiServerEnvironment.Release;
-            #if VRC_SDK_VRCSDK2
-                if (VRCSettings.Get().DisplayAdvancedSettings)
+                if (VRCSettings.DisplayAdvancedSettings)
                     newEnv = (ApiServerEnvironment)EditorGUILayout.EnumPopup("Use API", serverEnvironment);
-            #elif VRC_SDK_VRCSDK3
-                if (VRC.SDK3.Editor.VRCSettings.Get().DisplayAdvancedSettings)
-                    newEnv = (ApiServerEnvironment)EditorGUILayout.EnumPopup("Use API", serverEnvironment);
-            #endif
             if (serverEnvironment != newEnv)
                 serverEnvironment = newEnv;
 

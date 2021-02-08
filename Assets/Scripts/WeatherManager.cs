@@ -5,6 +5,7 @@ using UdonSharp;
 using UnityEngine;
 using VRC.SDKBase;
 using VRC.Udon;
+using VRC.Udon.Common.Interfaces;
 
 public class WeatherManager : UdonSharpBehaviour
 {
@@ -20,7 +21,8 @@ public class WeatherManager : UdonSharpBehaviour
     [SerializeField]
     private int _targetWeatherIndex;
     
-    
+    [UdonSynced]
+    private int _targetWeatherIndexSynced;
 
     [SerializeField]
     private Weather _internalWeather;
@@ -41,9 +43,10 @@ public class WeatherManager : UdonSharpBehaviour
     private readonly int SkyTint = Shader.PropertyToID("_SkyTint");
     private readonly int GroundColor = Shader.PropertyToID("_GroundColor");
     private readonly int Exposure = Shader.PropertyToID("_Exposure");
+    private bool _initialized;
 
 
-    private void Start()
+    private void Initialize()
     {
         var allWeather = GetComponentsInChildren<Weather>();
         _weatherTemplates = new Weather[allWeather.Length - 2];
@@ -56,6 +59,16 @@ public class WeatherManager : UdonSharpBehaviour
         _skyBox = RenderSettings.skybox;
         _internalWeather.Set(_weatherTemplates[_targetWeatherIndex]);
         _internalTargetWeather.Set(_internalWeather);
+        _t = 0;
+        _initialized = true;
+    }
+    
+    private void Start()
+    {
+        if (!_initialized)
+        {
+            Initialize();
+        }        
     }
 
     private void Update()
@@ -78,21 +91,39 @@ public class WeatherManager : UdonSharpBehaviour
             _t = -1;
         }
     }
-
-    [ContextMenu("Set Weather Debug")]
-    public void SetWeatherDebug()
+    
+    public void SetNextWeather()
+    {
+        SendCustomNetworkEvent(NetworkEventTarget.Owner, nameof(SetNextWeather_OWNER));
+    }
+    
+    public void SetNextWeather_OWNER()
     {
         _targetWeatherIndex++;
-        if (_targetWeatherIndex > _weatherTemplates.Length - 1)
+        if (_targetWeatherIndex >= _weatherTemplates.Length)
         {
             _targetWeatherIndex = 0;
         }
 
-        SetWeather(_weatherTemplates[_targetWeatherIndex]);
+        _targetWeatherIndexSynced = _targetWeatherIndex;
+        SetWeatherInternal(_weatherTemplates[_targetWeatherIndex]);
     }
 
-    public void SetWeather(Weather w)
+    public override void OnDeserialization()
     {
+        if (_targetWeatherIndexSynced != _targetWeatherIndex)
+        {
+            _targetWeatherIndex = _targetWeatherIndexSynced;
+            SetWeatherInternal(_weatherTemplates[_targetWeatherIndex]);
+        }
+    }
+
+    public void SetWeatherInternal(Weather w)
+    {
+        if (!_initialized)
+        {
+            Initialize();
+        }  
         _internalTargetWeather.Set(w);
         _t = 0;
     }

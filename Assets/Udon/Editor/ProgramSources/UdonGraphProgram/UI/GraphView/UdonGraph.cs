@@ -384,6 +384,15 @@ namespace VRC.Udon.Editor.ProgramSources.UdonGraphProgram.UI.GraphView
                 {
                     if (!graphData.nodes.Exists(n => n.uid == copiedNodeDataArray[i].uid))
                     {
+                        // check for conflicting variable names
+                        int nameIndex = (int)UdonParameterProperty.ValueIndices.name;
+                        string varName = (string)copiedNodeDataArray[i].nodeValues[nameIndex].Deserialize();
+                        if (GetVariableNames.Contains(varName))
+                        {
+                            // if we already have a variable with that name, find a new name and serialize it into the data
+                            varName = GetUnusedVariableNameLike(varName);
+                            copiedNodeDataArray[i].nodeValues[nameIndex] = SerializableObjectContainer.Serialize(varName);
+                        }
                         graphData.nodes.Add(copiedNodeDataArray[i]);
                     }
                 }
@@ -1116,12 +1125,22 @@ namespace VRC.Udon.Editor.ProgramSources.UdonGraphProgram.UI.GraphView
             return udonNode;
         }
 
-        private string GetUnusedVariableNameLike(string newVariableName)
+        public string GetUnusedVariableNameLike(string newVariableName)
         {
-            int defaultCount = _variableNodes.Count(n => ((string)n.nodeValues[1].Deserialize()).Contains(newVariableName));
-            if (defaultCount > 0)
+            RefreshVariables();
+
+            while (GetVariableNames.Contains(newVariableName))
             {
-                newVariableName = string.Concat(newVariableName, defaultCount + 1);
+                char lastChar = newVariableName[newVariableName.Length - 1];
+                if(char.IsDigit(lastChar))
+                {
+                    string newLastChar = (int.Parse(lastChar.ToString()) + 1).ToString();
+                    newVariableName = newVariableName.Substring(0, newVariableName.Length - 1) + newLastChar;
+                } 
+                else
+                {
+                    newVariableName = $"{newVariableName}_1";   
+                }
             }
             return newVariableName;
         }
