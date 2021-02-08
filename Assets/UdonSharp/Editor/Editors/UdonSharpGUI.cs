@@ -2,6 +2,7 @@
 using JetBrains.Annotations;
 using System;
 using System.Collections.Generic;
+using System.Collections.Immutable;
 using System.IO;
 using System.Linq;
 using System.Reflection;
@@ -988,7 +989,7 @@ namespace UdonSharpEditor
             }
             else if (declaredType == typeof(AnimationCurve))
             {
-                return EditorGUILayout.CurveField(fieldLabel, (AnimationCurve)value);
+                return EditorGUILayout.CurveField(fieldLabel, (AnimationCurve)value ?? new AnimationCurve());
             }
             else if (declaredType == typeof(char))
             {
@@ -1196,7 +1197,7 @@ namespace UdonSharpEditor
 
             IUdonSymbolTable symbolTable = program.SymbolTable;
 
-            string[] exportedSymbolNames = symbolTable.GetExportedSymbols();
+            ImmutableArray<string> exportedSymbolNames = symbolTable.GetExportedSymbols();
 
             EditorGUI.BeginChangeCheck();
 
@@ -1501,7 +1502,7 @@ namespace UdonSharpEditor
                 EditorGUI.BeginDisabledGroup(EditorApplication.isPlaying);
                 if (GUILayout.Button("Convert to UdonBehaviour", GUILayout.Height(25)))
                 {
-                    UdonSharpEditorUtility.ConvertToUdonBehavioursInternal(new[] { behaviour }, true, true);
+                    UdonSharpEditorUtility.ConvertToUdonBehavioursInternal(new[] { behaviour }, true, true, true);
                     EditorGUI.EndDisabledGroup();
 
                     return true;
@@ -1546,7 +1547,7 @@ namespace UdonSharpEditor
                 EditorGUI.BeginDisabledGroup(EditorApplication.isPlaying);
                 if (GUILayout.Button("Convert to UdonBehaviour", GUILayout.Height(25)))
                 {
-                    UdonSharpEditorUtility.ConvertToUdonBehavioursInternal(Array.ConvertAll(targets, e => e as UdonSharpBehaviour).Where(e => e != null && !UdonSharpEditorUtility.IsProxyBehaviour(e)).ToArray(), true, true);
+                    UdonSharpEditorUtility.ConvertToUdonBehavioursInternal(Array.ConvertAll(targets, e => e as UdonSharpBehaviour).Where(e => e != null && !UdonSharpEditorUtility.IsProxyBehaviour(e)).ToArray(), true, true, true);
                     EditorGUI.EndDisabledGroup();
 
                     return true;

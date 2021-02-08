@@ -17,6 +17,8 @@ public class SnowManager : UdonSharpBehaviour
     private float _camOffset = 50;
     
     private VRCPlayerApi[] _players = new VRCPlayerApi[32];
+    
+    [SerializeField]
     private Deformer[] _trackers;
     
     private readonly int TopCamData = Shader.PropertyToID("_TopCamData");
@@ -25,25 +27,29 @@ public class SnowManager : UdonSharpBehaviour
     public readonly int TerrainColor = Shader.PropertyToID("_TerrainColor");
 
     private Material _snowMaterial;
+
+    private bool _initialized = false;
+    private VRCPlayerApi _localPlayer;
     
     void Start()
     {
-        _trackers = GetComponentsInChildren<Deformer>();
+        Debug.Log($"Deformable Layer is: {LayerMask.LayerToName(_snowPlane.gameObject.layer)}");
         _snowMaterial = _snowPlane.material;
         foreach (var deformer in _trackers)
         {
             deformer.enabled = false;
         }
-        Add(Networking.LocalPlayer);
     }
 
     public override void OnPlayerJoined(VRCPlayerApi player)
     {
+        Debug.Log($"Player joined: {player.displayName}");
         Add(player);
     }
 
     public override void OnPlayerLeft(VRCPlayerApi player)
     {
+        Debug.Log($"Player left: {player.displayName}");
         Remove(player);
     }
 
@@ -63,7 +69,23 @@ public class SnowManager : UdonSharpBehaviour
 
     private void Update()
     {
-        var pos = Networking.LocalPlayer.GetPosition() + Vector3.up * _camOffset;
+        if (!_initialized)
+        {
+            var localPlayer = Networking.LocalPlayer;
+            if (localPlayer != null)
+            {
+                Debug.Log($"Initialized! Welcome {localPlayer.displayName}!");
+                _initialized = true;
+                _localPlayer = Networking.LocalPlayer;
+                Add(_localPlayer);
+            }
+            else
+            {
+                return;
+            }
+        }
+        
+        var pos = _localPlayer.GetPosition() + Vector3.up * _camOffset;
         float size = 1f / _snowCam.orthographicSize;
         _snowCam.transform.position = pos;
         _snowMaterial.SetVector("_TopCamData", new Vector4(pos.x, pos.y, pos.z, size));
@@ -76,7 +98,6 @@ public class SnowManager : UdonSharpBehaviour
             if (_players[i] == null)
             {
                 _players[i] = p;
-                _trackers[i].enabled = true;
                 _trackers[i].SetPlayer(p);
                 return;
             }

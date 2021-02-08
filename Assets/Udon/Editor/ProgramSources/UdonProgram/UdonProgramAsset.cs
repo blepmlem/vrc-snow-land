@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.Immutable;
 using System.IO;
 using System.Linq;
 using System.Reflection;
@@ -113,6 +114,37 @@ namespace VRC.Udon.Editor.ProgramSources
         }
 
         [PublicAPI]
+        protected void DrawInteractionArea(UdonBehaviour udonBehaviour)
+        {
+            ImmutableArray<string> exportedSymbols = program.EntryPoints.GetExportedSymbols();
+            if (exportedSymbols.Contains("_interact"))
+            {
+                EditorGUILayout.LabelField("Interaction", EditorStyles.boldLabel);
+                EditorGUI.indentLevel++;
+
+                if(udonBehaviour != null)
+                {
+                    udonBehaviour.interactText = EditorGUILayout.TextField("Interaction Text", udonBehaviour.interactText);
+                    udonBehaviour.proximity = EditorGUILayout.Slider("Proximity", udonBehaviour.proximity, 0f, 100f);
+                    udonBehaviour.interactTextPlacement = (Transform)EditorGUILayout.ObjectField("Text Placement", udonBehaviour.interactTextPlacement, typeof(Transform), true);
+                }
+                else
+                {
+                    using(new EditorGUI.DisabledScope(true))
+                    {
+                        EditorGUILayout.TextField("Interaction Text", "Use");
+                        EditorGUILayout.Slider("Proximity", 2.0f, 0f, 100f);
+                        EditorGUILayout.ObjectField("Text Placement", null, typeof(Transform), true);
+                    }
+                }
+                
+                
+                
+                EditorGUI.indentLevel--;
+            }
+        }
+
+        [PublicAPI]
         protected void DrawPublicVariables(UdonBehaviour udonBehaviour, ref bool dirty)
         {
             IUdonVariableTable publicVariables = null;
@@ -131,20 +163,19 @@ namespace VRC.Udon.Editor.ProgramSources
             }
 
             IUdonSymbolTable symbolTable = program.SymbolTable;
-            string[] exportedSymbolNames = symbolTable.GetExportedSymbols();
-
             // Remove non-exported public variables
             if(publicVariables != null)
             {
                 foreach(string publicVariableSymbol in publicVariables.VariableSymbols.ToArray())
                 {
-                    if(!exportedSymbolNames.Contains(publicVariableSymbol))
+                    if(!symbolTable.HasExportedSymbol(publicVariableSymbol))
                     {
                         publicVariables.RemoveVariable(publicVariableSymbol);
                     }
                 }
             }
 
+            ImmutableArray<string> exportedSymbolNames = symbolTable.GetExportedSymbols();
             if(exportedSymbolNames.Length <= 0)
             {
                 EditorGUILayout.LabelField("No public variables.");
@@ -1107,6 +1138,20 @@ namespace VRC.Udon.Editor.ProgramSources
 
                         variableValue = destinationArray;
 
+                        dirty = true;
+                    }
+                }
+                else if (variableType == typeof(VRC.SDKBase.VRCUrl))
+                {
+                    if(variableValue == null)
+                        variableValue = new VRC.SDKBase.VRCUrl("");
+
+                    VRC.SDKBase.VRCUrl url = (VRC.SDKBase.VRCUrl)variableValue;
+                    EditorGUI.BeginChangeCheck();
+                    variableValue = new VRC.SDKBase.VRCUrl(EditorGUILayout.TextField(symbol, url.Get()));
+
+                    if (EditorGUI.EndChangeCheck())
+                    {
                         dirty = true;
                     }
                 }
