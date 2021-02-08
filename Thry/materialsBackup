@@ -46,9 +46,10 @@ a88a93dd8abf2bc41a12a4b7358e7648:=Standard
 aa299303c3942d24c8b1bfd926632865:=Standard
 0821ec1c36f22644fb21ea32421557f0:=Standard
 19eae2b9ca615184eaf821deb21a878c:=Standard
-1fee9313adafa5844bcfc780b3f91470:=Standard
+1fee9313adafa5844bcfc780b3f91470:=.poiyomi/Toon/Opaque
 c180ab37d899b8c44bd498cb513efa1a:=Standard
 :=Custom/SnowShader
+
 
 
 
@@ -60,3 +61,7 @@ c180ab37d899b8c44bd498cb513efa1a:=Standard
 8221915f57a5d904ca3c603f2cda02be:=Standard
 c0a857098ca57b74aa43c634f2b67a8d:=Unlit/Color
 :=Custom/SnowShader
+92a159444bc7c124d802561bed893cc6:=Standard
+b6a9ab259417ccf459272fc9474926b7:=Standard
+dba01dcece904e84c91c06b9943dbdce:=.poiyomi/Toon/Opaque
+60e10b8a9f764124e9b756032de58f3b:=Standard
