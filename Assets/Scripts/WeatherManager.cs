@@ -43,9 +43,10 @@ public class WeatherManager : UdonSharpBehaviour
     private readonly int SkyTint = Shader.PropertyToID("_SkyTint");
     private readonly int GroundColor = Shader.PropertyToID("_GroundColor");
     private readonly int Exposure = Shader.PropertyToID("_Exposure");
+    private bool _initialized;
 
 
-    private void Start()
+    private void Initialize()
     {
         var allWeather = GetComponentsInChildren<Weather>();
         _weatherTemplates = new Weather[allWeather.Length - 2];
@@ -58,6 +59,16 @@ public class WeatherManager : UdonSharpBehaviour
         _skyBox = RenderSettings.skybox;
         _internalWeather.Set(_weatherTemplates[_targetWeatherIndex]);
         _internalTargetWeather.Set(_internalWeather);
+        _t = 0;
+        _initialized = true;
+    }
+    
+    private void Start()
+    {
+        if (!_initialized)
+        {
+            Initialize();
+        }        
     }
 
     private void Update()
@@ -89,7 +100,7 @@ public class WeatherManager : UdonSharpBehaviour
     public void SetNextWeather_OWNER()
     {
         _targetWeatherIndex++;
-        if (_targetWeatherIndex > _weatherTemplates.Length - 1)
+        if (_targetWeatherIndex >= _weatherTemplates.Length)
         {
             _targetWeatherIndex = 0;
         }
@@ -109,6 +120,10 @@ public class WeatherManager : UdonSharpBehaviour
 
     public void SetWeatherInternal(Weather w)
     {
+        if (!_initialized)
+        {
+            Initialize();
+        }  
         _internalTargetWeather.Set(w);
         _t = 0;
     }

@@ -26,18 +26,18 @@ public class SnowManager : UdonSharpBehaviour
     public readonly int TerrainRimColor = Shader.PropertyToID("_TerrainRimColor");
     public readonly int TerrainColor = Shader.PropertyToID("_TerrainColor");
 
-    private Material _snowMaterial;
-
     private bool _initialized = false;
     private VRCPlayerApi _localPlayer;
-    
-    void Start()
+
+    private void Initialize()
     {
-        Debug.Log($"Deformable Layer is: {LayerMask.LayerToName(_snowPlane.gameObject.layer)}");
-        _snowMaterial = _snowPlane.material;
-        foreach (var deformer in _trackers)
+        var localPlayer = Networking.LocalPlayer;
+        if (localPlayer != null)
         {
-            deformer.enabled = false;
+            Debug.Log($"Initialized! Welcome {localPlayer.displayName}!");
+            _initialized = true;
+            _localPlayer = Networking.LocalPlayer;
+            Add(_localPlayer);
         }
     }
 
@@ -71,24 +71,14 @@ public class SnowManager : UdonSharpBehaviour
     {
         if (!_initialized)
         {
-            var localPlayer = Networking.LocalPlayer;
-            if (localPlayer != null)
-            {
-                Debug.Log($"Initialized! Welcome {localPlayer.displayName}!");
-                _initialized = true;
-                _localPlayer = Networking.LocalPlayer;
-                Add(_localPlayer);
-            }
-            else
-            {
-                return;
-            }
+            Initialize();
+            return;
         }
         
         var pos = _localPlayer.GetPosition() + Vector3.up * _camOffset;
         float size = 1f / _snowCam.orthographicSize;
         _snowCam.transform.position = pos;
-        _snowMaterial.SetVector("_TopCamData", new Vector4(pos.x, pos.y, pos.z, size));
+        _snowPlane.material.SetVector("_TopCamData", new Vector4(pos.x, pos.y, pos.z, size));
     }
 
     private void Add(VRCPlayerApi p)
@@ -106,7 +96,7 @@ public class SnowManager : UdonSharpBehaviour
 
     public void SetSnowData(Weather weather)
     {
-        var mat = _snowMaterial;
+        var mat = _snowPlane.material;
         mat.SetColor(GlitterColor, weather.SnowGlitter);
         mat.SetColor(TerrainRimColor, weather.SnowRim);
         mat.SetColor(TerrainColor, weather.TerrainColor);
