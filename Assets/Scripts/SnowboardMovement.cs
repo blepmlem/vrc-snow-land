@@ -31,6 +31,8 @@ public class SnowboardMovement : UdonSharpBehaviour
             localUser.TeleportTo(StartPosition.position, StartPosition.rotation);
             transform.position = StartPosition.position;
             transform.rotation = StartPosition.rotation;
+            momentum = Vector2.zero;
+            gravityMomentum = 0;
         }
         else
         {

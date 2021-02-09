@@ -1224,7 +1224,7 @@ MonoBehaviour:
   interactTextPlacement: {fileID: 0}
   interactText: Use
   interactTextGO: {fileID: 0}
-  proximity: 3.3
+  proximity: 2
   SynchronizePosition: 0
   AllowCollisionOwnershipTransfer: 0
   serializedProgramAsset: {fileID: 11400000, guid: e049112879e0768439cef37b8c27320b,
@@ -1932,7 +1932,7 @@ MonoBehaviour:
   interactTextPlacement: {fileID: 0}
   interactText: Use
   interactTextGO: {fileID: 0}
-  proximity: 3.3
+  proximity: 2
   SynchronizePosition: 0
   AllowCollisionOwnershipTransfer: 0
   serializedProgramAsset: {fileID: 11400000, guid: e049112879e0768439cef37b8c27320b,
