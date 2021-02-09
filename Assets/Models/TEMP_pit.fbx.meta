@@ -51,6 +51,15 @@ ModelImporter:
     4300012: Mesh_pit_vineplant_TEMP
     4300014: Mesh_pit_rockfeature_TEMP
     4300016: Mesh_pit_floor_TEMP
+    6400000: Mash_pit_plantpot_TEMP
+    6400002: Mesh_pit_floor_TEMP
+    6400004: Mesh_pit_foundation_TEMP
+    6400006: Mesh_pit_pillar_TEMP
+    6400008: Mesh_pit_rockfeature_TEMP
+    6400010: Mesh_pit_sofa_TEMP
+    6400012: Mesh_pit_stairs_TEMP
+    6400014: Mesh_pit_vineplant_TEMP
+    6400016: Mesh_pit_waxplant_TEMP
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -83,15 +92,15 @@ ModelImporter:
   meshes:
     lODScreenPercentages: []
     globalScale: 1
-    meshCompression: 0
-    addColliders: 0
+    meshCompression: 2
+    addColliders: 1
     useSRGBMaterialColor: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
     importLights: 1
     swapUVChannels: 0
-    generateSecondaryUV: 0
+    generateSecondaryUV: 1
     useFileUnits: 1
     optimizeMeshForGPU: 1
     keepQuads: 0
