@@ -14,6 +14,7 @@ public class SnowboardMovement : UdonSharpBehaviour
 
     // The player collider needs to be off the ground otherwise they lag
     public float playerYOffset = 0.15f;
+    public float RotationMultiplier = 80;
 
     private Vector2 momentum = Vector2.zero;
     private Vector2 direction = new Vector2(1, 0);
@@ -44,6 +45,7 @@ public class SnowboardMovement : UdonSharpBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (localUser != null)
         {
             SnowboardingUpdate();
@@ -55,10 +57,24 @@ public class SnowboardMovement : UdonSharpBehaviour
         Vector3 movement = transform.forward * momentum.x + transform.right * momentum.y;
         transform.position = transform.position + movement;
 
+        // Turn board
+        if (localUser != null)
+        {
+            if (localUser.IsUserInVR())
+            {
+                VRCPlayerApi.TrackingData rightHand = localUser.GetTrackingData(VRCPlayerApi.TrackingDataType.RightHand);
+                Vector3 wantedForward = (new Vector3(rightHand.position.x, 0, rightHand.position.z) - new Vector3(transform.position.x, 0, transform.position.z)).normalized;
+                Quaternion wantedRotation = Quaternion.LookRotation(wantedForward, Vector3.up);
+                transform.rotation = Quaternion.Lerp(transform.rotation, wantedRotation, RotationMultiplier * Time.deltaTime);
+            }
+        }
+
+
+        // Update momentum
         RaycastHit hit;
         if (Physics.Raycast(transform.position + Vector3.up, Vector3.down, out hit, 1.2f, SlopeMask))
         {
-
+            // Is on ground
             momentum += Time.deltaTime * direction * acceleration * ScaledToAngle();
             momentum -= Time.deltaTime * momentum * friction;
 
@@ -69,17 +85,18 @@ public class SnowboardMovement : UdonSharpBehaviour
         }
         else
         {
+            // Is falling in air
             if (!isFalling)
             {
                 gravityMomentum = -movement.y;
                 isFalling = true;
             }
-
             transform.rotation = Quaternion.FromToRotation(transform.up, Vector3.up) * transform.rotation;
             gravityMomentum += Time.deltaTime * gravity;
             transform.position += Vector3.down * gravityMomentum;
         }
 
+        // Move player
         if (localUser != null)
         {
             localUser.TeleportTo(transform.position + Vector3.up * playerYOffset, StartPosition.rotation, VRC_SceneDescriptor.SpawnOrientation.AlignRoomWithSpawnPoint, true);
