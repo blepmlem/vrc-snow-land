@@ -8,8 +8,8 @@ public class SnowManager : UdonSharpBehaviour
     private GameObject _tracker;
 
     [SerializeField]
-    private Renderer _snowPlane;
-    
+    private Renderer[] _snowPlanes;
+
     [SerializeField]
     private Camera _snowCam;
 
@@ -29,8 +29,15 @@ public class SnowManager : UdonSharpBehaviour
     private bool _initialized = false;
     private VRCPlayerApi _localPlayer;
 
+    private Material _snowMaterial;
+    
     private void Initialize()
     {
+        if (_snowMaterial == null)
+        {
+            _snowMaterial = _snowPlanes[0].sharedMaterial;
+        }
+        
         var localPlayer = Networking.LocalPlayer;
         if (localPlayer != null)
         {
@@ -39,6 +46,8 @@ public class SnowManager : UdonSharpBehaviour
             _localPlayer = Networking.LocalPlayer;
             Add(_localPlayer);
         }
+        
+        _snowMaterial.color = Color.black;;
     }
 
     public override void OnPlayerJoined(VRCPlayerApi player)
@@ -78,7 +87,8 @@ public class SnowManager : UdonSharpBehaviour
         var pos = _localPlayer.GetPosition() + Vector3.up * _camOffset;
         float size = 1f / _snowCam.orthographicSize;
         _snowCam.transform.position = pos;
-        _snowPlane.material.SetVector("_TopCamData", new Vector4(pos.x, pos.y, pos.z, size));
+        
+        _snowMaterial.SetVector("_TopCamData", new Vector4(pos.x, pos.y, pos.z, size));
     }
 
     private void Add(VRCPlayerApi p)
@@ -96,7 +106,12 @@ public class SnowManager : UdonSharpBehaviour
 
     public void SetSnowData(Weather weather)
     {
-        var mat = _snowPlane.material;
+        if (_snowMaterial == null)
+        {
+            _snowMaterial = _snowPlanes[0].sharedMaterial;
+        }
+        
+        var mat = _snowMaterial;
         mat.SetColor(GlitterColor, weather.SnowGlitter);
         mat.SetColor(TerrainRimColor, weather.SnowRim);
         mat.SetColor(TerrainColor, weather.TerrainColor);

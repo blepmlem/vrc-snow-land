@@ -5,7 +5,7 @@
 		_Tess("Tessellation", Range(1,128)) = 4
 		_SnowTex ("Snow (RGB)", 2D) = "white" {}
 		_Splatmap("Splatmap", 2D) = "black" {}
-		_Displacement("Displacement", Range(0, 0.01)) = 0.003
+		_Displacement("Displacement", Range(0, 100)) = 0.003
 		[HDR] _TopColor ("Top Color", Color) = (1,1,1,1)
 		_TopTex ("Top (RGB)", 2D) = "white" {}
 		[HDR] _BotColor("Bottom Color", Color) = (1,1,1,1)
