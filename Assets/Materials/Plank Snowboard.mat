@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: futtrash Snowboard
+  m_Name: Plank Snowboard
   m_Shader: {fileID: 4800000, guid: 45429b755005c8245b20248fbc150a0a, type: 3}
   m_ShaderKeywords: LOD_FADE_CROSSFADE _GLOSSYREFLECTIONS_OFF _SPECGLOSSMAP
   m_LightmapFlags: 4
@@ -176,7 +176,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: ac212f6e93f3f98419d9468166b7e30e, type: 3}
+        m_Texture: {fileID: 2800000, guid: f034b48661535a0409f24e817b175550, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Matcap:
