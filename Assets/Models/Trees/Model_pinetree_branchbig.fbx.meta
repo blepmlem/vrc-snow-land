@@ -6,9 +6,11 @@ ModelImporter:
     100000: //RootNode
     400000: //RootNode
     2100000: lambert1
+    2100002: blinn1
     2300000: //RootNode
     3300000: //RootNode
     4300000: Mesh_Branch_Big
+    4300002: Model_pinetree_branchbig
   externalObjects: {}
   materials:
     importMaterials: 1
