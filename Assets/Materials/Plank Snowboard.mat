@@ -677,7 +677,7 @@ Material:
     - _SpecularToonEnd1: 1
     - _SpecularToonStart: 0.95
     - _SpecularToonStart1: 0.95
-    - _SpecularType: 2
+    - _SpecularType: 1
     - _SpecularType1: 1
     - _SrcBlend: 1
     - _StencilCompareFunction: 8
@@ -770,7 +770,7 @@ Material:
     - m_end_subsurface: 0
     - m_end_vertexManipulation: 0
     - m_lightingOptions: 1
-    - m_mainOptions: 1
+    - m_mainOptions: 0
     - m_renderingOptions: 0
     - m_start_Alpha: 0
     - m_start_CenterOutEmission: 0
