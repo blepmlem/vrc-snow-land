@@ -286,7 +286,10 @@
 			ss.Smoothness = s.Smoothness;
 			ss.Occlusion = s.Occlusion;
 			ss.Alpha = s.Alpha;
-			
+
+		    half3 attenRGB = gi.light.color / max(_LightColor0.rgb, 0.0001);
+			half atten = max(attenRGB.r, max(attenRGB.g, attenRGB.b));
+
 			float4 c = LightingStandard(ss,viewDir,gi);
 
 		    float3 L = gi.light.dir;
@@ -301,7 +304,7 @@
  
 		    // Combining
 		    float3 specularColor = saturate(max(rimColor, oceanColor));
-		    float3 color = diffuseColor + specularColor + glitterColor;
+		    float3 color = (diffuseColor + specularColor + glitterColor) * atten * 2;
 		 
 		    // Final color
 		    return float4(color + c, 1);

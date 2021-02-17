@@ -35,7 +35,11 @@ public class SnowManager : UdonSharpBehaviour
     {
         if (_snowMaterial == null)
         {
-            _snowMaterial = _snowPlanes[0].sharedMaterial;
+            _snowMaterial = _snowPlanes[0].material;
+            foreach (var snowPlane in _snowPlanes)
+            {
+                snowPlane.material = _snowMaterial;
+            }
         }
         
         var localPlayer = Networking.LocalPlayer;

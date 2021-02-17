@@ -9,8 +9,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: PoiSnow
   m_Shader: {fileID: 4800000, guid: 45429b755005c8245b20248fbc150a0a, type: 3}
-  m_ShaderKeywords: LOD_FADE_CROSSFADE _COLORADDSUBDIFF_ON _GLOSSYREFLECTIONS_OFF
-    _METALLICGLOSSMAP _SUNDISK_SIMPLE
+  m_ShaderKeywords: LOD_FADE_CROSSFADE _GLOSSYREFLECTIONS_OFF _SUNDISK_SIMPLE
   m_LightmapFlags: 6
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -350,7 +349,7 @@ Material:
     - _AnisoTangentMapUV: 0
     - _AnisoUseTangentMap: 0
     - _AnisoUseTangentMap1: 0
-    - _AttenuationMultiplier: 0.452
+    - _AttenuationMultiplier: 0.368
     - _BackFaceDetailIntensity: 1
     - _BackFaceEmissionStrength: 0
     - _BackFaceEnabled: 0
@@ -460,7 +459,7 @@ Material:
     - _EnableGITDEmission: 0
     - _EnableGITDEmission1: 0
     - _EnableLighting: 1
-    - _EnableMetallic: 1
+    - _EnableMetallic: 0
     - _EnableMirrorOptions: 0
     - _EnableMirrorTexture: 0
     - _EnableRandom: 0
@@ -525,7 +524,7 @@ Material:
     - _LightingGradientEnd: 0.5
     - _LightingGradientStart: 0
     - _LightingIndirectContribution: 0.2
-    - _LightingMinLightBrightness: 0
+    - _LightingMinLightBrightness: 0.732
     - _LightingMonochromatic: 0
     - _LightingNoIndirectMultiplier: 0.5
     - _LightingNoIndirectThreshold: 0.01
@@ -535,7 +534,7 @@ Material:
     - _LightingShadowStrength2: 1
     - _LightingStandardControlsToon: 0
     - _LightingStandardSmoothness: 0
-    - _LightingType: 1
+    - _LightingType: 2
     - _MainEmissionStrength: 0
     - _MainFadeTextureUV: 0
     - _MainHueShift: 0
@@ -560,7 +559,7 @@ Material:
     - _MatcapAdd: 0
     - _MatcapBorder: 0.43
     - _MatcapEmissionStrength: 0
-    - _MatcapEnable: 1
+    - _MatcapEnable: 0
     - _MatcapIntensity: 1
     - _MatcapLightMask: 0.344
     - _MatcapMaskUV: 0
@@ -633,10 +632,10 @@ Material:
     - _ShadowMix: 0
     - _ShadowMixThreshold: 0.5
     - _ShadowMixWidthMod: 0.5
-    - _ShadowOffset: 0
+    - _ShadowOffset: 0.317
     - _ShadowOffset1: 0
     - _ShadowOffset2: 0
-    - _ShadowStrength: 0.493
+    - _ShadowStrength: 1
     - _Smoothness: 0
     - _SmoothnessFrom: 1
     - _SmoothnessFrom1: 1
@@ -810,7 +809,7 @@ Material:
     - m_start_lightingAdvanced: 1
     - m_start_lightingBeta: 1
     - m_start_manualFlipbookControl: 0
-    - m_start_matcap: 0
+    - m_start_matcap: 1
     - m_start_mirrorOptions: 0
     - m_start_panosphereOptions: 0
     - m_start_parallaxAdvanced: 1
@@ -841,7 +840,7 @@ Material:
     - _ClearCoatMaskPan: {r: 0, g: 0, b: 0, a: 0}
     - _ClearCoatSmoothnessMapPan: {r: 0, g: 0, b: 0, a: 0}
     - _ClearCoatTint: {r: 1, g: 1, b: 1, a: 1}
-    - _Color: {r: 0.88300693, g: 0.8443396, b: 1, a: 1}
+    - _Color: {r: 0.8443396, g: 0.89473784, b: 1, a: 1}
     - _DecalColor: {r: 1, g: 1, b: 1, a: 1}
     - _DecalMaskPan: {r: 0, g: 0, b: 0, a: 0}
     - _DecalPosition: {r: 0.5, g: 0.5, b: 0, a: 0}
