@@ -1,7 +1,5 @@
 ﻿using UdonSharp;
 using UnityEngine;
-using UnityEngine.Playables;
-using UnityEngine.Timeline;
 using VRC.SDKBase;
 
 public class TimeOfDayManager : UdonSharpBehaviour
@@ -13,7 +11,7 @@ public class TimeOfDayManager : UdonSharpBehaviour
     private float _dayNightCycleDuration;
 
     [UdonSynced]
-    private float _targetWeatherIndexSynced;
+    private float _tSynced;
 
     [SerializeField, Range(0,1)]
     private float _t = 0;
@@ -22,12 +20,15 @@ public class TimeOfDayManager : UdonSharpBehaviour
     private bool _pauseTime;
     
     [SerializeField]
-    private Transform _skyboxCamera;
+    private Camera _skyboxCamera;
+    //
+    // [SerializeField, Header("Colors for the fog over a day. Alpha is density")]
+    // private Gradient _fogGradient;
 
-    [SerializeField, Header("Colors for the fog over a day. Alpha is density")]
-    private Gradient _fogGradient;
+    [SerializeField]
+    private Color[] _fogColors;
 
-
+    private bool _timeWasSet;
     private bool _initialized;
     private readonly int TimeOfDay = Animator.StringToHash("TimeOfDay");
 
@@ -55,6 +56,7 @@ public class TimeOfDayManager : UdonSharpBehaviour
         if(!_pauseTime)
         {
             _t += Time.deltaTime * (1f / _dayNightCycleDuration);
+            _tSynced = _t;
             if (_t >= 1)
             {
                 _t = 0;
@@ -66,19 +68,23 @@ public class TimeOfDayManager : UdonSharpBehaviour
             animator.SetFloat(TimeOfDay, _t);
         }
 
-        var color = _fogGradient.Evaluate(_t);
+        // var color = _fogGradient.Evaluate(_t);
+        // RenderSettings.fogColor = color;
+        // RenderSettings.fogDensity = color.a * 0.004f;
         
+        var color = _fogColors[Mathf.RoundToInt(_t * (_fogColors.Length - 1))];
+        color = Vector4.MoveTowards(RenderSettings.fogColor, color, Time.deltaTime * (1 / _dayNightCycleDuration));
         RenderSettings.fogColor = color;
         RenderSettings.fogDensity = color.a * 0.004f;
 		
-        var p = Networking.LocalPlayer;
-        if (p == null)
-        {
-            return;
-        }
-		
-        var rotation = p.GetRotation();
-        _skyboxCamera.rotation = rotation;
+        // var p = Networking.LocalPlayer;
+        // if (p == null)
+        // {
+        //     return;
+        // }
+		      //
+        // var rotation = p.GetRotation();
+        // _skyboxCamera.transform.rotation = rotation;
     }
     
     public void SetNextWeather()
@@ -100,10 +106,9 @@ public class TimeOfDayManager : UdonSharpBehaviour
 
     public override void OnDeserialization()
     {
-        // if (_targetWeatherIndexSynced != _targetWeatherIndex)
-        // {
-        //     _targetWeatherIndex = _targetWeatherIndexSynced;
-        //     SetWeatherInternal(_weatherTemplates[_targetWeatherIndex]);
-        // }
+        if (Mathf.Abs(_tSynced - _t) > .01f)
+        {
+            _t = _tSynced;
+        }
     }
 }
