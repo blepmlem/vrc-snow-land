@@ -65,7 +65,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _Displacement: 70
-    - _GlitterThreshold: -0.99999
+    - _GlitterThreshold: -0.9999
     - _Glossiness: 0.048
     - _Metallic: 0.478
     - _NormalStrength: 0.037
