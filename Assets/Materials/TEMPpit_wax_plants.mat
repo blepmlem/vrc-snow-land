@@ -7,9 +7,10 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Simple White 5
+  m_Name: TEMPpit_wax_plants
   m_Shader: {fileID: 4800000, guid: 45429b755005c8245b20248fbc150a0a, type: 3}
   m_ShaderKeywords: LOD_FADE_CROSSFADE _GLOSSYREFLECTIONS_OFF _MAPPING_6_FRAMES_LAYOUT
+    _TERRAIN_NORMAL_MAP
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -464,7 +465,7 @@ Material:
     - _EnableMirrorTexture: 0
     - _EnableRandom: 0
     - _EnableRimLighting: 1
-    - _EnableSSS: 0
+    - _EnableSSS: 1
     - _EnableSpecular: 0
     - _EnableSpecular1: 0
     - _FlipbookAdd: 0
@@ -509,7 +510,7 @@ Material:
     - _GlitterSpeed: 0
     - _GlitterUseSurfaceColor: 1
     - _GlossMapScale: 1
-    - _Glossiness: 0.5
+    - _Glossiness: 0.008
     - _GlossyReflections: 1
     - _IgnoreFog: 0
     - _InvertSmoothness: 0
@@ -566,7 +567,7 @@ Material:
     - _MatcapMultiply: 0
     - _MatcapNormal: 1
     - _MatcapReplace: 1
-    - _Metallic: 0.185
+    - _Metallic: 0
     - _MetallicMaskUV: 0
     - _MetallicTintMapUV: 0
     - _Mirror: 0
@@ -635,7 +636,7 @@ Material:
     - _ShadowOffset: 0
     - _ShadowOffset1: 0
     - _ShadowOffset2: 0
-    - _ShadowStrength: 0.525
+    - _ShadowStrength: 0.665
     - _Smoothness: 0.436
     - _SmoothnessFrom: 1
     - _SmoothnessFrom1: 1
@@ -840,7 +841,7 @@ Material:
     - _ClearCoatMaskPan: {r: 0, g: 0, b: 0, a: 0}
     - _ClearCoatSmoothnessMapPan: {r: 0, g: 0, b: 0, a: 0}
     - _ClearCoatTint: {r: 1, g: 1, b: 1, a: 1}
-    - _Color: {r: 0.5283019, g: 0.5283019, b: 0.5283019, a: 1}
+    - _Color: {r: 0.42991528, g: 0.5943396, b: 0.32800817, a: 1}
     - _DecalColor: {r: 1, g: 1, b: 1, a: 1}
     - _DecalMaskPan: {r: 0, g: 0, b: 0, a: 0}
     - _DecalPosition: {r: 0.5, g: 0.5, b: 0, a: 0}

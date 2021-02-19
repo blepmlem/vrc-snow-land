@@ -7,9 +7,9 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Simple White 3
+  m_Name: TEMPpit_pit
   m_Shader: {fileID: 4800000, guid: 45429b755005c8245b20248fbc150a0a, type: 3}
-  m_ShaderKeywords: LOD_FADE_CROSSFADE _GLOSSYREFLECTIONS_OFF _MAPPING_6_FRAMES_LAYOUT
+  m_ShaderKeywords: LOD_FADE_CROSSFADE
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -41,7 +41,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
         m_Texture: {fileID: 0}
-        m_Scale: {x: 5, y: 5}
+        m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ClearCoatCubeMap:
         m_Texture: {fileID: 8900000, guid: 1f79f71b84fc2844bb81e9ae4f5bc384, type: 3}
@@ -56,7 +56,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _CubeMap:
-        m_Texture: {fileID: 8900000, guid: 8fc1b64e56c5c6540a4fe651abb8e855, type: 3}
+        m_Texture: {fileID: 8900000, guid: 1f79f71b84fc2844bb81e9ae4f5bc384, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DecalMask:
@@ -316,7 +316,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ToonRamp:
-        m_Texture: {fileID: 2800000, guid: 61bd594533da4fc42bd46ef93ba5a4f6, type: 3}
+        m_Texture: {fileID: 2800000, guid: 7ea07678c8dd4984f943b23db7ffffb0, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ToonRamp1:
@@ -349,14 +349,14 @@ Material:
     - _AnisoTangentMapUV: 0
     - _AnisoUseTangentMap: 0
     - _AnisoUseTangentMap1: 0
-    - _AttenuationMultiplier: 1
+    - _AttenuationMultiplier: 0.427
     - _BackFaceDetailIntensity: 1
     - _BackFaceEmissionStrength: 0
     - _BackFaceEnabled: 0
     - _BackFaceHueShift: 0
     - _BackFaceTextureUV: 0
-    - _BumpMapUV: 1
-    - _BumpScale: 0
+    - _BumpMapUV: 0
+    - _BumpScale: 1
     - _CameraAngleMax: 90
     - _CameraAngleMin: 45
     - _ClearCoat: 1
@@ -454,7 +454,7 @@ Material:
     - _EnableDistortion: 0
     - _EnableEmission: 0
     - _EnableEmission1: 0
-    - _EnableEnvironmentalRim: 1
+    - _EnableEnvironmentalRim: 0
     - _EnableFlipbook: 0
     - _EnableGITDEmission: 0
     - _EnableGITDEmission1: 0
@@ -463,7 +463,7 @@ Material:
     - _EnableMirrorOptions: 0
     - _EnableMirrorTexture: 0
     - _EnableRandom: 0
-    - _EnableRimLighting: 1
+    - _EnableRimLighting: 0
     - _EnableSSS: 0
     - _EnableSpecular: 0
     - _EnableSpecular1: 0
@@ -496,18 +496,18 @@ Material:
     - _GITDEWorldOrMesh1: 0
     - _GlitterAngleRange: 90
     - _GlitterBias: 0.8
-    - _GlitterBrightness: 2.6
+    - _GlitterBrightness: 3
     - _GlitterColorMapUV: 0
-    - _GlitterContrast: 413
+    - _GlitterContrast: 300
     - _GlitterEnable: 0
     - _GlitterFrequency: 300
     - _GlitterJitter: 1
     - _GlitterMaskUV: 0
     - _GlitterMinBrightness: 0
     - _GlitterRandomColors: 0
-    - _GlitterSize: 1
-    - _GlitterSpeed: 0
-    - _GlitterUseSurfaceColor: 1
+    - _GlitterSize: 0.3
+    - _GlitterSpeed: 10
+    - _GlitterUseSurfaceColor: 0
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
@@ -527,7 +527,7 @@ Material:
     - _LightingMinLightBrightness: 0
     - _LightingMonochromatic: 0
     - _LightingNoIndirectMultiplier: 0.5
-    - _LightingNoIndirectThreshold: 0.01
+    - _LightingNoIndirectThreshold: 0
     - _LightingNumRamps: 1
     - _LightingShadowMaskUV: 0
     - _LightingShadowStrength1: 1
@@ -566,7 +566,7 @@ Material:
     - _MatcapMultiply: 0
     - _MatcapNormal: 1
     - _MatcapReplace: 1
-    - _Metallic: 0.185
+    - _Metallic: 0
     - _MetallicMaskUV: 0
     - _MetallicTintMapUV: 0
     - _Mirror: 0
@@ -607,9 +607,9 @@ Material:
     - _RimEnviroBlur: 0.7
     - _RimEnviroIntensity: 1
     - _RimEnviroMaskUV: 0
-    - _RimEnviroMinBrightness: 0.269
+    - _RimEnviroMinBrightness: 0
     - _RimEnviroSharpness: 0
-    - _RimEnviroWidth: 0.707
+    - _RimEnviroWidth: 0.45
     - _RimLightColorBias: 0
     - _RimLightNormal: 1
     - _RimLightingInvert: 0
@@ -622,10 +622,10 @@ Material:
     - _RimWidthNoiseTextureUV: 0
     - _SSSDistortion: 1
     - _SSSPower: 5
-    - _SSSSCale: 1
+    - _SSSSCale: 0.25
     - _SSSThicknessMapUV: 0
     - _SSSThicknessMod: 0
-    - _SampleWorld: 1
+    - _SampleWorld: 0
     - _Saturation: 0
     - _ScrollingEmission: 0
     - _ScrollingEmission1: 0
@@ -635,8 +635,8 @@ Material:
     - _ShadowOffset: 0
     - _ShadowOffset1: 0
     - _ShadowOffset2: 0
-    - _ShadowStrength: 0.52
-    - _Smoothness: 0.436
+    - _ShadowStrength: 0.718
+    - _Smoothness: 0
     - _SmoothnessFrom: 1
     - _SmoothnessFrom1: 1
     - _SmoothnessMaskUV: 0
@@ -715,7 +715,7 @@ Material:
     - footer_twitter: 0
     - footer_youtube: 0
     - m_ParallaxMap: 0
-    - m_Special_Effects: 1
+    - m_Special_Effects: 0
     - m_end_Alpha: 0
     - m_end_CenterOutEmission: 0
     - m_end_CenterOutEmission1: 0
@@ -770,8 +770,8 @@ Material:
     - m_end_subsurface: 0
     - m_end_vertexManipulation: 0
     - m_lightingOptions: 1
-    - m_mainOptions: 0
-    - m_renderingOptions: 1
+    - m_mainOptions: 1
+    - m_renderingOptions: 0
     - m_start_Alpha: 0
     - m_start_CenterOutEmission: 0
     - m_start_CenterOutEmission1: 0
@@ -780,7 +780,7 @@ Material:
     - m_start_Lighting: 1
     - m_start_MainHueShift: 0
     - m_start_Matcap2: 0
-    - m_start_Metallic: 1
+    - m_start_Metallic: 0
     - m_start_RGBMask: 0
     - m_start_ShadowMix: 0
     - m_start_StencilPassOptions: 0
@@ -802,7 +802,7 @@ Material:
     - m_start_emission1Options: 0
     - m_start_emissionOptions: 0
     - m_start_flipBook: 0
-    - m_start_glitter: 1
+    - m_start_glitter: 0
     - m_start_glitterRandom: 0
     - m_start_glowInDarkEmissionOptions: 0
     - m_start_glowInDarkEmissionOptions1: 0
@@ -816,12 +816,12 @@ Material:
     - m_start_parallaxHeightmap: 0
     - m_start_parallaxInternal: 0
     - m_start_pointToPoint: 0
-    - m_start_reflectionRim: 1
-    - m_start_rimLightOptions: 1
+    - m_start_reflectionRim: 0
+    - m_start_rimLightOptions: 0
     - m_start_rimWidthNoise: 0
     - m_start_scrollingEmissionOptions: 0
     - m_start_scrollingEmissionOptions1: 0
-    - m_start_specular: 0
+    - m_start_specular: 1
     - m_start_specular1: 0
     - m_start_subsurface: 0
     - m_start_vertexManipulation: 0
@@ -840,7 +840,7 @@ Material:
     - _ClearCoatMaskPan: {r: 0, g: 0, b: 0, a: 0}
     - _ClearCoatSmoothnessMapPan: {r: 0, g: 0, b: 0, a: 0}
     - _ClearCoatTint: {r: 1, g: 1, b: 1, a: 1}
-    - _Color: {r: 0.7264151, g: 0.6434085, b: 0.5516643, a: 1}
+    - _Color: {r: 0.509434, g: 0.47175464, b: 0.3484336, a: 1}
     - _DecalColor: {r: 1, g: 1, b: 1, a: 1}
     - _DecalMaskPan: {r: 0, g: 0, b: 0, a: 0}
     - _DecalPosition: {r: 0.5, g: 0.5, b: 0, a: 0}
@@ -916,7 +916,7 @@ Material:
     - _RimMaskPan: {r: 0, g: 0, b: 0, a: 0}
     - _RimTexPan: {r: 0, g: 0, b: 0, a: 0}
     - _RimWidthNoiseTexturePan: {r: 0, g: 0, b: 0, a: 0}
-    - _SSSColor: {r: 1, g: 1, b: 1, a: 1}
+    - _SSSColor: {r: 1, g: 0, b: 0, a: 1}
     - _SSSThicknessMapPan: {r: 0, g: 0, b: 0, a: 0}
     - _SmoothnessMaskPan: {r: 0, g: 0, b: 0, a: 0}
     - _SpecularAnisoJitterMacro1Pan: {r: 0, g: 0, b: 0, a: 0}
@@ -927,9 +927,9 @@ Material:
     - _SpecularMapPan: {r: 0, g: 0, b: 0, a: 0}
     - _SpecularMask1Pan: {r: 0, g: 0, b: 0, a: 0}
     - _SpecularMaskPan: {r: 0, g: 0, b: 0, a: 0}
-    - _SpecularTint: {r: 0, g: 0, b: 0, a: 1}
+    - _SpecularTint: {r: 1, g: 0.8709266, b: 0.6084906, a: 1}
     - _SpecularTint1: {r: 1, g: 1, b: 1, a: 1}
-    - _SpecularToonInnerOuter: {r: 0.25, g: 0.3, b: 0, a: 1}
+    - _SpecularToonInnerOuter: {r: 0.25, g: 0.48994857, b: 0, a: 1}
     - _SpecularToonInnerOuter1: {r: 0.25, g: 0.3, b: 0, a: 1}
     - _TextFPSColor: {r: 1, g: 1, b: 1, a: 1}
     - _TextFPSOffset: {r: 0, g: 0, b: 0, a: 0}

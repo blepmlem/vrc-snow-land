@@ -13,6 +13,16 @@ ModelImporter:
     100014: Mesh_pit_vineplant_TEMP
     100016: Mesh_pit_waxplant_TEMP
     100018: //RootNode
+    100020: Mash_pit_plantpot
+    100022: Mesh_pit_floor
+    100024: Mesh_pit_foundation
+    100026: Mesh_pit_pillar
+    100028: Mesh_pit_rockfeature
+    100030: Mesh_pit_rockfeature_back
+    100032: Mesh_pit_sofa
+    100034: Mesh_pit_stairs
+    100036: Mesh_pit_vineplant
+    100038: Mesh_pit_waxplant
     400000: Mash_pit_plantpot_TEMP
     400002: Mesh_pit_floor_TEMP
     400004: Mesh_pit_foundation_TEMP
@@ -23,6 +33,16 @@ ModelImporter:
     400014: Mesh_pit_vineplant_TEMP
     400016: Mesh_pit_waxplant_TEMP
     400018: //RootNode
+    400020: Mash_pit_plantpot
+    400022: Mesh_pit_floor
+    400024: Mesh_pit_foundation
+    400026: Mesh_pit_pillar
+    400028: Mesh_pit_rockfeature
+    400030: Mesh_pit_rockfeature_back
+    400032: Mesh_pit_sofa
+    400034: Mesh_pit_stairs
+    400036: Mesh_pit_vineplant
+    400038: Mesh_pit_waxplant
     2100000: lambert1
     2300000: Mash_pit_plantpot_TEMP
     2300002: Mesh_pit_floor_TEMP
@@ -33,6 +53,16 @@ ModelImporter:
     2300012: Mesh_pit_stairs_TEMP
     2300014: Mesh_pit_vineplant_TEMP
     2300016: Mesh_pit_waxplant_TEMP
+    2300018: Mash_pit_plantpot
+    2300020: Mesh_pit_floor
+    2300022: Mesh_pit_foundation
+    2300024: Mesh_pit_pillar
+    2300026: Mesh_pit_rockfeature
+    2300028: Mesh_pit_rockfeature_back
+    2300030: Mesh_pit_sofa
+    2300032: Mesh_pit_stairs
+    2300034: Mesh_pit_vineplant
+    2300036: Mesh_pit_waxplant
     3300000: Mash_pit_plantpot_TEMP
     3300002: Mesh_pit_floor_TEMP
     3300004: Mesh_pit_foundation_TEMP
@@ -42,6 +72,16 @@ ModelImporter:
     3300012: Mesh_pit_stairs_TEMP
     3300014: Mesh_pit_vineplant_TEMP
     3300016: Mesh_pit_waxplant_TEMP
+    3300018: Mash_pit_plantpot
+    3300020: Mesh_pit_floor
+    3300022: Mesh_pit_foundation
+    3300024: Mesh_pit_pillar
+    3300026: Mesh_pit_rockfeature
+    3300028: Mesh_pit_rockfeature_back
+    3300030: Mesh_pit_sofa
+    3300032: Mesh_pit_stairs
+    3300034: Mesh_pit_vineplant
+    3300036: Mesh_pit_waxplant
     4300000: Mesh_pit_foundation_TEMP
     4300002: Mesh_pit_sofa_TEMP
     4300004: Mesh_pit_pillar_TEMP
@@ -51,6 +91,16 @@ ModelImporter:
     4300012: Mesh_pit_vineplant_TEMP
     4300014: Mesh_pit_rockfeature_TEMP
     4300016: Mesh_pit_floor_TEMP
+    4300018: Mesh_pit_foundation
+    4300020: Mesh_pit_sofa
+    4300022: Mesh_pit_pillar
+    4300024: Mesh_pit_stairs
+    4300026: Mash_pit_plantpot
+    4300028: Mesh_pit_waxplant
+    4300030: Mesh_pit_vineplant
+    4300032: Mesh_pit_rockfeature
+    4300034: Mesh_pit_rockfeature_back
+    4300036: Mesh_pit_floor
     6400000: Mash_pit_plantpot_TEMP
     6400002: Mesh_pit_floor_TEMP
     6400004: Mesh_pit_foundation_TEMP
@@ -60,6 +110,16 @@ ModelImporter:
     6400012: Mesh_pit_stairs_TEMP
     6400014: Mesh_pit_vineplant_TEMP
     6400016: Mesh_pit_waxplant_TEMP
+    6400018: Mash_pit_plantpot
+    6400020: Mesh_pit_floor
+    6400022: Mesh_pit_foundation
+    6400024: Mesh_pit_pillar
+    6400026: Mesh_pit_rockfeature
+    6400028: Mesh_pit_rockfeature_back
+    6400030: Mesh_pit_sofa
+    6400032: Mesh_pit_stairs
+    6400034: Mesh_pit_vineplant
+    6400036: Mesh_pit_waxplant
   externalObjects: {}
   materials:
     importMaterials: 1

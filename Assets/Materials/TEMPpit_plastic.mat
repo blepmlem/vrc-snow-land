@@ -7,10 +7,10 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Simple White 4
+  m_Name: TEMPpit_plastic
   m_Shader: {fileID: 4800000, guid: 45429b755005c8245b20248fbc150a0a, type: 3}
   m_ShaderKeywords: LOD_FADE_CROSSFADE _GLOSSYREFLECTIONS_OFF _MAPPING_6_FRAMES_LAYOUT
-    _TERRAIN_NORMAL_MAP
+    _METALLICGLOSSMAP
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -41,8 +41,8 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
+        m_Texture: {fileID: 2800000, guid: 14c44bcfcba8ed64e84406fb06cbaae4, type: 3}
+        m_Scale: {x: 5, y: 5}
         m_Offset: {x: 0, y: 0}
     - _ClearCoatCubeMap:
         m_Texture: {fileID: 8900000, guid: 1f79f71b84fc2844bb81e9ae4f5bc384, type: 3}
@@ -216,6 +216,14 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _OutlineMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OutlineTexture:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _PanoCubeMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -339,6 +347,7 @@ Material:
     - _AOStrength: 0
     - _AlphaMaskUV: 0
     - _AlphaMod: 0
+    - _AlphaToMask: 0
     - _AngleCompareTo: 0
     - _AngleMinAlpha: 0
     - _AngleType: 0
@@ -356,8 +365,8 @@ Material:
     - _BackFaceEnabled: 0
     - _BackFaceHueShift: 0
     - _BackFaceTextureUV: 0
-    - _BumpMapUV: 0
-    - _BumpScale: 1
+    - _BumpMapUV: 1
+    - _BumpScale: 0.49
     - _CameraAngleMax: 90
     - _CameraAngleMin: 45
     - _ClearCoat: 1
@@ -460,12 +469,12 @@ Material:
     - _EnableGITDEmission: 0
     - _EnableGITDEmission1: 0
     - _EnableLighting: 1
-    - _EnableMetallic: 0
+    - _EnableMetallic: 1
     - _EnableMirrorOptions: 0
     - _EnableMirrorTexture: 0
     - _EnableRandom: 0
     - _EnableRimLighting: 1
-    - _EnableSSS: 1
+    - _EnableSSS: 0
     - _EnableSpecular: 0
     - _EnableSpecular1: 0
     - _FlipbookAdd: 0
@@ -510,7 +519,7 @@ Material:
     - _GlitterSpeed: 0
     - _GlitterUseSurfaceColor: 1
     - _GlossMapScale: 1
-    - _Glossiness: 0.008
+    - _Glossiness: 0.807
     - _GlossyReflections: 1
     - _IgnoreFog: 0
     - _InvertSmoothness: 0
@@ -536,6 +545,8 @@ Material:
     - _LightingStandardControlsToon: 0
     - _LightingStandardSmoothness: 0
     - _LightingType: 1
+    - _LineWidth: 0
+    - _MainAlphaToCoverage: 0
     - _MainEmissionStrength: 0
     - _MainFadeTextureUV: 0
     - _MainHueShift: 0
@@ -544,6 +555,7 @@ Material:
     - _MainHueShiftSpeed: 0
     - _MainHueShiftToggle: 0
     - _MainMinAlpha: 0
+    - _MainMipScale: 0.25
     - _MainShadowClipMod: 0
     - _MainTextureUV: 0
     - _MainVertexColoring: 0
@@ -567,7 +579,7 @@ Material:
     - _MatcapMultiply: 0
     - _MatcapNormal: 1
     - _MatcapReplace: 1
-    - _Metallic: 0
+    - _Metallic: 0.123
     - _MetallicMaskUV: 0
     - _MetallicTintMapUV: 0
     - _Mirror: 0
@@ -576,6 +588,20 @@ Material:
     - _ModelAngleMax: 90
     - _ModelAngleMin: 45
     - _OcclusionStrength: 1
+    - _OutlineCull: 1
+    - _OutlineEmission: 0
+    - _OutlineFixedSize: 0
+    - _OutlineLit: 1
+    - _OutlineMode: 0
+    - _OutlineRimLightBlend: 0
+    - _OutlineShadowStrength: 1
+    - _OutlineStencilCompareFunction: 8
+    - _OutlineStencilFailOp: 0
+    - _OutlineStencilPassOp: 0
+    - _OutlineStencilRef: 0
+    - _OutlineStencilZFailOp: 0
+    - _OutlineTintMix: 0
+    - _OutlineUseVertexColors: 0
     - _PanoBlend: 0
     - _PanoCubeMapToggle: 0
     - _PanoEmission: 0
@@ -604,28 +630,28 @@ Material:
     - _RGBMaskEnabled: 0
     - _RGBMaskUV: 0
     - _RGBRed_UV: 0
-    - _RimBrighten: 0
+    - _RimBrighten: 0.39
     - _RimEnviroBlur: 0.7
     - _RimEnviroIntensity: 1
     - _RimEnviroMaskUV: 0
     - _RimEnviroMinBrightness: 0.269
     - _RimEnviroSharpness: 0
     - _RimEnviroWidth: 0.707
-    - _RimLightColorBias: 0
+    - _RimLightColorBias: 0.051
     - _RimLightNormal: 1
     - _RimLightingInvert: 0
     - _RimMaskUV: 0
     - _RimSharpness: 0.25
     - _RimStrength: 0
     - _RimTexUV: 0
-    - _RimWidth: 0.8
+    - _RimWidth: 0.75
     - _RimWidthNoiseStrength: 0.1
     - _RimWidthNoiseTextureUV: 0
-    - _SSSDistortion: 0.665
-    - _SSSPower: 1
-    - _SSSSCale: 0.864
+    - _SSSDistortion: 1
+    - _SSSPower: 5
+    - _SSSSCale: 1
     - _SSSThicknessMapUV: 0
-    - _SSSThicknessMod: 0.567
+    - _SSSThicknessMod: 0
     - _SampleWorld: 1
     - _Saturation: 0
     - _ScrollingEmission: 0
@@ -633,10 +659,10 @@ Material:
     - _ShadowMix: 0
     - _ShadowMixThreshold: 0.5
     - _ShadowMixWidthMod: 0.5
-    - _ShadowOffset: 0
+    - _ShadowOffset: -0.018
     - _ShadowOffset1: 0
     - _ShadowOffset2: 0
-    - _ShadowStrength: 0.665
+    - _ShadowStrength: 0.58
     - _Smoothness: 0.436
     - _SmoothnessFrom: 1
     - _SmoothnessFrom1: 1
@@ -726,6 +752,7 @@ Material:
     - m_end_MainHueShift: 0
     - m_end_Matcap2: 0
     - m_end_Metallic: 0
+    - m_end_OutlineStencil: 0
     - m_end_RGBMask: 0
     - m_end_ShadowMix: 0
     - m_end_StencilPassOptions: 0
@@ -756,6 +783,7 @@ Material:
     - m_end_manualFlipbookControl: 0
     - m_end_matcap: 0
     - m_end_mirrorOptions: 0
+    - m_end_outlineAdvanced: 0
     - m_end_panosphereOptions: 0
     - m_end_parallaxAdvanced: 0
     - m_end_parallaxHeightmap: 0
@@ -772,6 +800,7 @@ Material:
     - m_end_vertexManipulation: 0
     - m_lightingOptions: 1
     - m_mainOptions: 1
+    - m_outlineOptions: 0
     - m_renderingOptions: 1
     - m_start_Alpha: 0
     - m_start_CenterOutEmission: 0
@@ -782,6 +811,7 @@ Material:
     - m_start_MainHueShift: 0
     - m_start_Matcap2: 0
     - m_start_Metallic: 1
+    - m_start_OutlineStencil: 0
     - m_start_RGBMask: 0
     - m_start_ShadowMix: 0
     - m_start_StencilPassOptions: 0
@@ -812,13 +842,14 @@ Material:
     - m_start_manualFlipbookControl: 0
     - m_start_matcap: 0
     - m_start_mirrorOptions: 0
+    - m_start_outlineAdvanced: 0
     - m_start_panosphereOptions: 0
     - m_start_parallaxAdvanced: 0
     - m_start_parallaxHeightmap: 0
     - m_start_parallaxInternal: 0
     - m_start_pointToPoint: 0
-    - m_start_reflectionRim: 0
-    - m_start_rimLightOptions: 0
+    - m_start_reflectionRim: 1
+    - m_start_rimLightOptions: 1
     - m_start_rimWidthNoise: 0
     - m_start_scrollingEmissionOptions: 0
     - m_start_scrollingEmissionOptions1: 0
@@ -841,7 +872,7 @@ Material:
     - _ClearCoatMaskPan: {r: 0, g: 0, b: 0, a: 0}
     - _ClearCoatSmoothnessMapPan: {r: 0, g: 0, b: 0, a: 0}
     - _ClearCoatTint: {r: 1, g: 1, b: 1, a: 1}
-    - _Color: {r: 0.42991528, g: 0.5943396, b: 0.32800817, a: 1}
+    - _Color: {r: 0.9811321, g: 0.44472072, b: 0.22677112, a: 1}
     - _DecalColor: {r: 1, g: 1, b: 1, a: 1}
     - _DecalMaskPan: {r: 0, g: 0, b: 0, a: 0}
     - _DecalPosition: {r: 0.5, g: 0.5, b: 0, a: 0}
@@ -885,6 +916,7 @@ Material:
     - _LightingEndColor: {r: 1, g: 1, b: 1, a: 1}
     - _LightingShadowMaskPan: {r: 0, g: 0, b: 0, a: 0}
     - _LightingStartColor: {r: 1, g: 1, b: 1, a: 1}
+    - _LineColor: {r: 1, g: 1, b: 1, a: 1}
     - _MainDistanceFade: {r: 0, g: 0, b: 0, a: 0}
     - _MainFadeTexturePan: {r: 0, g: 0, b: 0, a: 0}
     - _MainHueShiftMaskPan: {r: 0, g: 0, b: 0, a: 0}
@@ -897,6 +929,10 @@ Material:
     - _MetallicMaskPan: {r: 0, g: 0, b: 0, a: 0}
     - _MetallicTintMapPan: {r: 0, g: 0, b: 0, a: 0}
     - _MirrorTexturePan: {r: 0, g: 0, b: 0, a: 0}
+    - _OutlineDropShadowOffset: {r: 1, g: 0, b: 0, a: 0}
+    - _OutlineFadeDistance: {r: 0, g: 0, b: 0, a: 0}
+    - _OutlinePersonaDirection: {r: 1, g: 0, b: 0, a: 0}
+    - _OutlineTexturePan: {r: 0, g: 0, b: 0, a: 0}
     - _PanoMaskPan: {r: 0, g: 0, b: 0, a: 0}
     - _PanosphereColor: {r: 1, g: 1, b: 1, a: 1}
     - _PanospherePan: {r: 0, g: 0, b: 0, a: 0}
@@ -917,7 +953,7 @@ Material:
     - _RimMaskPan: {r: 0, g: 0, b: 0, a: 0}
     - _RimTexPan: {r: 0, g: 0, b: 0, a: 0}
     - _RimWidthNoiseTexturePan: {r: 0, g: 0, b: 0, a: 0}
-    - _SSSColor: {r: 0.67053705, g: 1, b: 0.6650944, a: 1}
+    - _SSSColor: {r: 1, g: 1, b: 1, a: 1}
     - _SSSThicknessMapPan: {r: 0, g: 0, b: 0, a: 0}
     - _SmoothnessMaskPan: {r: 0, g: 0, b: 0, a: 0}
     - _SpecularAnisoJitterMacro1Pan: {r: 0, g: 0, b: 0, a: 0}
