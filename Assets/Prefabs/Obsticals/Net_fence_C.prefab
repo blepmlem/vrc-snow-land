@@ -14,7 +14,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 126
   m_IsActive: 1
 --- !u!4 &4205461530353658287
 Transform:
@@ -48,7 +48,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 126
   m_IsActive: 1
 --- !u!4 &4157849915976589680
 Transform:
@@ -95,6 +95,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 92a159444bc7c124d802561bed893cc6, type: 3}
       propertyPath: m_Name
       value: Mesh_fence_net_C
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 92a159444bc7c124d802561bed893cc6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 126
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 92a159444bc7c124d802561bed893cc6, type: 3}
       propertyPath: m_LocalPosition.x
