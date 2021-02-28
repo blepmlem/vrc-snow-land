@@ -1,4 +1,4 @@
-﻿using UdonSharp;
+using UdonSharp;
 using UnityEngine;
 using VRC.SDKBase;
 
@@ -36,7 +36,8 @@ public class TimeOfDayManager : UdonSharpBehaviour
     {
         if (Networking.IsMaster)
         {
-            _t = Random.Range(0, 1);
+            _t = Random.Range(0f, 1f);
+            _tSynced = _t;
         }
         
         _initialized = true;
@@ -46,7 +47,6 @@ public class TimeOfDayManager : UdonSharpBehaviour
     {
         if (!_initialized)
         {
-            
             Initialize();
         }        
     }
@@ -56,11 +56,12 @@ public class TimeOfDayManager : UdonSharpBehaviour
         if(!_pauseTime)
         {
             _t += Time.deltaTime * (1f / _dayNightCycleDuration);
-            _tSynced = _t;
+
             if (_t >= 1)
             {
                 _t = 0;
             }
+            _tSynced = _t;
         }
         
         foreach (Animator animator in _animators)
