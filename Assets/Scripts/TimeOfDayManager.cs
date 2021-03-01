@@ -7,13 +7,16 @@ public class TimeOfDayManager : UdonSharpBehaviour
     [SerializeField]
     private Animator[] _animators;
 
-    [SerializeField]
+    [SerializeField, Header("Time in seconds for a full day/night cycle")]
     private float _dayNightCycleDuration;
-
+    
+    [SerializeField, Header("Start time of the day (0 - 1)")]
+    private Vector2 _startingRange = new Vector2(.3f, 5f);
+    
     [UdonSynced]
     private float _tSynced;
 
-    [SerializeField, Range(0,1)]
+    [SerializeField, Range(0,1), Header("Time of day in (0 - 1)")]
     private float _t = 0;
 
     [SerializeField]
@@ -36,7 +39,7 @@ public class TimeOfDayManager : UdonSharpBehaviour
     {
         if (Networking.IsMaster)
         {
-            _t = Random.Range(0f, 1f);
+            _t = Random.Range(_startingRange.x, _startingRange.y);
             _tSynced = _t;
         }
         
@@ -55,7 +58,8 @@ public class TimeOfDayManager : UdonSharpBehaviour
     {
         if(!_pauseTime)
         {
-            _t += Time.deltaTime * (1f / _dayNightCycleDuration);
+            float multiplier = Mathf.Abs(_t * 2 - 1) + .5f; // Make the day go slower, night faster
+            _t += Time.deltaTime * (1f / _dayNightCycleDuration) * multiplier;
 
             if (_t >= 1)
             {

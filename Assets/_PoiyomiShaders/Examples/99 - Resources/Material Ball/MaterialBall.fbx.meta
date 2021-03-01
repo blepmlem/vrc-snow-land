@@ -19,22 +19,7 @@ ModelImporter:
     4300000: MaterialBall
     9500000: //RootNode
     13700000: MaterialBall
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Inside
-    second: {fileID: 2100000, guid: 68a283cfd85359946a262eaa83a6e8db, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Logo
-    second: {fileID: 2100000, guid: c6c9f4e02191aff4491d2dfb710802c2, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Outside
-    second: {fileID: 2100000, guid: 5b847969ecc4daa44b0a09e81f9413e8, type: 2}
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0

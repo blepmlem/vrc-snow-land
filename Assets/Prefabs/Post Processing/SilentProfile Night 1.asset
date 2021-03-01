@@ -132,7 +132,7 @@ MonoBehaviour:
     value: {r: 1, g: 0.87267137, b: 0.75, a: 1}
   fastMode:
     overrideState: 1
-    value: 0
+    value: 1
   dirtTexture:
     overrideState: 1
     value: {fileID: 2800000, guid: 2114823bdb941844d9ae16271a7e55ff, type: 3}

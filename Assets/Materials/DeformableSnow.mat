@@ -65,14 +65,14 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _Displacement: 70
-    - _GlitterThreshold: -0.9999
+    - _GlitterThreshold: -0.999
     - _Glossiness: 0.048
     - _Metallic: 0.478
     - _NormalStrength: 0.037
     - _OceanSpecularPower: 101
-    - _OceanSpecularStrength: 0
+    - _OceanSpecularStrength: 0.05
     - _SteepnessSharpnessPower: 2.34
-    - _TerrainRimPower: 31.7
+    - _TerrainRimPower: 36.5
     - _TerrainRimStrength: 1.24
     - _Tess: 78
     - _TesselationDistance: 50
@@ -87,6 +87,6 @@ Material:
     - _ShadowColor: {r: 0.29156286, g: 0.4485987, b: 0.6792453, a: 1}
     - _SnowColor: {r: 0.9669811, g: 0.98745227, b: 1, a: 1}
     - _TerrainColor: {r: 0.121568605, g: 0.15485498, b: 0.6039216, a: 1}
-    - _TerrainRimColor: {r: 1, g: 0.3945463, b: 0.2028302, a: 1}
+    - _TerrainRimColor: {r: 0.5943396, g: 0.18812375, b: 0.058873262, a: 1}
     - _TopCamData: {r: 0, g: 10, b: 0, a: 0.04}
     - _TopColor: {r: 0.75645244, g: 0.8396226, b: 0.8325443, a: 1}
