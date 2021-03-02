@@ -8,9 +8,8 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Simple White
-  m_Shader: {fileID: 4800000, guid: e9e18fbf88ba9eb44ab0d683cd27c2a3, type: 3}
-  m_ShaderKeywords: LOD_FADE_CROSSFADE VIGNETTE_MASKED _GLOSSYREFLECTIONS_OFF _MAPPING_6_FRAMES_LAYOUT
-    _SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A _SPECGLOSSMAP
+  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: LOD_FADE_CROSSFADE VIGNETTE_MASKED _MAPPING_6_FRAMES_LAYOUT _SPECGLOSSMAP
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -1060,7 +1059,7 @@ Material:
     - _GlitterUseSurfaceColor: 1
     - _GlitterUseSurfaceColorAnimated: 0
     - _GlossMapScale: 1
-    - _Glossiness: 0.246
+    - _Glossiness: 0
     - _GlossyReflections: 1
     - _GrabBlurDirections: 4
     - _GrabBlurDirectionsAnimated: 0

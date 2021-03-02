@@ -65,7 +65,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _Displacement: 70
-    - _GlitterThreshold: -0.999
+    - _GlitterThreshold: -0.9999
     - _Glossiness: 0.048
     - _Metallic: 0.478
     - _NormalStrength: 0.037
@@ -81,7 +81,7 @@ Material:
     m_Colors:
     - _BotColor: {r: 0.41229087, g: 0.43084306, b: 0.8018868, a: 1}
     - _Color: {r: 0, g: 0, b: 0, a: 1}
-    - _GlitterColor: {r: 4.5412054, g: 4.5412054, b: 4.5412054, a: 1}
+    - _GlitterColor: {r: 0.8027793, g: 0.8027793, b: 0.8027793, a: 1}
     - _GroundColor: {r: 0.7169812, g: 0.7169812, b: 0.7169812, a: 1}
     - _OceanSpecularColor: {r: 1.4980392, g: 0.8, b: 0.36078432, a: 1}
     - _ShadowColor: {r: 0.29156286, g: 0.4485987, b: 0.6792453, a: 1}

@@ -62,7 +62,7 @@ MonoBehaviour:
     defaultState: 1
   dirtIntensity:
     overrideState: 1
-    value: 1
+    value: 0
 --- !u!114 &114357776453000568
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -81,13 +81,13 @@ MonoBehaviour:
     value: 1
   filtering:
     overrideState: 1
-    value: {x: 50, y: 95}
+    value: {x: 54, y: 99}
   minLuminance:
     overrideState: 1
-    value: -0.1
+    value: 0
   maxLuminance:
     overrideState: 1
-    value: 0.45
+    value: 0
   keyValue:
     overrideState: 1
     value: 1
@@ -165,16 +165,16 @@ MonoBehaviour:
     value: 0
   saturation:
     overrideState: 1
-    value: 0
+    value: 5
   brightness:
     overrideState: 1
     value: 0
   postExposure:
     overrideState: 1
-    value: 0
+    value: -1
   contrast:
     overrideState: 1
-    value: 0
+    value: 5
   mixerRedOutRedIn:
     overrideState: 1
     value: 100
@@ -204,10 +204,10 @@ MonoBehaviour:
     value: 100
   lift:
     overrideState: 1
-    value: {x: 0.9982456, y: 1, z: 0.9964912, w: 0}
+    value: {x: 1, y: 1, z: 1, w: 0}
   gamma:
     overrideState: 1
-    value: {x: 0.8271358, y: 0.8247922, z: 1, w: 0}
+    value: {x: 1, y: 1, z: 1, w: -0.33460075}
   gain:
     overrideState: 1
     value: {x: 1, y: 1, z: 1, w: 0}
