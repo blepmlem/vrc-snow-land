@@ -82,14 +82,14 @@ public class TimeOfDayManager : UdonSharpBehaviour
         RenderSettings.fogColor = color;
         RenderSettings.fogDensity = color.a * 0.004f;
 		
-        // var p = Networking.LocalPlayer;
-        // if (p == null)
-        // {
-        //     return;
-        // }
-		      //
-        // var rotation = p.GetRotation();
-        // _skyboxCamera.transform.rotation = rotation;
+        var p = Networking.LocalPlayer;
+        if (p == null || !p.IsValid())
+        {
+            return;
+        }
+
+        var rotation = p.GetRotation();
+        _skyboxCamera.transform.rotation = rotation;
     }
     
     public void SetNextWeather()

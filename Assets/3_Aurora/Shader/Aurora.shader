@@ -5,6 +5,7 @@
 
 Shader "Custom/Aurora" {
     Properties {
+        _Alpha ("Alpha", Float) = 1.0
         _MIX ("MIX", 2D) = "white" {}
         _VO_Strength ("VO_Strength", Float ) = 0.1
         _VO_SPD_U ("VO_SPD_U", Float ) = 0.1
@@ -52,6 +53,7 @@ Shader "Custom/Aurora" {
             #pragma only_renderers d3d9 d3d11 glcore gles 
             #pragma target 3.0
             uniform sampler2D _MIX; uniform float4 _MIX_ST;
+            float _Alpha;
             uniform float _VO_Strength;
             uniform float _VO_SPD_U;
             uniform float _VO_SPD_V;
@@ -107,7 +109,7 @@ Shader "Custom/Aurora" {
                 float3 finalColor = emissive;
                 fixed4 finalRGBA = fixed4(finalColor,1);
                 // UNITY_APPLY_FOG(i.fogCoord, finalRGBA);
-                return finalRGBA;
+                return finalRGBA * _Alpha;
             }
             ENDCG
         }
