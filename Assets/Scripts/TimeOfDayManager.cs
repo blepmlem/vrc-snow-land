@@ -39,7 +39,9 @@ public class TimeOfDayManager : UdonSharpBehaviour
     {
         if (Networking.IsMaster)
         {
+            
             _t = Random.Range(_startingRange.x, _startingRange.y);
+            Debug.Log($"Good morning! {_t}");
             _tSynced = _t;
         }
         
@@ -56,6 +58,12 @@ public class TimeOfDayManager : UdonSharpBehaviour
 
     private void Update()
     {
+        if (!_initialized)
+        {
+            Initialize();
+            return;
+        }  
+        
         if(!_pauseTime)
         {
             float multiplier = Mathf.Abs(_t * 2 - 1) + .5f; // Make the day go slower, night faster

@@ -109,7 +109,7 @@ Shader "Custom/Aurora" {
                 float3 finalColor = emissive;
                 fixed4 finalRGBA = fixed4(finalColor,1);
                 // UNITY_APPLY_FOG(i.fogCoord, finalRGBA);
-                return finalRGBA * _Alpha;
+                return finalRGBA * _Alpha * _Alpha;
             }
             ENDCG
         }
