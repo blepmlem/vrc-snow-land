@@ -1,5 +1,8 @@
-﻿using UdonSharp;
+﻿using System;
+using System.Collections.Generic;
+using UdonSharp;
 using UnityEngine;
+using UnityEngine.XR;
 using VRC.SDKBase;
 
 public class SnowboardMovement : UdonSharpBehaviour
@@ -13,10 +16,19 @@ public class SnowboardMovement : UdonSharpBehaviour
     public float gravity = 0.5f;
     public float ResetTimeoutAfterUsage = 60f * 5;
     public bool RunWithoutPlayer = false;
+    private float BoostCooldown = 2.5f;
+
 
     // The player collider needs to be off the ground otherwise they lag
     public float playerYOffset = 0.15f;
     public float RotationMultiplier = 80;
+
+    // Desktop input modifiers
+    public float DesktopSnowboardRotationSpeed = 80;
+    public float DesktopSnowboardDeadZone = 0.01f;
+    public KeyCode DesktopJumpOffSnowboardKey = KeyCode.F;
+    public KeyCode DesktopSnowboardBoostKey = KeyCode.Q;
+
 
     private Vector2 momentum = Vector2.zero;
     private float gravityMomentum = 0;
@@ -27,7 +39,7 @@ public class SnowboardMovement : UdonSharpBehaviour
     private Vector3 spawnPosition;
     private Quaternion spawnRotation;
     private float lastUsageTime = -1;
-
+    private float lastBoostTime = -1;
 
     public void Start()
     {
@@ -61,18 +73,8 @@ public class SnowboardMovement : UdonSharpBehaviour
 
         if (localUser != null || RunWithoutPlayer)
         {
-            Vector3 beforePosition = transform.position;
+            if (Input.GetKeyDown(DesktopJumpOffSnowboardKey)) localUser = null;
             SnowboardingUpdate();
-            Vector3 afterPosition = transform.position;
-            float speed = (afterPosition - beforePosition).magnitude;
-            //if (Time.deltaTime > 0.03f)
-            //{
-            //    Debug.Log("speed: " + speed / Time.deltaTime + ", delta time: " + Time.deltaTime + " LAG!");
-            //}
-            //else
-            //{
-            //    Debug.Log("speed: " + speed / Time.deltaTime + ", delta time: " + Time.deltaTime);
-            //}
         }
 
         if (transform.position.y < -100)
@@ -96,9 +98,26 @@ public class SnowboardMovement : UdonSharpBehaviour
     private void SnowboardingUpdate()
     {
         // Turn board
-        if (localUser != null && localUser.IsUserInVR())
+        if (localUser != null)
         {
-            VrPlayerInputRotationUpdate();
+            if (localUser.IsUserInVR())
+            {
+                VrPlayerInputRotationUpdate();
+            }
+            else
+            {
+                DesktopPlayerInputRotationUpdate();
+            }
+        }
+
+
+        // Boost
+        string rightHand_AButton = "Fire2";
+        if (Time.time - lastBoostTime > BoostCooldown && (Input.GetKeyDown(DesktopSnowboardBoostKey) || Input.GetButtonDown(rightHand_AButton)))
+        {
+            float boost = 2;
+            momentum.x += boost;
+            lastBoostTime = Time.time;
         }
 
         RaycastHit hit;
@@ -162,8 +181,29 @@ public class SnowboardMovement : UdonSharpBehaviour
         // Move player
         if (localUser != null)
         {
-            localUser.TeleportTo(transform.position + Vector3.up * playerYOffset, StartPosition.rotation, VRC_SceneDescriptor.SpawnOrientation.AlignRoomWithSpawnPoint, true);
+
+            if (localUser.IsUserInVR())
+            {
+                localUser.TeleportTo(transform.position + Vector3.up * playerYOffset, StartPosition.rotation, VRC_SceneDescriptor.SpawnOrientation.AlignRoomWithSpawnPoint, true);
+            }
+            else
+            {
+                localUser.TeleportTo(transform.position + Vector3.up * playerYOffset, localUser.GetRotation(), VRC_SceneDescriptor.SpawnOrientation.Default, true);
+            }
         }
+    }
+
+    private void DesktopPlayerInputRotationUpdate()
+    {
+        float turnInput = Input.GetAxis("Horizontal");
+
+        // Check if input is within the deadzone
+        if (DesktopSnowboardDeadZone > turnInput && turnInput > -DesktopSnowboardDeadZone) return;
+
+        // Turn
+        Vector3 wantedForward = (new Vector3(transform.position.x + transform.right.x * turnInput, 0, transform.position.z + transform.right.z * turnInput) - new Vector3(transform.position.x, 0, transform.position.z)).normalized;
+        Quaternion wantedRotation = Quaternion.LookRotation(wantedForward, Vector3.up);
+        transform.rotation = Quaternion.Lerp(transform.rotation, wantedRotation, RotationMultiplier * Time.deltaTime);
     }
 
     private void VrPlayerInputRotationUpdate()
@@ -192,7 +232,7 @@ public class SnowboardMovement : UdonSharpBehaviour
     {
         Vector3 hitForward = new Vector3(hitNormal.x, 0, hitNormal.z).normalized;
         Vector3 playerNormalizedForward = new Vector3(playerForward.x, 0, playerForward.z).normalized;
-        
+
         // How steep is the slope
         float slopeAngle = Vector3.Angle(hitForward, hitNormal);
 
@@ -204,7 +244,7 @@ public class SnowboardMovement : UdonSharpBehaviour
         if (upDownAngle > 90) return 0;
         float angle = slopeAngle * (90 - upDownAngle) / 90;
 
-        Debug.Log("slopeAngle: " + slopeAngle + ", upDownAngle: " + upDownAngle + ", angle: "+ angle + ", (upDownAngle) / 90: " + ((90 - upDownAngle) / 90));
+        //Debug.Log("slopeAngle: " + slopeAngle + ", upDownAngle: " + upDownAngle + ", angle: "+ angle + ", (upDownAngle) / 90: " + ((90 - upDownAngle) / 90));
         if (angle > 0 && angle < 90)
         {
             return Mathf.Sin(angle * Mathf.PI / 180);
@@ -212,57 +252,7 @@ public class SnowboardMovement : UdonSharpBehaviour
         else
         {
             return 0;
-            
+
         }
     }
-
-
-    //private void SnowboardingUpdate()
-    //{
-
-    //    // Turn board
-    //    if (localUser != null && localUser.IsUserInVR())
-    //    {
-    //        VrPlayerInputRotationUpdate();
-    //    }
-
-
-    //    Vector3 wantedMovement = transform.forward * momentum.x + transform.right * momentum.y;
-    //    transform.position = transform.position + wantedMovement;
-
-
-    //    // Update momentum
-    //    RaycastHit hit;
-    //    if (Physics.Raycast(transform.position + Vector3.up, Vector3.down, out hit, 1.2f, SlopeMask))
-    //    {
-    //        UpdateGroundMomentum();
-
-    //        transform.position = transform.position + ((hit.distance - 1) - wantedDistanceToGround) * Vector3.down;
-    //        transform.rotation = Quaternion.FromToRotation(transform.up, hit.normal) * transform.rotation;
-    //        gravityMomentum = 0;
-    //        isFalling = false;
-    //    }
-    //    else
-    //    {
-    //        // Is falling in air
-    //        if (!isFalling)
-    //        {
-    //            gravityMomentum = -wantedMovement.y;
-    //            isFalling = true;
-    //        }
-
-    //        transform.rotation = Quaternion.FromToRotation(transform.up, Vector3.up) * transform.rotation;
-    //        transform.position += Vector3.down * gravityMomentum;
-
-    //        // Update gravity momentum
-    //        gravityMomentum += Time.deltaTime * gravity;
-    //    }
-
-
-    //    // Move player
-    //    if (localUser != null)
-    //    {
-    //        localUser.TeleportTo(transform.position + Vector3.up * playerYOffset, StartPosition.rotation, VRC_SceneDescriptor.SpawnOrientation.AlignRoomWithSpawnPoint, true);
-    //    }
-    //}
 }
