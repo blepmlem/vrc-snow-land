@@ -207,11 +207,12 @@ public class SnowboardMovement : UdonSharpBehaviour
         Debug.Log("slopeAngle: " + slopeAngle + ", upDownAngle: " + upDownAngle + ", angle: "+ angle + ", (upDownAngle) / 90: " + ((90 - upDownAngle) / 90));
         if (angle > 0 && angle < 90)
         {
-            return angle / 90f;
+            return Mathf.Sin(angle * Mathf.PI / 180);
         }
         else
         {
             return 0;
+            
         }
     }
 
