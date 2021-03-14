@@ -8,13 +8,16 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Pine_tree_texture
-  m_Shader: {fileID: 4800000, guid: e9e18fbf88ba9eb44ab0d683cd27c2a3, type: 3}
-  m_ShaderKeywords: LOD_FADE_CROSSFADE VIGNETTE_MASKED _SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A
+  m_Shader: {fileID: 4800000, guid: 395004a61ce8b4648883ad1c364af0f9, type: 3}
+  m_ShaderKeywords: VIGNETTE_MASKED _SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A _SUNDISK_SIMPLE
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
+  m_CustomRenderQueue: 2010
+  stringTagMap:
+    OptimizedShaderFolder: Pine_tree_texture-8f5cc3ff
+    OriginalShader: ".poiyomi/\u2605 Poiyomi Pro \u2605"
+    RenderType: Opaque
   disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
@@ -168,7 +171,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _GlitterMask:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: bbb4c42ff56bbe5449e9cc8040e0cd68, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _GlitterTexture:
@@ -976,7 +979,7 @@ Material:
     - _GlitterColorMapUVAnimated: 0
     - _GlitterContrast: 300
     - _GlitterContrastAnimated: 0
-    - _GlitterEnable: 0
+    - _GlitterEnable: 1
     - _GlitterEnableAnimated: 0
     - _GlitterFrequency: 300
     - _GlitterFrequencyAnimated: 0
@@ -1010,9 +1013,9 @@ Material:
     - _GlitterRandomSizeAnimated: 0
     - _GlitterShape: 0
     - _GlitterShapeAnimated: 0
-    - _GlitterSize: 0.3
+    - _GlitterSize: 0.18
     - _GlitterSizeAnimated: 0
-    - _GlitterSpeed: 10
+    - _GlitterSpeed: 3
     - _GlitterSpeedAnimated: 0
     - _GlitterTextureAnimated: 0
     - _GlitterTexturePanAnimated: 0
@@ -1495,7 +1498,7 @@ Material:
     - _ScrollingEmissionAnimated: 0
     - _ShadeColor_Step: 0
     - _ShadeColor_StepAnimated: 0
-    - _ShaderOptimizerEnabled: 0
+    - _ShaderOptimizerEnabled: 1
     - _ShadowMix: 0
     - _ShadowMixAnimated: 0
     - _ShadowMixThreshold: 0.5
@@ -1792,7 +1795,7 @@ Material:
     - footer_youtube: 0
     - m_ParallaxMap: 0
     - m_Patreon: 0
-    - m_Special_Effects: 0
+    - m_Special_Effects: 1
     - m_end_Alpha: 0
     - m_end_BlackLight: 0
     - m_end_Blur: 0
@@ -1945,7 +1948,7 @@ Material:
     - m_start_emissionOptions: 1
     - m_start_flipBook: 0
     - m_start_flipbookHueShift: 0
-    - m_start_glitter: 0
+    - m_start_glitter: 1
     - m_start_glitterHueShift: 0
     - m_start_glitterRandom: 0
     - m_start_glowInDarkEmissionOptions: 0
