@@ -8,14 +8,17 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: PoiSnow
-  m_Shader: {fileID: 4800000, guid: e9e18fbf88ba9eb44ab0d683cd27c2a3, type: 3}
-  m_ShaderKeywords: LOD_FADE_CROSSFADE VIGNETTE_MASKED _GLOSSYREFLECTIONS_OFF _SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A
+  m_Shader: {fileID: 4800000, guid: f7e0ca30e8c0ac04e9efb89aa2900139, type: 3}
+  m_ShaderKeywords: VIGNETTE_MASKED _GLOSSYREFLECTIONS_OFF _SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A
     _SUNDISK_SIMPLE
   m_LightmapFlags: 6
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
+  m_CustomRenderQueue: 2010
+  stringTagMap:
+    OptimizedShaderFolder: PoiSnow-407f3d3c
+    OriginalShader: ".poiyomi/\u2605 Poiyomi Pro \u2605"
+    RenderType: Opaque
   disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
@@ -1217,7 +1220,7 @@ Material:
     - _MainColorAdjustTextureUV: 0
     - _MainColorAdjustTextureUVAnimated: 0
     - _MainDistanceFadeAnimated: 0
-    - _MainEmissionStrength: 0
+    - _MainEmissionStrength: 0.62
     - _MainEmissionStrengthAnimated: 0
     - _MainFadeTextureAnimated: 0
     - _MainFadeTexturePanAnimated: 0
@@ -1548,7 +1551,7 @@ Material:
     - _ScrollingEmissionAnimated: 0
     - _ShadeColor_Step: 0
     - _ShadeColor_StepAnimated: 0
-    - _ShaderOptimizerEnabled: 0
+    - _ShaderOptimizerEnabled: 1
     - _ShadowMix: 0
     - _ShadowMixAnimated: 0
     - _ShadowMixThreshold: 0.5
@@ -1946,7 +1949,7 @@ Material:
     - m_end_vertexManipulation: 0
     - m_end_voronoiRandom: 0
     - m_lightingOptions: 1
-    - m_mainOptions: 1
+    - m_mainOptions: 0
     - m_outlineOptions: 0
     - m_renderingOptions: 1
     - m_start_Alpha: 0
@@ -2013,7 +2016,7 @@ Material:
     - m_start_glitterRandom: 0
     - m_start_glowInDarkEmissionOptions: 0
     - m_start_glowInDarkEmissionOptions1: 0
-    - m_start_lightingAdvanced: 1
+    - m_start_lightingAdvanced: 0
     - m_start_lightingBeta: 1
     - m_start_lightingHSL: 0
     - m_start_lightingModifiers: 0
